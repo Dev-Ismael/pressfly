@@ -105,29 +105,29 @@
                             <i class="nav-icon fas fa-layer-group"></i>
                             <p><?= __('Categories') ?></p></a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="{{ route('admin.tags.index') }}">
+                    {{-- <li class="nav-item"><a class="nav-link" href="{{ route('admin.tags.index') }}">
                             <i class="nav-icon fa fa-tags"></i>
-                            <p><?= __('Tags') ?></p></a></li>
+                            <p>{{  __('Tags') }} </p></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.pages.index') }}">
                             <i class="nav-icon far fa-copy"></i>
-                            <p><?= __('Pages') ?></p></a></li>
+                            <p> {{ __('Pages')  }} </p></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.files.index') }}">
                             <i class="nav-icon far fa-images"></i>
-                            <p><?= __('Files') ?></p></a></li>
+                            <p>{{ __('Files') }} </p></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.pages.homepage') }}">
                             <i class="nav-icon fa fa-table"></i>
-                            <p><?= __('Home Page') ?></p></a></li>
+                            <p>{{  __('Home Page') }} </p></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.menus.index') }}">
                             <i class="nav-icon far fa-caret-square-down"></i>
-                            <p><?= __('Menus') ?></p></a></li>
+                            <p>{{  __('Menus') }} </p></a></li>
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.sidebars.index') }}">
                             <i class="nav-icon fa fa-columns"></i>
-                            <p><?= __('Sidebars') ?></p></a></li>
+                            <p>{{  __('Sidebars') }} </p></a></li> --}}
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.ads.index') }}">
                             <i class="nav-icon fas fa-ad"></i>
@@ -192,10 +192,10 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('admin.language.index') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
                                     <p><?= __('Language Manager') ?></p></a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.system') }}"
+                            {{-- <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.system') }}"
                                                     target="_blank">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('System Info') ?></p></a></li>
+                                    <p>{{  __('System Info') }} </p></a></li> --}}
                         </ul>
                     </li>
 

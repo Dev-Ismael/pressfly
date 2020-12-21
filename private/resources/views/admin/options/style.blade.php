@@ -20,35 +20,35 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link" href="#general" aria-controls="general" role="tab" data-toggle="tab">
-                        General </a>
+                        {{ __("General") }}  </a>
                 </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#header" aria-controls="header" role="tab" data-toggle="tab">
-                        Header </a>
+                        {{ __("Header") }}  </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#footer" aria-controls="footer" role="tab" data-toggle="tab">
-                        Footer </a>
+                        {{ __("Footer") }}  </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#content" aria-controls="content" role="tab" data-toggle="tab">
-                        Content </a>
+                        {{ __("Content") }}  </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#css" aria-controls="content" role="tab" data-toggle="tab">
-                        Custom CSS </a>
+                        {{ __("Custom CSS") }}  </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#menus" aria-controls="menus" role="tab" data-toggle="tab">
-                        Menus </a>
+                        {{ __("Menus") }}  </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebars" aria-controls="sidebars" role="tab" data-toggle="tab">
-                        Sidebars </a>
+                        {{ __("Sidebars") }}  </a>
                 </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="#ads" aria-controls="ads" role="tab" data-toggle="tab">
-                        Ads </a>
+                        {{ __("Ads") }}  </a>
                 </li>
             </ul>
 

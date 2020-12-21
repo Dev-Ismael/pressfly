@@ -39,10 +39,10 @@
                     {{ Form::textarea('description', old('description'), ['class' => 'form-control', 'rows' => 3]) }}
                 </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     {{ Form::label('color', __('Primary Color')) }}
                     {{ Form::text('color', old('color'), ['class' => 'form-control color-select']) }}
-                </div>
+                </div> --}}
 
                 <div class="form-group">
                     {{ Form::submit(__('Submit'), ['class' => 'btn btn-primary']) }}
