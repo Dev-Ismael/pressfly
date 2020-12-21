@@ -20,35 +20,35 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link" href="#general" aria-controls="general" role="tab" data-toggle="tab">
-                        <?= __('General') ?></a>
+                        General </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#header" aria-controls="header" role="tab" data-toggle="tab">
-                        <?= __('Header') ?></a>
+                        Header </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#footer" aria-controls="footer" role="tab" data-toggle="tab">
-                        <?= __('Footer') ?></a>
+                        Footer </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#content" aria-controls="content" role="tab" data-toggle="tab">
-                        <?= __('Content') ?></a>
+                        Content </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#css" aria-controls="content" role="tab" data-toggle="tab">
-                        <?= __('Custom CSS') ?></a>
+                        Custom CSS </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#menus" aria-controls="menus" role="tab" data-toggle="tab">
-                        <?= __('Menus') ?></a>
+                        Menus </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebars" aria-controls="sidebars" role="tab" data-toggle="tab">
-                        <?= __('Sidebars') ?></a>
-                </li>
+                        Sidebars </a>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="#ads" aria-controls="ads" role="tab" data-toggle="tab">
-                        <?= __('Ads') ?></a>
+                        Ads </a>
                 </li>
             </ul>
 
@@ -70,8 +70,8 @@
                         <small class="form-text text-muted"></small>
                     </div>
 
-                    <div class="form-group ">
-                        <label><?= __('Primary Color') ?></label>
+                    {{-- <div class="form-group ">
+                        <label>{{ __('Primary Color') }}</label>
                         {{ Form::text("style[primary_color]", old("style[primary_color]", $style['primary_color'] ?? ''),
                             ['class' => 'color-select form-control', 'autocomplete' => 'off']) }}
                     </div>
@@ -89,7 +89,7 @@
                     <div class="form-group ">
                         <label>{{ __('Body Background') }}</label>
                         {!! html_background('body_bg', $style['body_bg'] ?? '') !!}
-                    </div>
+                    </div> --}}
 
                 </div>
 
