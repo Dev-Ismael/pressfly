@@ -15,7 +15,8 @@ class ActivationController extends AdminController
      */
     public function index()
     {
-        return view('admin.activation.index');
+        // return view('admin.activation.index');
+        return redirect()->route('admin.dashboard');
     }
 
     public function process()
