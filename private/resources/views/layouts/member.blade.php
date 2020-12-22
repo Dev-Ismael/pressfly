@@ -126,6 +126,13 @@
     <div class="container">
         <div class="row">
             <div class="col text-left">
+                <strong style="color: #fff; font-weight:400">
+                    All Right Reversed &copy; {{ now()->format("Y") }} - Powerd By 
+                    <i class="fas fa-heart" style="color: #ff0000;"></i> 
+                    <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a> .
+                </strong>
+            </div>
+            <div class="col text-right">
                 <div class="footer-menu">
                     {!! menu_display(get_style('footer_menu'), [
                     'ul_class' => 'list-inline mb-0',
@@ -133,9 +140,6 @@
                     'a_class' => '',
                     ]) !!}
                 </div>
-            </div>
-            <div class="col text-right">
-                {{ __('Copyright') }} &copy; {{ get_option('site_name') }} {{ date("Y") }}
             </div>
         </div>
     </div>
