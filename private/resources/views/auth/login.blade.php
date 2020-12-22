@@ -48,19 +48,20 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-sm">
+            <button type="submit" class="btn btn-purple btn-block btn-sm">
                 {{ __('Login') }}
             </button>
         </div>
 
-        <a href="{{ route('password.reset') }}">{{ __('I forgot my password') }}</a>
+        <a href="{{ route('password.reset') }}" class="forgot_password">{{ __('I forgot my password') }}</a>
         <br>
         <a href="{{ route('register') }}">{{ __('Register a new membership') }}</a>
     </form>
 
-    <hr>
+    
 
     @if ((bool)get_option('social_login_facebook', false))
+        <hr>
         <a href="{{ route('social.login', ['facebook', 'action' => 'login']) }}" class="sb sb-facebook btn-block">
             {{ __('Login with Facebook') }}
         </a>

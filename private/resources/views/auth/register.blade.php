@@ -60,7 +60,7 @@
         @endif
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-sm">
+            <button type="submit" class="btn btn-purple btn-block btn-sm">
                 {{ __('Register') }}
             </button>
         </div>
@@ -68,9 +68,10 @@
 
     <a href="{{ route('login') }}">{{ __('I already have a membership') }}</a>
 
-    <hr>
+    
 
     @if ((bool)get_option('social_login_facebook', false))
+        <hr>
         <a href="{{ route('social.login', ['provider '=> 'facebook', 'action' => 'register']) }}"
            class="sb sb-facebook btn-block">
             {{ __('Register with Facebook') }}

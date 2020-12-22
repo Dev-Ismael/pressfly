@@ -27,27 +27,36 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/auth.css?v=' . APP_VERSION) }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom_auth_style.css') }}" rel="stylesheet">
 
     @stack('header')
 </head>
 <body>
 
+<div class="purble_background"></div>
+
 <div class="auth">
-    <div class="auth-title">
-        <a href="{{ url('/') }}">
-            @if(get_style('logo_image'))
-                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-            @else
-                {{ get_option('site_name') }}
-            @endif
-        </a>
+
+    <div class="form-content">
+    
+        <div class="auth-content">
+            <div class="auth-title">
+                <a href="{{ url('/') }}">
+                    @if(get_style('logo_image'))
+                        <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
+                    @else
+                        {{ get_option('site_name') }}
+                    @endif
+                </a>
+            </div>
+            <div class="underline"></div>
+
+            @include('_partials.flash_message')
+    
+            @yield('content')
+        </div>
     </div>
 
-    <div class="auth-content">
-        @include('_partials.flash_message')
-
-        @yield('content')
-    </div>
 </div>
 
 @include('_partials.js_vars')

@@ -1,0 +1,88 @@
+
+/*===== btn ======*/
+a{
+    color: #140850;
+}
+a:hover{
+    color: #140850;
+}
+a.forgot_password{
+      display: none;
+}
+.btn-purple{
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #140850;
+    border-color: #140850;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus{
+    color: #fff;
+    background-color: #140850d3;
+    border-color: #140850d3;
+}
+/*===== body ======*/
+body {
+    background: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #616161;
+    height: 150%;
+    position: relative;
+}
+/*===== purple_background ======*/
+.purble_background{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: #140850;
+}
+/*===== title ======*/
+p.title.text-center{
+    color: #140850;
+    font-size: 25px;
+}
+.underline{
+    width: 30px;
+    height: 3px;
+    background-color: #140850;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    margin-top: -10px;
+
+}
+/*===== Form =====*/
+.auth{
+    overflow: auto !important;
+    position: relative;
+    max-width: 450px !important;
+    margin-top: -150px;
+    z-index: 999999999999;
+    box-shadow: 0px 0px 9px 1px #000;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.form-content{
+    /* width: 450px; */
+    /* box-shadow: 0px 0px 9px 1px #000; */
+}
+.form-control{
+    font-size: 16px;
+    padding: 20px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
