@@ -1,0 +1,112 @@
+/*=== Body ===*/
+body::-webkit-scrollbar ,
+body::-webkit-scrollbar {
+    background-color:#14085065;
+    width:10px;
+    right: -10px
+}
+body::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+    background-color:#140850;
+    border-radius:8px;
+    right: -10px
+}
+/*==== sidebar =====*/
+[class*=sidebar-dark] .brand-link{
+    border-bottom: 1px solid #e4e4e4;
+    color: rgba(255,255,255,.8);
+}
+[class*=sidebar-dark-] {
+    background-color: #140850;
+}
+/*==== card-primary =====*/
+.card-primary.card-outline {
+    border-top: 3px solid #140850;
+}
+/*==== Links =====*/
+a {
+    color: #140850;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #140850c9;
+    text-decoration: none;
+}
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #2a1496;
+    color: #fff;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #140850;
+    border-color: #140850;
+    box-shadow: none;
+}
+.btn-primary:hover, 
+.btn-primary:focus {
+    background-color: #140850c9;
+    border-color: #140850c9;
+}
+/*==== edit delete btn =====*/
+td a.btn{
+    margin-right: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+i.fas.fa-bars{
+    color: #140850;
+    font-size: 24px;
+}
+.card {
+    box-shadow: 0 0 14px rgba(0,0,0,.125), 0 2px 11px rgb(0 0 0 / 57%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.morris-hover-point{
+    color: #140850 !important;
+}
+.info-box .info-box-icon{
+    border-radius: 50%  !important;
+    -webkit-border-radius: 50%  !important;
+    -moz-border-radius: 50%  !important;
+    -ms-border-radius: 50%  !important;
+    -o-border-radius: 50%  !important;
+    box-shadow: 0px 0px 8px 0px #40404094 !important;
+}
+.info-box .info-box-icon i{
+    font-size: 42px;
+}
+.page-item.active .page-link{
+    background-color: #140850;
+    border-color: #140850;
+}
+.form-inline{
+    margin: 0px 5px !important;
+}
+/*=== Withdrawal Page ===*/
+.card-body i.fa-money-bill-wave,
+.card-body i.fa-exchange-alt,
+.card-body i.fa-search-dollar,
+.card-body i.fa-hand-holding-usd{
+    font-size: 45px;
+    padding: 15px !important;
+}
+/*==== Nav Links ====*/
+.navbar-light .navbar-nav .nav-link{
+    color: rgb(20 8 80);
+}
+/*===== button primary ======*/
+button.btn-primary,
+input.btn-primary{
+    border-radius: 15px;
+    padding: 6px 14px;
+    font-size: 17px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
