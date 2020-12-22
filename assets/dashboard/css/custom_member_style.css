@@ -1,0 +1,80 @@
+/*=== Body ===*/
+body{
+    background-color: #e0e0e03b;
+}
+body::-webkit-scrollbar ,
+body::-webkit-scrollbar {
+    background-color:#14085065;
+    width:10px;
+    right: -10px
+}
+body::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+    background-color:#140850;
+    border-radius:8px;
+    right: -10px
+}
+/*======= col-sm-9 setting page ======*/
+body.member-settings main > .row > .col-sm-9{
+    border-radius: 7px;
+    padding: 15px;
+    box-shadow: 0px 0px 12px -2px #656565;
+    margin-bottom: 50px;
+}
+/*======= member-menu list-group ======*/
+.member-menu.list-group{
+    margin-bottom: 50px;
+}
+.member-menu.list-group i{
+    font-size: 20px;
+    margin-right: 7px;
+}
+.member-menu .list-group-item.selected,
+.list-group-item{
+    color: #140850 !important;
+}
+.member-menu .list-group-item.selected:hover,
+.list-group-item:hover{
+    color: #fff !important;
+}
+/*======= card ======*/
+.card{
+    box-shadow: 0px 0px 12px 0px #bbb;
+    margin-bottom: 80px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+/*======= btn ======*/
+.btn-primary {
+    color: #fff;
+    background-color: #140850;
+    border-color: #140850;
+    border-radius: 15px;
+    padding: 7px 15px;
+    font-size: 18px
+}
+.btn-primary:hover, 
+.btn-primary:active {
+    color: #fff;
+    background-color: #140850cb;
+    border-color: #140850cb;
+}
+a.list-group-item:hover,
+a.list-group-item:active{
+    background-color: #140850;
+    border-color: #140850;
+    color: #fff !important;
+
+}
+/*======= Footer ======*/
+footer.footer{
+    padding: 20px 0;
+}
+footer.footer a {
+      color: #ffffff;
+      font-size: 16px;
+}
+footer.footer div.col.text-right{
+      color: #ffffff;
+      font-size: 16px;  
+}
