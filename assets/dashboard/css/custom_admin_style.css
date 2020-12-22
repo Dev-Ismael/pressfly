@@ -23,7 +23,7 @@ body::-webkit-scrollbar-thumb{
 .card-primary.card-outline {
     border-top: 3px solid #140850;
 }
-/*==== Links =====*/
+/*==== Links , btn =====*/
 a {
     color: #140850;
     text-decoration: none;
@@ -61,10 +61,26 @@ i.fas.fa-bars{
     color: #140850;
     font-size: 24px;
 }
+/*====== Card ========*/ 
 .card {
     box-shadow: 0 0 14px rgba(0,0,0,.125), 0 2px 11px rgb(0 0 0 / 57%);
     border-radius: 15px;
     overflow: hidden;
+}
+.card-header.text-white{
+    background-color: #140850 !important;
+}
+.card-body .list-group::-webkit-scrollbar ,
+.card-body .list-group::-webkit-scrollbar {
+    background-color:#14085065;
+    width:10px;
+    right: -10px
+}
+.card-body .list-group::-webkit-scrollbar-thumb,
+.card-body .list-group::-webkit-scrollbar-thumb{
+    background-color:#140850;
+    border-radius:8px;
+    right: -10px
 }
 .morris-hover-point{
     color: #140850 !important;
