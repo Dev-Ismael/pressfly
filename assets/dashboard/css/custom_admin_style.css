@@ -37,6 +37,14 @@ a:hover {
     background-color: #2a1496;
     color: #fff;
 }
+.btn{
+    margin: 3px;
+    border-radius: 7px !important;
+    -webkit-border-radius: 7px !important;
+    -moz-border-radius: 7px !important;
+    -ms-border-radius: 7px !important;
+    -o-border-radius: 7px !important;
+}
 .btn-primary {
     color: #fff;
     background-color: #140850;
@@ -44,27 +52,15 @@ a:hover {
     box-shadow: none;
 }
 .btn-primary:hover, 
+.btn-primary:active, 
 .btn-primary:focus {
     background-color: #140850c9;
     border-color: #140850c9;
 }
-/*==== edit delete btn =====*/
-td a.btn{
-    margin-right: 5px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-i.fas.fa-bars{
-    color: #140850;
-    font-size: 24px;
-}
 /*====== Card ========*/ 
 .card {
     box-shadow: 0 0 14px rgba(0,0,0,.125), 0 2px 11px rgb(0 0 0 / 57%);
-    border-radius: 15px;
+    border-radius: 7px;
     overflow: hidden;
 }
 .card-header.text-white{
@@ -109,7 +105,7 @@ i.fas.fa-bars{
 .card-body i.fa-search-dollar,
 .card-body i.fa-hand-holding-usd{
     font-size: 45px;
-    padding: 15px !important;
+    padding: 7px !important;
 }
 /*==== Nav Links ====*/
 .navbar-light .navbar-nav .nav-link{
@@ -118,11 +114,33 @@ i.fas.fa-bars{
 /*===== button primary ======*/
 button.btn-primary,
 input.btn-primary{
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 6px 14px;
     font-size: 17px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+/*======== translations page ===========*/
+.btn.edit-translations{
+    border-radius: 7px !important;
+    -webkit-border-radius: 7px !important;
+    -moz-border-radius: 7px !important;
+    -ms-border-radius: 7px !important;
+    -o-border-radius: 7px !important;
+}
+
+/*==== circle sm btn =====*/
+td a.btn{
+    margin-right: 5px;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+i.fas.fa-bars{
+    color: #140850;
+    font-size: 24px;
 }

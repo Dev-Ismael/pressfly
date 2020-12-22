@@ -57,7 +57,7 @@
                         <td>{{ locale_get_display_name($language, $language) }}</td>
                         <td>
                             <div class="d-inline-flex">
-                                <a class="btn btn-success btn-sm"
+                                <a class="btn btn-success btn-sm edit-translations"
                                    href="{{ route('admin.language.index', ['edit_language' => $language]) }}">
                                     {{ __('Edit Translations') }}
                                 </a>
