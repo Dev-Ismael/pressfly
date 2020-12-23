@@ -89,6 +89,7 @@ class ArticleController extends MemberController
     {
         $data = $request->only([
             'title',
+            'lang',
             'slug',
             'summary',
             'content',

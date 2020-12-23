@@ -21,6 +21,13 @@
                     {{ Form::text('slug', old('slug'), ['class' => 'form-control']) }}
                 </div>
 
+                <!---- Add Custom  ---->
+                <div class="form-group">
+                    {{ Form::label('lang', __('Language')) }}
+                    {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ], old('lang'),
+                        ['class' => 'form-control ', 'required' => true]) }} 
+                </div>
+
                 <div class="form-group">
                     {{ Form::label('category', __('Category')) }}
                     {{ Form::select('category', $categories, old('category'),
