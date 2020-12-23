@@ -107,7 +107,7 @@
                             <td>{{ display_date_timezone($article->created_at) }}</td>
                             <td class="d-inline-flex">
                                 <div class="d-inline-flex">
-                                    <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}">
+                                    <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}" style="display:none">
                                         <i class="fa fa-eye"></i></a>
 
                                     @if((int)$article->pay_type === 2 && !(bool)$article->paid)
