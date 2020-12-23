@@ -57,6 +57,7 @@ class V100Tables extends Migration
             $table->unsignedTinyInteger('status')->nullable()
                 ->comment('1=active, 2=Inactive, 3=Pending Review, 4=Update Pending Review');
             $table->string('title', 191)->nullable();
+            $table->string('lang', 191)->nullable();
             $table->string('slug', 191)->nullable()->unique('idx_slug');
             $table->text('summary')->nullable();
             $table->longtext('content')->nullable();
