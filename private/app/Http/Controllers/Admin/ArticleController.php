@@ -208,6 +208,7 @@ class ArticleController extends AdminController
 
         $data = $request->only([
             'title',
+            'lang',
             'slug',
             'summary',
             'content',
