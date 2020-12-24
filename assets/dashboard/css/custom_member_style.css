@@ -66,6 +66,17 @@ a.list-group-item:active{
     color: #fff !important;
 
 }
+/*======= icon table circle ======*/
+td .d-inline-flex a.btn.btn-sm{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 5px 9px;
+    font-size: 14px;
+    margin-right: 2px;
+}
 /*======= Footer ======*/
 footer.footer{
     padding: 20px 0;

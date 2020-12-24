@@ -80,7 +80,7 @@
                         <td>{{ display_date_timezone($article->published_at) }}</td>
                         <td>
                             <div class="d-inline-flex">
-                                <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}">
+                                <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}" style="display: none">
                                     <i class="fa fa-eye"></i>
                                 </a>
 
