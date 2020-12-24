@@ -18,6 +18,12 @@
                             {{ Form::label('title', __('Title')) }}
                             {{ Form::text('title', old('title', $article->title), ['class' => 'form-control', 'required' => true]) }}
                         </div>
+                        
+                        <!----- Add Option Lang ----->
+                        <div class="form-group">
+                            {{ Form::label('lang', __('Language')) }}
+                            {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
+                        </div>
 
                         <div class="form-group">
                             {{ Form::label('slug', __('Slug(URL Key)')) }}
