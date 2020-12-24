@@ -86,7 +86,7 @@ class Category extends AppModel
                 <td><?= display_date_timezone($category->created_at) ?></td>
                 <td>
                     <div class="d-inline-flex">
-                        <a class="btn btn-sm btn-primary" target="_blank"
+                        <a class="btn btn-sm btn-primary" target="_blank" style="display: none"
                            href="<?= e($category->permalink()) ?>">
                             <i class="fa fa-eye"></i></a>
 
