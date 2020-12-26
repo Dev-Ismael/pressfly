@@ -82,11 +82,12 @@ Route::name('')->group(function () {
 Route::name('')->group(function () {
 
     ## Custom Routes
-    Route::get('/' , function(){ return view("custom_blades/index"); });
-    Route::get('/our_privacy' , function(){ return view("custom_blades/privacy"); });
-    Route::get('/our_terms' , function(){ return view("custom_blades/terms"); });
+    // Route::get('/' , function(){ return view("custom_blades/index"); });
+    // Route::get('/our_privacy' , function(){ return view("custom_blades/privacy"); });
+    // Route::get('/our_terms' , function(){ return view("custom_blades/terms"); });
+    // Route::get('/payout_rates' , function(){ return view("custom_blades/payout_rates"); });
 
-    // Route::get('/', 'HomeController@index')->name('homepage');
+    Route::get('/', 'HomeController@index')->name('homepage');
 
     Route::post('/visitor-check', 'VisitorCheckController@index')->name('visitor-check');
 

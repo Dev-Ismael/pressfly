@@ -77,6 +77,7 @@
                         <li class="nav-item active"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
                         <li class="nav-item active"><a href="{{ url('/our_privacy') }}" class="nav-link">Privacy</a></li>
                         <li class="nav-item active"><a href="{{ url('/our_terms') }}" class="nav-link">Terms</a></li>
+                        <li class="nav-item active"><a href="{{ url('/payout_rates') }}" class="nav-link">Payout rates</a></li>
                         <div class="top-menu">
                             {!! menu_display(get_style('top_menu'), [
                             'ul_class' => 'list-inline',
@@ -151,6 +152,7 @@
                             <li><a href="{{ url('/') }}" class="py-2 d-block">Home</a></li>
                             <li><a href="{{ url('/our_privacy') }}" class="py-2 d-block">Privacy</a></li>
                             <li><a href="{{ url('/our_terms') }}" class="py-2 d-block">Terms</a></li>
+                            <li><a href="{{ url('/payout_rates') }}" class="py-2 d-block">Payout rates</a></li>
                             <li><a href="{{ url('/login') }}" class="py-2 d-block">Login</a></li>
                             <li><a href="{{ url('/register') }}" class="py-2 d-block">Register</a></li>
                         </ul>
