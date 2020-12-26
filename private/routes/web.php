@@ -80,7 +80,13 @@ Route::name('')->group(function () {
 
 // Public Routes
 Route::name('')->group(function () {
-    Route::get('/', 'HomeController@index')->name('homepage');
+
+    ## Custom Routes
+    Route::get('/' , function(){ return view("custom_blades/index"); });
+    Route::get('/our_privacy' , function(){ return view("custom_blades/privacy"); });
+    Route::get('/our_terms' , function(){ return view("custom_blades/terms"); });
+
+    // Route::get('/', 'HomeController@index')->name('homepage');
 
     Route::post('/visitor-check', 'VisitorCheckController@index')->name('visitor-check');
 
