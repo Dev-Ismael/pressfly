@@ -274,6 +274,30 @@
     fixedContentPos: false
   });
 
+  
+/* ====================================================================
+|   |   |   |   |   |   |   scroll-to-top
+===================================================================== */
+$(function () {
+	var btn = $('#scroll-to-top');
+	$(window).scroll(function() {
+	    if ($(window).scrollTop() > 600) {
+		  btn.fadeIn();
+	    } else {
+		  btn.fadeOut();
+	    }
+	});
+	btn.click(function(){
+	    $('html,body').animate({
+		  scrollTop: 0
+	    }, 900);
+	});
+	btn.click(function(){
+	    $(this).animate({bottom: '50px'}, 200);
+	    $(this).animate({bottom: '30px'}, 200);
+	    $(this).animate({bottom: '50px'}, 200);
+	});
+  });
 
 })(jQuery);
 

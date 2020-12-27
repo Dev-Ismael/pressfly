@@ -30,25 +30,28 @@
             line-height: 2.25em;
       }
       .table {
-      text-align: left;
-      overflow: hidden;
-      box-shadow: 0px 0px 29px 0px #bfbfbf;
-      border-radius: 20px;
+            text-align: left !important;
+            overflow: hidden;
+            box-shadow: 0px 0px 29px 0px #bfbfbf;
+            border-radius: 20px;
       }
-       td, #payout-rates th {
+      .table td, #payout-rates th {
             vertical-align: middle;
       }
-      .table tbody tr td:nth-child(odd) {
-      background: #fff;
-      }
-      .table tbody tr td:nth-child(even) {
-      background: #f2f2f2;
+      .table td img,
+      .table td .flag-icon{
+            margin-left: 20px;
       }
       thead{
             background-color: #140850;
             color: #fff;
       }
-      
+      .table tbody tr td:nth-child(odd) {
+            background: #fff !important;
+      }
+      /* .table tbody tr td:nth-child(odd) {
+            background: #121212 !important;
+      } */
 </style>
 
 @extends('custom_blades.layout')
@@ -111,7 +114,7 @@
                   <div class="row justify-content-center">
                         <div class="col-md-12 text-left heading-section ftco-animate" >
 
-                              <table class="table table-responsive-sm table-striped">
+                              <table class="table table-responsive-sm">
                                     <thead>
                                           <tr>
                                                 <th>{{ __('Country') }}</th>
