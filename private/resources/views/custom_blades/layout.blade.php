@@ -77,7 +77,7 @@
                         <li class="nav-item active"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
                         <li class="nav-item active"><a href="{{ url('/our_privacy') }}" class="nav-link">Privacy</a></li>
                         <li class="nav-item active"><a href="{{ url('/our_terms') }}" class="nav-link">Terms</a></li>
-                        <li class="nav-item active"><a href="{{ url('/payout_rates') }}" class="nav-link">Payout rates</a></li>
+                        <li class="nav-item active"><a href="{{ url('/page/write-get-paid') }}" class="nav-link">Payout rates</a></li>
                         <div class="top-menu">
                             {!! menu_display(get_style('top_menu'), [
                             'ul_class' => 'list-inline',
@@ -94,27 +94,6 @@
     
 
 
-
-
-
-
-            
-        <div class="hero-wrap js-fullheight">
-            <div class="overlay"></div>
-            <div class="container-fluid px-0">
-                <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-end">
-                    <img class="one-third js-fullheight align-self-end order-md-last img-fluid" src="{{ asset("assets/custom_assets/images/undraw_pair_programming_njlp.svg")}}"  alt="">
-                <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
-                    <div class="text mt-5">
-                        <h2 class="text-bold"><span> Start your career with us </span></h2>
-                        <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
-                        <p><a href="login" class="btn btn-primary px-4 py-3">Get in touch</a></p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    
 
 
         @yield('content')
@@ -152,7 +131,7 @@
                             <li><a href="{{ url('/') }}" class="py-2 d-block">Home</a></li>
                             <li><a href="{{ url('/our_privacy') }}" class="py-2 d-block">Privacy</a></li>
                             <li><a href="{{ url('/our_terms') }}" class="py-2 d-block">Terms</a></li>
-                            <li><a href="{{ url('/payout_rates') }}" class="py-2 d-block">Payout rates</a></li>
+                            <li><a href="{{ url('/page/write-get-paid') }}" class="py-2 d-block">Payout rates</a></li>
                             <li><a href="{{ url('/login') }}" class="py-2 d-block">Login</a></li>
                             <li><a href="{{ url('/register') }}" class="py-2 d-block">Register</a></li>
                         </ul>

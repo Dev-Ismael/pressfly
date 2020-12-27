@@ -82,12 +82,13 @@ Route::name('')->group(function () {
 Route::name('')->group(function () {
 
     ## Custom Routes
-    // Route::get('/' , function(){ return view("custom_blades/index"); });
-    // Route::get('/our_privacy' , function(){ return view("custom_blades/privacy"); });
-    // Route::get('/our_terms' , function(){ return view("custom_blades/terms"); });
-    // Route::get('/payout_rates' , function(){ return view("custom_blades/payout_rates"); });
+    Route::get('/' , function(){ return view("custom_blades/index"); });
+    Route::get('/our_privacy' , function(){ return view("custom_blades/privacy"); });
+    Route::get('/our_terms' , function(){ return view("custom_blades/terms"); });
+    Route::get('/payout_rates' , function(){ return view("custom_blades/payout_rates"); });
+    Route::get('/page/{slug}', 'CustomController@payout_rates')->name('page.show');
 
-    Route::get('/', 'HomeController@index')->name('homepage');
+    // Route::get('/', 'HomeController@index')->name('homepage');
 
     Route::post('/visitor-check', 'VisitorCheckController@index')->name('visitor-check');
 
@@ -111,7 +112,7 @@ Route::name('')->group(function () {
         ->where(['slug' => '(.+)', 'tag' => '[0-9]+'])
         ->name('tag.feed');
 
-    Route::get('/page/{slug}', 'PageController@show')->name('page.show');
+    // Route::get('/page/{slug}', 'PageController@show')->name('page.show');
 
     Route::post('/comment/store', 'CommentController@store')->name('comment.add');
     Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');

@@ -3,6 +3,32 @@
 @section('content')
 
 
+
+
+
+
+
+
+        
+    <div class="hero-wrap js-fullheight">
+        <div class="overlay"></div>
+        <div class="container-fluid px-0">
+            <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-end">
+                <img class="one-third js-fullheight align-self-end order-md-last img-fluid" src="{{ asset("assets/custom_assets/images/undraw_pair_programming_njlp.svg")}}"  alt="">
+            <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
+                <div class="text mt-5">
+                    <h2 class="text-bold"><span> Start your career with us </span></h2>
+                    <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
+                    <p><a href="login" class="btn btn-primary px-4 py-3">Get in touch</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+     
+
     <section class="ftco-section services-section bg-light" id="features">
         <div class="container">
             <div class="row justify-content-center">
@@ -349,7 +375,7 @@
         </div>
     </section>
 
-
+    {{-- 
     <section class="ftco-section ftco-partner mb-5 payment-methods bg-light">
         <div class="container">
             <div class="row justify-content-center ">
@@ -379,6 +405,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
+    --}}
 
 @endsection

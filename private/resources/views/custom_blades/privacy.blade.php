@@ -2,9 +2,11 @@
 
 @section('content')
 
-      <section class="ftco-section">
+      <section class="ftco-section" style="margin-top: 100px">
             <div class="container">
                   <h2>Privacy policy</h2>
+                  <hr style="border-top: 3px solid rgb(20 8 80) ">
+                  <br>
                   <div class="row justify-content-center">
                         <div class="col-md-12 text-left heading-section ftco-animate" >
                               
