@@ -52,7 +52,7 @@
                               
                               
                               
-                              <p>     <strong>“tasked.info”</strong>, <strong>“tasked”</strong>, <strong>“we”</strong>,  “<strong>our”</strong> , <strong>“company”</strong> or <strong>“the company”</strong> or <strong>“us”</strong> means tasked.info (MB delsos centras).     </p>
+                              <p>     <strong>“writte.me”</strong>, <strong>“tasked”</strong>, <strong>“we”</strong>,  “<strong>our”</strong> , <strong>“company”</strong> or <strong>“the company”</strong> or <strong>“us”</strong> means writte.me (MB delsos centras).     </p>
                               
                               
                               
@@ -130,7 +130,7 @@
                               
                               
                               
-                              <p>     <strong>“Website”</strong> means the Websites operated by tasked and available at: tasked.info and any of its regional or other domains or properties, and any related  tasked.info service, tool or application, specifically including mobile  web, any iOS App and any Android App, or API or other access mechanism.     </p>
+                              <p>     <strong>“Website”</strong> means the Websites operated by tasked and available at: writte.me and any of its regional or other domains or properties, and any related  writte.me service, tool or application, specifically including mobile  web, any iOS App and any Android App, or API or other access mechanism.     </p>
                               
                               
                               
@@ -140,7 +140,7 @@
                               
                               
                               
-                              <p>     By accessing the Website, you agree to the following terms with tasked.info.     </p>
+                              <p>     By accessing the Website, you agree to the following terms with writte.me.     </p>
                               
                               
                               
@@ -186,7 +186,7 @@
                               
                               
                               
-                              <p>     You must read and accept all of the terms in, and linked to, this User Agreement, tasked.info Privacy Policy  and all Website policies. By accepting this User Agreement as you  access our Website, you agree that this User Agreement will apply  whenever you use the Website, or when you use the tools we make  available to interact with the Website. Some Websites may have  additional or other terms that we provide to you when you use those  services.     </p>
+                              <p>     You must read and accept all of the terms in, and linked to, this User Agreement, writte.me Privacy Policy  and all Website policies. By accepting this User Agreement as you  access our Website, you agree that this User Agreement will apply  whenever you use the Website, or when you use the tools we make  available to interact with the Website. Some Websites may have  additional or other terms that we provide to you when you use those  services.     </p>
                               
                               
                               
@@ -255,7 +255,7 @@
                               
                               
                               
-                              <h2>     4. Using tasked.info     </h2>
+                              <h2>     4. Using writte.me     </h2>
                               
                               
                               
@@ -265,7 +265,7 @@
                               
                               
                               
-                              <ol><li>post content or items in inappropriate categories or areas on our Websites and services;     </li><li>infringe any laws, third party rights or our policies;     </li><li>fail to deliver payment for services delivered to you;     </li><li>fail to deliver Seller Services purchased from you;     </li><li>circumvent or manipulate our fee structure, the billing process, or fees owed to tasked.info;     </li><li>post false, inaccurate, misleading, deceptive, defamatory or offensive content (including personal information);     </li><li>take any action that may undermine the feedback or  reputation systems (such as displaying, importing or exporting feedback  information or using it for purposes unrelated to the Website);     </li><li>transfer your tasked account (including feedback) and Username to another party without our consent;     </li><li>distribute or post spam, unsolicited, or bulk electronic communications, chain letters, or pyramid schemes;     </li><li>distribute viruses or any other technologies that may harm  tasked, the Website, or the interests or property of tasked  users (including their Intellectual Property Rights, privacy and  publicity rights) or is unlawful, threatening, abusive, defamatory,  invasive of privacy, vulgar, obscene, profane or which may harass or  cause distress or inconvenience to, or incite hatred of, any person;     </li><li>download and aggregate listings from our website for  display with listings from other websites without our express written  permission, “frame”, “mirror” or otherwise incorporate any part of the  Website into any other website without our prior written authorisation;     </li><li>attempt to modify, translate, adapt, edit, decompile,  disassemble, or reverse engineer any software programs used by us in  connection with the Website;     </li><li>copy, modify or distribute rights or content from the Website or tasked’s copyrights and trademarks; or     </li><li>harvest or otherwise collect information about Users, including email addresses, without their consent.    </li></ol>
+                              <ol><li>post content or items in inappropriate categories or areas on our Websites and services;     </li><li>infringe any laws, third party rights or our policies;     </li><li>fail to deliver payment for services delivered to you;     </li><li>fail to deliver Seller Services purchased from you;     </li><li>circumvent or manipulate our fee structure, the billing process, or fees owed to writte.me;     </li><li>post false, inaccurate, misleading, deceptive, defamatory or offensive content (including personal information);     </li><li>take any action that may undermine the feedback or  reputation systems (such as displaying, importing or exporting feedback  information or using it for purposes unrelated to the Website);     </li><li>transfer your tasked account (including feedback) and Username to another party without our consent;     </li><li>distribute or post spam, unsolicited, or bulk electronic communications, chain letters, or pyramid schemes;     </li><li>distribute viruses or any other technologies that may harm  tasked, the Website, or the interests or property of tasked  users (including their Intellectual Property Rights, privacy and  publicity rights) or is unlawful, threatening, abusive, defamatory,  invasive of privacy, vulgar, obscene, profane or which may harass or  cause distress or inconvenience to, or incite hatred of, any person;     </li><li>download and aggregate listings from our website for  display with listings from other websites without our express written  permission, “frame”, “mirror” or otherwise incorporate any part of the  Website into any other website without our prior written authorisation;     </li><li>attempt to modify, translate, adapt, edit, decompile,  disassemble, or reverse engineer any software programs used by us in  connection with the Website;     </li><li>copy, modify or distribute rights or content from the Website or tasked’s copyrights and trademarks; or     </li><li>harvest or otherwise collect information about Users, including email addresses, without their consent.    </li></ol>
                               
                               
                               
@@ -523,7 +523,7 @@
                               
                               
                               
-                              <p>tasked.info may use information such as your name, location,  display or username, and or your image, in relation to the provision  messaging services on the Website or in the mobile apps.</p>
+                              <p>writte.me may use information such as your name, location,  display or username, and or your image, in relation to the provision  messaging services on the Website or in the mobile apps.</p>
                               
                               
                               
@@ -691,7 +691,7 @@
                               
                               
                               
-                              <ol><li>we are not a bank or other licensed financial institution and do not provide banking services or any financial services to you;</li><li>the funds shown in your Account (which may include Milestone  Payments subject to Section 25, and/or any prepayment of fees and  charges which you owe to us) represents our unsecured obligations to you  with respect to your rights to direct us to make payment in relation to  the purchase and sale of Seller Services through the Website and  provision of the tasked.info Services;</li><li>if you were a User acquired in an acquisition and your  account was migrated to the Website, we are responsible for your  positive funds only to the extent of the legal documentation between us  and any acquired marketplace, along with this agreement, and you  acknowledge specifically that the onus is on you to confirm the validity  of your fund, and that any understatement or misstatement in relation  to this is not a claim against us, and belongs with the counterparty of  any prior user agreement to which you agreed;</li><li>to the extent that we are required to release funds from  your Account to you, you will become our unsecured creditor until such  funds are paid to you;</li><li>we are not acting as a trustee or fiduciary with respect to such funds or payments;</li><li>the amount of funds showing in your Account is not insured and is not a guaranteed deposit;</li><li>funds may only loaded into your Account, or released from  your Account, by us and you must only use the mechanisms available on  the Website to pay for, or receive funds in respect of Seller Services;</li><li>any refunds required to be processed in your favour will be  returned only to the source of the original deposit, and cannot be  redirected to any other payment source;</li><li>we will hold funds in respect of the amount of your Account  (including Milestone Payments, subject to Section 25) in an account held  by us with a financial institution (or in any manner that we decide in  our sole discretion from time to time) and such funds are not segregated  into a separate account; and</li><li>we may commingle your funds with funds of other Users and  our own funds and such commingled funds could be used to pay other Users  or for our general corporate purposes or otherwise, however, we will  remain obliged to release or refund funds at your direction in  accordance with this User Agreement.</li></ol>
+                              <ol><li>we are not a bank or other licensed financial institution and do not provide banking services or any financial services to you;</li><li>the funds shown in your Account (which may include Milestone  Payments subject to Section 25, and/or any prepayment of fees and  charges which you owe to us) represents our unsecured obligations to you  with respect to your rights to direct us to make payment in relation to  the purchase and sale of Seller Services through the Website and  provision of the writte.me Services;</li><li>if you were a User acquired in an acquisition and your  account was migrated to the Website, we are responsible for your  positive funds only to the extent of the legal documentation between us  and any acquired marketplace, along with this agreement, and you  acknowledge specifically that the onus is on you to confirm the validity  of your fund, and that any understatement or misstatement in relation  to this is not a claim against us, and belongs with the counterparty of  any prior user agreement to which you agreed;</li><li>to the extent that we are required to release funds from  your Account to you, you will become our unsecured creditor until such  funds are paid to you;</li><li>we are not acting as a trustee or fiduciary with respect to such funds or payments;</li><li>the amount of funds showing in your Account is not insured and is not a guaranteed deposit;</li><li>funds may only loaded into your Account, or released from  your Account, by us and you must only use the mechanisms available on  the Website to pay for, or receive funds in respect of Seller Services;</li><li>any refunds required to be processed in your favour will be  returned only to the source of the original deposit, and cannot be  redirected to any other payment source;</li><li>we will hold funds in respect of the amount of your Account  (including Milestone Payments, subject to Section 25) in an account held  by us with a financial institution (or in any manner that we decide in  our sole discretion from time to time) and such funds are not segregated  into a separate account; and</li><li>we may commingle your funds with funds of other Users and  our own funds and such commingled funds could be used to pay other Users  or for our general corporate purposes or otherwise, however, we will  remain obliged to release or refund funds at your direction in  accordance with this User Agreement.</li></ol>
                               
                               
                               
@@ -782,7 +782,7 @@
                               
                               
                               
-                              <p>     You can request a refund by using our customer support website or emailing us at support@tasked.info.  Once you have made a Milestone Payment subject to Section 25, you  expressly agree to use the dispute resolution process in this agreement,  expressly agree to be bound by its ruling and expressly agree not to  initiate any chargeback request with your card issuer.     </p>
+                              <p>     You can request a refund by using our customer support website or emailing us at support@writte.me.  Once you have made a Milestone Payment subject to Section 25, you  expressly agree to use the dispute resolution process in this agreement,  expressly agree to be bound by its ruling and expressly agree not to  initiate any chargeback request with your card issuer.     </p>
                               
                               
                               
@@ -983,7 +983,7 @@
                               
                               
                               
-                              <p>     tasked.info offers Milestone Dispute Resolution Services to Users who  have elected to use the Milestone Payment feature. You agree and  acknowledge that: (i) tasked is not providing legal services; (ii)  tasked will not advise you regarding any legal matters; and (iii) if  you desire to have legal counsel, you will seek an independent legal  counsel from those licensed to practice law in your jurisdiction. You  will not rely on tasked for any such counsel.     </p>
+                              <p>     writte.me offers Milestone Dispute Resolution Services to Users who  have elected to use the Milestone Payment feature. You agree and  acknowledge that: (i) tasked is not providing legal services; (ii)  tasked will not advise you regarding any legal matters; and (iii) if  you desire to have legal counsel, you will seek an independent legal  counsel from those licensed to practice law in your jurisdiction. You  will not rely on tasked for any such counsel.     </p>
                               
                               
                               
@@ -995,7 +995,7 @@
                               
                               
                               
-                              <p>     tasked will respond to disputes initiated by a Seller or a Buyer  in accordance with the Milestone Dispute Resolution Services as set out  in this clause and the Milestone Disputes Policy  and in relation to disputes that arise in relation to the provision of  the venue, and the hosting of the Website by tasked.info as set out in  the clause entitled Disputes with Us, along with the approach to  disclosing information in relation to chargebacks set out in clauses 19  and 21 of this agreement.     </p>
+                              <p>     tasked will respond to disputes initiated by a Seller or a Buyer  in accordance with the Milestone Dispute Resolution Services as set out  in this clause and the Milestone Disputes Policy  and in relation to disputes that arise in relation to the provision of  the venue, and the hosting of the Website by writte.me as set out in  the clause entitled Disputes with Us, along with the approach to  disclosing information in relation to chargebacks set out in clauses 19  and 21 of this agreement.     </p>
                               
                               
                               
@@ -1050,7 +1050,7 @@
                               
                               
                               
-                              <p>     If a dispute arises between you and  tasked , our goal is to  address your concerns immediately and, if we are unable to do so to your  satisfaction, to provide you with a means of resolving the dispute  quickly. We strongly encourage you to first contact us directly to seek a  resolution by using our customer support website or emailing us at support@tasked.info.     </p>
+                              <p>     If a dispute arises between you and  tasked , our goal is to  address your concerns immediately and, if we are unable to do so to your  satisfaction, to provide you with a means of resolving the dispute  quickly. We strongly encourage you to first contact us directly to seek a  resolution by using our customer support website or emailing us at support@writte.me.     </p>
                               
                               
                               
@@ -1453,7 +1453,7 @@
                               
                               
                               
-                              <p>     tasked.info located at Vilnius, Lithuania.     </p>
+                              <p>     writte.me located at Vilnius, Lithuania.     </p>
                               
                               
                               
@@ -1473,7 +1473,7 @@
                               
                               
                               
-                              <ol><li>use of our services for any illegitimate or non bona fide purpose</li><li>creating problems with other users or potential legal liabilities</li><li>infringing the intellectual property rights of third parties</li><li>acting inconsistently with the letter or spirit of any of our policies</li><li>abuse of any staff members including inappropriate or unreasonable communications</li><li>abuse or poor performance in the Preferred tasked Program</li><li>any attempt to use tasked.info platform or services for any objectionable purpose</li></ol>
+                              <ol><li>use of our services for any illegitimate or non bona fide purpose</li><li>creating problems with other users or potential legal liabilities</li><li>infringing the intellectual property rights of third parties</li><li>acting inconsistently with the letter or spirit of any of our policies</li><li>abuse of any staff members including inappropriate or unreasonable communications</li><li>abuse or poor performance in the Preferred tasked Program</li><li>any attempt to use writte.me platform or services for any objectionable purpose</li></ol>
                               
                               
                               
@@ -1483,7 +1483,7 @@
                               
                               
                               
-                              <p>     If you have any questions about this User Agreement or if you wish  to report breaches of this User Agreement, please contact us by using  our customer support website or emailing us at support@tasked.info.     </p>
+                              <p>     If you have any questions about this User Agreement or if you wish  to report breaches of this User Agreement, please contact us by using  our customer support website or emailing us at support@writte.me.     </p>
                         </div>
                   </div>
             </div>

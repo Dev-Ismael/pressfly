@@ -11,7 +11,7 @@
                         <div class="col-md-12 text-left heading-section ftco-animate" >
                               
                                     
-                                    <p> ‘Personal information’ means information or an opinion about an  identified individual, or an individual who is reasonably identifiable.   tasked’s Privacy Policy applies to personal information collected  and/or held by tasked.info. </p>
+                                    <p> ‘Personal information’ means information or an opinion about an  identified individual, or an individual who is reasonably identifiable.   writte.me Privacy Policy applies to personal information collected  and/or held by writte.me. </p>
                                     
                                     <p>
                                     This Privacy Policy also explains how we process ‘personal data’ about 
@@ -270,7 +270,7 @@
                                     
                                     
                                     
-                                    <p> Through the tasked API it is possible for users to grant third party  applications access to their tasked account. Depending on the  permissions that are granted, these applications may be able to access  some personal information or do actions on the users’ behalf. These  third party applications are not controlled by us and will be governed  by their own privacy policy. Users are able to remove third party  applications from access their data through their settings. </p>
+                                    <p> Through the writte.me API it is possible for users to grant third party  applications access to their writte.me account. Depending on the  permissions that are granted, these applications may be able to access  some personal information or do actions on the users’ behalf. These  third party applications are not controlled by us and will be governed  by their own privacy policy. Users are able to remove third party  applications from access their data through their settings. </p>
                                     
                                     
                                     
@@ -296,7 +296,7 @@
                                     
                                     
                                     
-                                    <p> You have the right to request access to the personal information  tasked holds about you.  Unless an exception applies, we must allow  you to see the personal information we hold about you, within a  reasonable time period, and without unreasonable expense for no charge.  Most personal information can be accessed by logging into your account.  If you wish to access information that is not accessible through the  platform, or wish to download all personal information we hold on you in  a portable data format, please contact our Privacy Officer. </p>
+                                    <p> You have the right to request access to the personal information  writte.me holds about you.  Unless an exception applies, we must allow  you to see the personal information we hold about you, within a  reasonable time period, and without unreasonable expense for no charge.  Most personal information can be accessed by logging into your account.  If you wish to access information that is not accessible through the  platform, or wish to download all personal information we hold on you in  a portable data format, please contact our Privacy Officer. </p>
                                     
                                     
                                     
@@ -313,7 +313,7 @@
                                     
                                     
                                     
-                                    <p> You have a number of other rights in relation to the personal data  tasked holds about you, however, there may be restrictions on how  you may exercise the rights. This is largely due to the nature of the  products and services we provide. Much of the data we collect is in  order to facilitate contracts between users, facilitate payments, and  provide protection for the legitimate users of our marketplace – these  data uses are protected against the below rights. </p>
+                                    <p> You have a number of other rights in relation to the personal data  writte.me holds about you, however, there may be restrictions on how  you may exercise the rights. This is largely due to the nature of the  products and services we provide. Much of the data we collect is in  order to facilitate contracts between users, facilitate payments, and  provide protection for the legitimate users of our marketplace – these  data uses are protected against the below rights. </p>
                                     
                                     
                                     
@@ -383,7 +383,7 @@
                                     
                                     
                                     
-                                    <p> <strong>By Email:</strong> <br>support@tasked.info </p>
+                                    <p> <strong>By Email:</strong> <br>support@writte.me </p>
                                     
                                     
                                     

@@ -49,9 +49,6 @@
       .table tbody tr td:nth-child(odd) {
             background: #fff !important;
       }
-      /* .table tbody tr td:nth-child(odd) {
-            background: #121212 !important;
-      } */
 </style>
 
 @extends('custom_blades.layout')
