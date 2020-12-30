@@ -160,7 +160,7 @@
                     <p>
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script>
-                         All rights reserved | This Site is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a>
+                        All rights reserved | This Site is made with <i class="icon-heart" style="color: #f00;"></i> by <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a>
                         
                     </p>
                 </div>

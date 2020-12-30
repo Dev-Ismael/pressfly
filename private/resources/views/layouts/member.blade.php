@@ -127,8 +127,8 @@
         <div class="row">
             <div class="col text-left">
                 <strong style="color: #fff; font-weight:400">
-                    All Right Reversed &copy; {{ now()->format("Y") }} - Powerd By 
-                    <i class="fas fa-heart" style="color: #ff0000;"></i> 
+                    All Right Reversed &copy; {{ now()->format("Y") }} | This Site is made with 
+                    <i class="fas fa-heart" style="color: #f00;"></i> 
                     <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a> .
                 </strong>
             </div>
