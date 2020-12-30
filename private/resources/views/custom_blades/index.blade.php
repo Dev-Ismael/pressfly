@@ -323,49 +323,90 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
+                                    <td>News</td>
+                                    <td> <a href="news.topiclix.com"> news.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
+                                    <td>Vets</td>
+                                    <td> <a href="vets.topiclix.com"> vets.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
+                                    <td>Sports</td>
+                                    <td> <a href="sports.topiclix.com"> sports.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Bitcoin & Earn From Internet</td>
+                                    <td> <a href="trading.topiclix.com"> trading.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Foods & recipes</td>
+                                    <td> <a href="recipes.topiclix.com"> recipes.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>LifeStyle & Travel & architecture</td>
+                                    <td> <a href="lifstyle.topiclix.com">lifstyle.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Fashion & beauty & spa</td>
+                                    <td> <a href="fashion.topiclix.com"> fashion.topiclix.com </a> </td>
                                 </tr>
                             </tbody>
                         </table>
                         
                         <h4 class="ftco-animate"> <i class="fas fa-language" style="color: #140850" ></i>Arabic Content</h4>
-                        <table class="table ftco-animate">
+                        <table class="table ftco-animate arabia">
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col"> <i class="far fa-keyboard"></i> Content</th>
-                                    <th scope="col"> <i class="fas fa-globe-americas"></i> WebSite</th>
+                                    <th scope="col" class="arabic-text"> <i class="far fa-keyboard"></i> المحتوي </th>
+                                    <th scope="col" class="arabic-text"> <i class="fas fa-globe-americas"></i> الموقع</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
+                                    <td class="arabic-text">الاخبار</td>
+                                    <td> <a href="news.topiclix.com"> news.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
+                                    <td class="arabic-text">الحيوانات الاليفة</td>
+                                    <td> <a href="vets.topiclix.com"> vets.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
+                                    <td class="arabic-text">الرياضة</td>
+                                    <td> <a href="sports.arabia.topiclix.com"> sports.arabia.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td class="arabic-text">التداول و الربح من الانترنت </td>
+                                    <td> <a href="trading.arabia.topiclix.com"> trading.arabia.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td class="arabic-text">الاكلات و اشهر الوصفات </td>
+                                    <td> <a href="recipes.arabia.topiclix.com"> recipes.arabia.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td class="arabic-text">السياحة و السفر </td>
+                                    <td> <a href="lifstyle.arabia.topiclix.com">lifstyle.arabia.topiclix.com </a> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td class="arabic-text">الموضة و الجمال</td>
+                                    <td> <a href="fashion.arabia.topiclix.com"> fashion.arabia.topiclix.com </a> </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <br>
                         <br>
                         <br>
 

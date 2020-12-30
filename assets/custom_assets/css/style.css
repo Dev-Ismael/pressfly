@@ -10193,6 +10193,12 @@ body::-webkit-scrollbar-thumb{
 #our_websites i{
   margin-right: 10px;
 }
+#our_websites table a{
+  text-decoration: underline !important;
+}
+#our_websites table.arabia .arabic-text{
+  font-family: 'Cairo', sans-serif;
+}
 
 /*======== Footer ========*/
 .ftco-footer{

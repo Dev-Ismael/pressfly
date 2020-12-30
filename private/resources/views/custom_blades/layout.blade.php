@@ -35,8 +35,12 @@
         <!----- Font Awesome ------>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-
+        <!--- Google Font --->
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+        <!--- Google Arabic Font --->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        
 
         <link rel="stylesheet" href="{{ asset("assets/custom_assets/css/open-iconic-bootstrap.min.css") }} ">
         <link rel="stylesheet" href="{{ asset("assets/custom_assets/css/animate.css") }} ">
