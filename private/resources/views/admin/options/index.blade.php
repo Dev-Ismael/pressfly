@@ -20,8 +20,8 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item"><a class="nav-link" href="#general" aria-controls="general" role="tab"
                                             data-toggle="tab"><?= __('General') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#language" aria-controls="language" role="tab"
-                                            data-toggle="tab"><?= __('Language') ?></a></li>
+                    {{-- <li class="nav-item"><a class="nav-link" href="#language" aria-controls="language" role="tab"
+                                            data-toggle="tab">{{ __('Language') }}</a></li> --}}
                     <li class="nav-item"><a class="nav-link" href="#earnings" aria-controls="earnings" role="tab"
                                             data-toggle="tab"><?= __('Earnings') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#protection" aria-controls="protection" role="tab"
@@ -39,8 +39,8 @@
                     <li class="nav-item"><a class="nav-link" href="#social_login" aria-controls="social_login"
                                             role="tab"
                                             data-toggle="tab"><?= __('Social Login') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cron" aria-controls="cron" role="tab"
-                                            data-toggle="tab"><?= __('Cron') ?></a></li>
+                    {{-- <li class="nav-item"><a class="nav-link" href="#cron" aria-controls="cron" role="tab"
+                                            data-toggle="tab">{{ __('Cron') }}</a></li> --}}
                 </ul>
             </div>
             <div class="card-body">

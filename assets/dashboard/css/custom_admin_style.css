@@ -19,6 +19,12 @@ body::-webkit-scrollbar-thumb{
 [class*=sidebar-dark-] {
     background-color: #140850;
 }
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #2a1496;
+    color: #fff;
+    border-radius: 20px;
+}
 /*==== card-primary =====*/
 .card-primary.card-outline {
     border-top: 3px solid #140850;

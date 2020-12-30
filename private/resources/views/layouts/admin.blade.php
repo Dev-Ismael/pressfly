@@ -63,9 +63,18 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{ url('/') }}" target="_blank" class="brand-link text-center">
-            <span class="brand-text font-weight-light">{{ get_option('site_name') }}</span>
-        </a>
+        
+        <div class="text-center text-white mt-2">
+            {{-- Hello --}}
+            <a href="{{ url('/') }}" target="_blank" class="brand-link text-center">
+                @if(get_style('logo_image'))
+                    <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="80" style="border-radius: 10px">
+                @else
+                    <span class="brand-text font-weight-light">{{ get_option('site_name') }}</span>
+                @endif
+            </a>
+        </div>
+        
 
         <!-- Sidebar -->
         <div class="sidebar">
@@ -178,29 +187,34 @@
                         </ul>
                     </li>
 
+                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.index') }}">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>{{  __('Settings') }}</p></a></li>
+
+                    {{--   
                     <li class="nav-item has-treeview">
                         <a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon fas fa-cogs"></i>
                             <p>
-                                <?= __('Settings') ?>
+                                {{ __('Settings') }} 
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.index') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Settings') ?></p></a></li>
+                                    <p>{{ __('Settings') }} </p></a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.style') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Styling') ?></p></a></li>
+                                    <p>{{ __('Styling') }} </p></a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('admin.language.index') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Language Manager') ?></p></a></li>
-                            {{-- <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.system') }}"
+                                    <p>{{ __('Language Manager') }} </p></a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.system') }}"
                                                     target="_blank">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p>{{  __('System Info') }} </p></a></li> --}}
+                                    <p>{{  __('System Info') }} </p></a></li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </nav>

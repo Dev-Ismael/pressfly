@@ -112,7 +112,7 @@
                     <h2 class="ftco-heading-2">
                         <a href="{{ url('/') }}" class="navbar-brand">
                             @if(get_style('logo_image'))
-                                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="80">
+                                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="80" style="border-radius: 10px">
                             @else
                                 {{ get_option('site_name') }}
                             @endif
