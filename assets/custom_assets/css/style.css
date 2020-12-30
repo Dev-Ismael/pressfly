@@ -10119,7 +10119,23 @@ body::-webkit-scrollbar-thumb{
   background-color: #fff;
   color: #140850;
 }
-/*==== features ====*/
+@media (max-width: 991.98px){
+  .ftco-navbar-light {
+      position: absolute;
+      background: #fff !important;
+      box-shadow: 0px 0px 26px 0px #b3b3b3;
+  }
+  .ftco-navbar-light .navbar-toggler{
+    color: #000 !important;
+  }
+}
+@media (min-width: 991.98px) and (max-width: 1200px){
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link{
+    padding-right: 10px !important;
+    padding-left: 5px !important;
+  }
+}
+/*=========== features ===========*/
 #features i{
   font-size: 44px;
   color: #fff;
