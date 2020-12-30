@@ -10196,6 +10196,10 @@ body::-webkit-scrollbar-thumb{
 #our_websites table a{
   text-decoration: underline !important;
 }
+#our_websites tbody i{
+  color: #140850;
+  font-size: 20px;
+}
 #our_websites table.arabia .arabic-text{
   font-family: 'Cairo', sans-serif;
 }

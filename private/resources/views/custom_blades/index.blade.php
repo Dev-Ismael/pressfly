@@ -19,7 +19,7 @@
                 <div class="text mt-5">
                     <h2 class="text-bold"><span> Start your career with us </span></h2>
                     <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
-                    <p><a href="login" class="btn btn-primary px-4 py-3">Get in touch</a></p>
+                    <p><a href="{{ url('/member') }}" class="btn btn-primary px-4 py-3">Get in touch</a></p>
                 </div>
             </div>
             </div>
@@ -139,7 +139,7 @@
                                 <div class="one-half ml-md-5 align-self-center">
                                     <h2 class="mb-4">Online Work</h2>
                                     <p>How would you like to write conveniently at home, work at flexible hours, set your own schedule, spend more time with your family and friends, and get a nice big fat paycheck at the end of the month?</p>
-                                    <p><a href="login" class="btn btn-primary py-3">Goin Now !</a></p>
+                                    <p><a href="{{ url('/member') }}" class="btn btn-primary py-3">Join Now !</a></p>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 <div class="one-half order-first mr-md-5 align-self-center">
                                     <h2 class="mb-4">Writing Online Job</h2>
                                     <p>Writing Jobs by tasked.info and its partners bring you fresh and creative opportunities to get writing jobs online and get paid to boot!!!</p>
-                                    <p><a href="login" class="btn btn-primary py-3">Goin Now !</a></p>
+                                    <p><a href="{{ url('/member') }}" class="btn btn-primary py-3">Join Now !</a></p>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                                 <div class="one-half ml-md-5 align-self-center">
                                     <h2 class="mb-4">Perfect opportunity</h2>
                                     <p>This is a perfect opportunity for freelance writers and just about anybody who can write that just don’t have time for a commute to a dead end, part-time job. Or, for anyone for wants to sit in their pajamas and work at home!</p>
-                                    <p><a href="login" class="btn btn-primary py-3">Goin Now !</a></p>
+                                    <p><a href="{{ url('/member') }}" class="btn btn-primary py-3">Join Now !</a></p>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                             <div class="block-18 text-center">
                                 <div class="text">
                                     <strong class="number" data-number="42000">0</strong>
-                                    <span>Total Article</span>
+                                    <span> <i class="far fa-newspaper"></i> Total Article</span>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                             <div class="block-18 text-center">
                                 <div class="text">
                                     <strong class="number" data-number="3200">0</strong>
-                                    <span>Users</span>
+                                    <span> <i class="fas fa-users"></i> Users</span>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                             <div class="block-18 text-center">
                                 <div class="text">
                                     <strong class="number" data-number="98000">0</strong>
-                                    <span>Daily Views</span>
+                                    <span> <i class="far fa-eye"></i> Daily Views</span>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                             <div class="block-18 text-center">
                                 <div class="text">
                                     <strong style="color:#fff">$</strong> <strong class="number" data-number="580">0</strong>
-                                    <span>Daily withdraw</span>
+                                    <span> <i class="fas fa-dollar-sign"></i> Daily withdraw</span>
                                 </div>
                             </div>
                         </div>
@@ -323,38 +323,38 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>News</td>
-                                    <td> <a href="news.topiclix.com"> news.topiclix.com </a> </td>
+                                    <td> <i class="far fa-newspaper"></i> News</td>
+                                    <td> <a href="https://news.topiclix.com" target="_blank"> news.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Vets</td>
-                                    <td> <a href="vets.topiclix.com"> vets.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-dog"></i> Vets</td>
+                                    <td> <a href="https://vets.topiclix.com" target="_blank"> vets.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Sports</td>
-                                    <td> <a href="sports.topiclix.com"> sports.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-futbol"></i> Sports</td>
+                                    <td> <a href="https://sports.topiclix.com" target="_blank"> sports.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
-                                    <td>Bitcoin & Earn From Internet</td>
-                                    <td> <a href="trading.topiclix.com"> trading.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-dollar-sign"></i> Bitcoin & Earn From Internet</td>
+                                    <td> <a href="https://trading.topiclix.com" target="_blank"> trading.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
-                                    <td>Foods & recipes</td>
-                                    <td> <a href="recipes.topiclix.com"> recipes.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-utensils"></i> Foods & recipes</td>
+                                    <td> <a href="https://recipes.topiclix.com" target="_blank"> recipes.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">6</th>
-                                    <td>LifeStyle & Travel & architecture</td>
-                                    <td> <a href="lifstyle.topiclix.com">lifstyle.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-plane"></i> LifeStyle & Travel & architecture</td>
+                                    <td> <a href="https://lifstyle.topiclix.com" target="_blank">lifstyle.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">7</th>
-                                    <td>Fashion & beauty & spa</td>
-                                    <td> <a href="fashion.topiclix.com"> fashion.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-tshirt"></i> Fashion & beauty & spa</td>
+                                    <td> <a href="https://fashion.topiclix.com" target="_blank"> fashion.topiclix.com </a> </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -371,38 +371,38 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td class="arabic-text">الاخبار</td>
-                                    <td> <a href="news.topiclix.com"> news.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">الاخبار  <i class="far fa-newspaper"></i>  </td>
+                                    <td> <a href="https://news.topiclix.com" target="_blank"> news.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td class="arabic-text">الحيوانات الاليفة</td>
-                                    <td> <a href="vets.topiclix.com"> vets.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">الحيوانات الاليفة  <i class="fas fa-dog"></i>  </td>
+                                    <td> <a href="https://vets.topiclix.com" target="_blank"> vets.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td class="arabic-text">الرياضة</td>
-                                    <td> <a href="sports.arabia.topiclix.com"> sports.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">الرياضة  <i class="far fa-futbol"></i>  </td>
+                                    <td> <a href="https://sports.arabia.topiclix.com" target="_blank"> sports.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
-                                    <td class="arabic-text">التداول و الربح من الانترنت </td>
-                                    <td> <a href="trading.arabia.topiclix.com"> trading.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">التداول و الربح من الانترنت  <i class="fas fa-dollar-sign"></i>  </td>
+                                    <td> <a href="https://trading.arabia.topiclix.com" target="_blank"> trading.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
-                                    <td class="arabic-text">الاكلات و اشهر الوصفات </td>
-                                    <td> <a href="recipes.arabia.topiclix.com"> recipes.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">الاكلات و اشهر الوصفات  <i class="fas fa-utensils"></i>  </td>
+                                    <td> <a href="https://recipes.arabia.topiclix.com" target="_blank"> recipes.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">6</th>
-                                    <td class="arabic-text">السياحة و السفر </td>
-                                    <td> <a href="lifstyle.arabia.topiclix.com">lifstyle.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">السياحة و السفر  <i class="fas fa-plane"></i>  </td>
+                                    <td> <a href="https://lifstyle.arabia.topiclix.com" target="_blank">lifstyle.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">7</th>
-                                    <td class="arabic-text">الموضة و الجمال</td>
-                                    <td> <a href="fashion.arabia.topiclix.com"> fashion.arabia.topiclix.com </a> </td>
+                                    <td class="arabic-text">الموضة و الجمال  <i class="fas fa-tshirt"></i>  </td>
+                                    <td> <a href="https://fashion.arabia.topiclix.com" target="_blank"> fashion.arabia.topiclix.com </a> </td>
                                 </tr>
                             </tbody>
                         </table>

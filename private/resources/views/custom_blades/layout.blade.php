@@ -136,8 +136,6 @@
                             <li><a href="{{ url('/our_privacy') }}" class="py-2 d-block">Privacy</a></li>
                             <li><a href="{{ url('/our_terms') }}" class="py-2 d-block">Terms</a></li>
                             <li><a href="{{ url('/page/write-get-paid') }}" class="py-2 d-block">Payout rates</a></li>
-                            <li><a href="{{ url('/login') }}" class="py-2 d-block">Login</a></li>
-                            <li><a href="{{ url('/register') }}" class="py-2 d-block">Register</a></li>
                         </ul>
                     </div>
                 </div>
