@@ -62,11 +62,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
                 <a href="{{ url('/') }}" class="navbar-brand">
-                    @if(get_style('logo_image'))
-                        <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-                    @else
-                        {{ get_option('site_name') }}
-                    @endif
+                    <img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/134513012_693241008056560_2580027487095031121_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=V3NgruXmU0QAX_4KdXT&_nc_ht=scontent-hbe1-1.xx&oh=e6007874eb6b9de7394113e5541f54cf&oe=600FF916" alt="{{ get_option('site_name') }}" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="oi oi-menu"></span> Menu
@@ -107,11 +103,7 @@
                     <div class="ftco-footer-widget mb-4 bg-primary p-4">
                     <h2 class="ftco-heading-2">
                         <a href="{{ url('/') }}" class="navbar-brand">
-                            @if(get_style('logo_image'))
-                                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-                            @else
-                                {{ get_option('site_name') }}
-                            @endif
+                            <img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/134513012_693241008056560_2580027487095031121_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=V3NgruXmU0QAX_4KdXT&_nc_ht=scontent-hbe1-1.xx&oh=e6007874eb6b9de7394113e5541f54cf&oe=600FF916" alt="{{ get_option('site_name') }}" height="80">
                         </a>
                     </h2>
                     <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
@@ -168,7 +160,7 @@
 
         <!-- Scroll To Top-->
         <div id="scroll-to-top">
-            <i class="fas fa-arrow-circle-up" style="color: #140850"></i>
+            <i class="fas fa-arrow-circle-up" style="color: #221a4a"></i>
         </div>
 
         <!-- loader -->
