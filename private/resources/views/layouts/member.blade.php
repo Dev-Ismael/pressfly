@@ -42,7 +42,7 @@
 
     @include('_partials.header_css')
 
-    {!! get_option('frontend_head_code') !!}
+    
 
     @stack('header')
 </head>
@@ -158,7 +158,6 @@
 
 <script src="{{ asset('assets/js/app.js?v=' . APP_VERSION) }}"></script>
 
-{!! get_option('frontend_footer_code') !!}
 
 @stack('footer')
 
