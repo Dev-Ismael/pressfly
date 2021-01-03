@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="one-half order-first mr-md-5 align-self-center">
                                     <h2 class="mb-4">Writing Online Job</h2>
-                                    <p>Writing Jobs by tasked.info and its partners bring you fresh and creative opportunities to get writing jobs online and get paid to boot!!!</p>
+                                    <p>Writing Jobs by Writte.me and its partners bring you fresh and creative opportunities to get writing jobs online and get paid to boot!!!</p>
                                     <p><a href="{{ url('/member') }}" class="btn btn-primary py-3">Join Now !</a></p>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@
                         </div>
                         <div class="mt-3 media-body media-body-2">
                             <h3 class="heading">creative opportunities</h3>
-                            <p>Writing Jobs by tasked.info and its partners bring you fresh and creative opportunities to get writing jobs online </p>
+                            <p>Writing Jobs by Writte.me and its partners bring you fresh and creative opportunities to get writing jobs online </p>
                         </div>
                     </div>
                         </div>

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> Writte.Me </title>
+    <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
 
     <!-----FavIcon----->
     <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>

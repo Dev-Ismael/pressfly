@@ -8,26 +8,12 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title> Writte.Me </title>
+        <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
         <meta name="description" content="@yield('description', e(get_option('site_description')) )">
         <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
         <link rel="canonical" href="{{ url()->current() }}"/>
 
-        <link rel="alternate" type="application/rss+xml" title="{{ get_option('site_name') }} {{ __('Feed') }}"
-            href="{{ route('feed') }}"/>
-        @if(request()->route()->getName() === 'category.show')
-            <link href="{{ request()->route()->parameter('category')->feed() }}" rel="alternate" type="application/rss+xml"
-                title="{{ __(':category-name Category Feed', ['category-name' => request()->route()->parameter('category')->name]) }}"/>
-        @endif
-        @if(request()->route()->getName() === 'tag.show')
-            <link href="{{ request()->route()->parameter('tag')->feed() }}" rel="alternate" type="application/rss+xml"
-                title="{{ __(':tag-name Tag Feed', ['tag-name' => request()->route()->parameter('tag')->name]) }}"/>
-        @endif
-        @if(request()->route()->getName() === 'author.show')
-            <link href="{{ route('author.feed', ['username' => request()->route()->parameter('username')]) }}"
-                rel="alternate" type="application/rss+xml"
-                title="{{ __(':author Author Feed', ['author' => request()->route()->parameter('username')]) }}"/>
-        @endif
+       
 
         <!-----FavIcon----->
         <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>

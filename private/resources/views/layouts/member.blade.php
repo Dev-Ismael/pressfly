@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> Writte.Me </title>
+    <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
     <meta name="description" content="@yield('description', e(get_option('site_description')) )">
     <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
     <link rel="canonical" href="{{ url()->current() }}"/>
