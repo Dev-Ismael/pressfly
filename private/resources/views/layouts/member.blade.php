@@ -8,13 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
+    <title> Writte.Me </title>
     <meta name="description" content="@yield('description', e(get_option('site_description')) )">
     <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
     <link rel="canonical" href="{{ url()->current() }}"/>
 
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='icon'/>
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='shortcut icon'/>
+    <!-----FavIcon----->
+    <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>
+    <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='shortcut icon'/>
 
     @if(get_option('language_direction', 'ltr') === 'rtl')
         <link href="https://cdn.jsdelivr.net/gh/RTLCSS/bootstrap@4.2.1-rtl/dist/css/rtl/bootstrap.min.css"
@@ -57,12 +58,8 @@
     <div class="container">
         <div class="wrap-inner">
             <div class="logo">
-                <a href="{{ url('/') }}">
-                    @if(get_style('logo_image'))
-                        <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-                    @else
-                        {{ get_option('site_name') }}
-                    @endif
+                <a href="{{ url('/') }}" class="navbar-brand">
+                    <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" style="border-radius: 10px" >
                 </a>
             </div>
             <div class="top-banner">

@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
+        <title> Writte.Me </title>
         <meta name="description" content="@yield('description', e(get_option('site_description')) )">
         <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
         <link rel="canonical" href="{{ url()->current() }}"/>
@@ -29,8 +29,9 @@
                 title="{{ __(':author Author Feed', ['author' => request()->route()->parameter('username')]) }}"/>
         @endif
 
-        <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='icon'/>
-        <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='shortcut icon'/>
+        <!-----FavIcon----->
+        <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>
+        <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='shortcut icon'/>
         
         <!----- Font Awesome ------>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -66,11 +67,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
                 <a href="{{ url('/') }}" class="navbar-brand">
-                    @if(get_style('logo_image'))
-                        <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="50">
-                    @else
-                        {{ get_option('site_name') }}
-                    @endif
+                    <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" style="border-radius: 10px" >
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="oi oi-menu"></span> Menu
@@ -111,11 +108,7 @@
                     <div class="ftco-footer-widget mb-4 bg-primary p-4">
                     <h2 class="ftco-heading-2">
                         <a href="{{ url('/') }}" class="navbar-brand">
-                            @if(get_style('logo_image'))
-                                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="80" style="border-radius: 10px">
-                            @else
-                                {{ get_option('site_name') }}
-                            @endif
+                            <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" style="border-radius: 10px" >
                         </a>
                     </h2>
                     <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
@@ -170,7 +163,7 @@
 
         <!-- Scroll To Top-->
         <div id="scroll-to-top">
-            <i class="fas fa-arrow-circle-up" style="color: #221a4a"></i>
+            <i class="fas fa-arrow-circle-up" style="color: #6a6298"></i>
         </div>
 
         <!-- loader -->

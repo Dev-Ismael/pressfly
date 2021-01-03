@@ -8,10 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', e(get_option('site_name')) )</title>
+    <title> Writte.Me </title>
 
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='icon'/>
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='shortcut icon'/>
+    <!-----FavIcon----->
+    <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>
+    <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='shortcut icon'/>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
@@ -65,13 +66,8 @@
         <!-- Brand Logo -->
         
         <div class="text-center text-white mt-2">
-            {{-- Hello --}}
-            <a href="{{ url('/') }}" target="_blank" class="brand-link text-center">
-                @if(get_style('logo_image'))
-                    <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" height="80" style="border-radius: 10px">
-                @else
-                    <span class="brand-text font-weight-light">{{ get_option('site_name') }}</span>
-                @endif
+            <a href="{{ url('/') }}" class="navbar-brand">
+                <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" style="border-radius: 10px" >
             </a>
         </div>
         
