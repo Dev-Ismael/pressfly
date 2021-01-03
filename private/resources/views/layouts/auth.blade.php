@@ -8,9 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))) )</title>
-    <meta name="description" content="@yield('description') )">
-    <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
+    <title>Writte.Me</title>
+    <meta name="description" content="You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write , go ahead and start your career with us. This is a perfect opportunity for freelance writers and just about anybody who can write that just don’t have time for a commute to a dead end, part-time job. Or, for anyone for wants to sit in their pajamas and work at home! ">
+    <meta name="keywords" content="earn money , write article , earn money online , writte.me , writing management platform , freelancer writing , writing topics , writing a paragraph	 , earn money from writing articles , earn money from writing blogs , earn money from writing uk , earn money from writing work , earn money writing articles online india  , earn money writing articles online uk  ,  earn money writing book reviews  , earn money writing blog posts ,  earn money from home by writing , earn money from content writing , making money from creative writing , earn money in writing , can i make money from writing , can i make money from writing a blog">
     <link rel="canonical" href="{{ url()->current() }}"/>
 
     <!-----FavIcon----->
