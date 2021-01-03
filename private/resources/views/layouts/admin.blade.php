@@ -67,7 +67,7 @@
         
         <div class="text-center text-white mt-2">
             <a href="{{ url('/') }}" class="navbar-brand">
-                <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" style="border-radius: 10px" >
+                <img src="https://i.ibb.co/SwxWHNN/logo.png" alt="Writte.Me" height="80" >
             </a>
         </div>
         

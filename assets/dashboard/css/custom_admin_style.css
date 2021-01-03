@@ -12,6 +12,29 @@ body::-webkit-scrollbar-thumb{
     right: -10px
 }
 /*==== sidebar =====*/
+.main-sidebar a.navbar-brand img{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+.sidebar-mini.sidebar-collapse a.navbar-brand img{
+    height: 25px !important;
+    border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -ms-border-radius: 2px !important;
+    -o-border-radius: 2px !important;
+}
+.sidebar-mini.sidebar-collapse .navbar-brand{
+    margin-right: 0 !important;
+}
 [class*=sidebar-dark] .brand-link{
     border-bottom: 1px solid #e4e4e4;
     color: rgba(255,255,255,.8);
