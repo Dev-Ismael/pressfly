@@ -104,11 +104,14 @@
                 </ul>
             </div>
             <div class="top-menu">
-                {!! menu_display(get_style('top_menu'), [
-                'ul_class' => 'list-inline',
-                'li_class' => 'list-inline-item',
-                'a_class' => '',
-                ]) !!}
+                <ul class="list-inline">
+                    @if (Auth::check())
+                            <li class="list-inline-item"> <i class="far fa-user"></i> {{ ucfirst( Auth::user()->username) }} </li>
+                    @else
+                        <li class="list-inline-item"> <a href="{{ url("/login") }}"> Login </a> </li>
+                        <li class="list-inline-item"> <a href="{{ url("/register") }}"> Register </a> </li>
+                    @endif
+                </ul>
             </div>
         </div>
     </div>
