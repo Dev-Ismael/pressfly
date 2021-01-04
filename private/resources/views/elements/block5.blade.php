@@ -67,8 +67,6 @@ $categories = \App\Category::whereIn('id', array_map('trim', explode(',', $attri
                                     <small>
                                         <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
                                     </small>
-                                    -
-                                    <small><i class="far fa-user"></i> {{ $article->user->name }}</small>
                                 </div>
                                 <div class="block-item-content">
                                     {{ $article->getSummary() }}
@@ -99,8 +97,6 @@ $categories = \App\Category::whereIn('id', array_map('trim', explode(',', $attri
                                 <small>
                                     <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
                                 </small>
-                                -
-                                <small><i class="far fa-user"></i> {{ $article->user->name }}</small>
                             </div>
                             <div class="block-item-content">
                                 {{ $article->getSummary(20) }}
