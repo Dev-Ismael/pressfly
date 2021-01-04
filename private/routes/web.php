@@ -89,10 +89,54 @@ Route::name('')->group(function () {
     Route::get('/page/{slug}', 'CustomController@payout_rates')->name('page.show');
 
 
-    
+
+    // Route::get('/', 'HomeController@index')->name('homepage');
+
+
     Route::post('/visitor-check', 'VisitorCheckController@index')->name('visitor-check');
+
+    Route::get('/feed', 'HomeController@feed')->name('feed');
+
     Route::get('/ref/{username}', 'UserController@ref')->name('referral.url');
 
+    Route::post('/article/go', 'ArticleController@go')->name('article-go');
+
+    Route::get('/category/{slug}-{category}', 'CategoryController@show')
+        ->where(['slug' => '(.+)', 'category' => '[0-9]+'])
+        ->name('category.show');
+    Route::get('/category/{slug}-{category}/feed', 'CategoryController@feed')
+        ->where(['slug' => '(.+)', 'category' => '[0-9]+'])
+        ->name('category.feed');
+
+    Route::get('/tag/{slug}-{tag}', 'TagController@show')
+        ->where(['slug' => '(.+)', 'tag' => '[0-9]+'])
+        ->name('tag.show');
+    Route::get('/tag/{slug}-{tag}/feed', 'TagController@feed')
+        ->where(['slug' => '(.+)', 'tag' => '[0-9]+'])
+        ->name('tag.feed');
+
+    // Route::get('/page/{slug}', 'PageController@show')->name('page.show');
+
+    Route::post('/comment/store', 'CommentController@store')->name('comment.add');
+    Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
+
+    Route::get('/author/{username}', 'AuthorController@show')->name('author.show');
+    Route::get('/author/{username}/feed', 'AuthorController@feed')->name('author.feed');
+    Route::post('/author/{username}/follow', 'AuthorController@follow')->name('author.follow');
+    Route::post('/author/{username}/unFollow', 'AuthorController@unFollow')->name('author.unfollow');
+
+    Route::post('/newsletter/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');
+    Route::match(['get', 'post'], '/search', 'SearchController@index')->name('search');
+
+    Route::get('/contact', 'ContactController@show')->name('contact.show');
+    Route::post('/contact/process', 'ContactController@process')->name('contact.process');
+
+    Route::get('/sitemap', 'SitemapController@index')->name('sitemap');
+
+    Route::get('/{slug}-{article}', 'ArticleController@show')->where(['slug' => '(.+)', 'article' => '[0-9]+'])
+        ->name('article.show');
+
+        
 });
 
 // Admin Routes
