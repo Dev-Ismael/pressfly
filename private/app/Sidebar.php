@@ -65,13 +65,6 @@ class Sidebar extends Model
             return view('widgets.recent_tweets', ['widget' => $widget])->render();
         }
 
-        if ($widget['type'] === 'author_about') {
-            return view('widgets.author_about', ['widget' => $widget])->render();
-        }
-
-        if ($widget['type'] === 'author_popular') {
-            return view('widgets.author_popular', ['widget' => $widget])->render();
-        }
 
         if ($widget['type'] === 'follow_us') {
             return view('widgets.follow_us', ['widget' => $widget])->render();
