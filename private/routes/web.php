@@ -211,26 +211,3 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
     Route::delete('/translation/delete', 'LanguageController@translationDelete')->name('translation.delete');
 });
 
-// Member Routes
-Route::namespace('Member')->prefix('member')->name('member.')->middleware(['role:admin,member'])->group(function () {
-    Route::get('/', 'DashboardController@index')->name('dashboard');
-
-    Route::get('feed', 'UserController@feed')->name('feed');
-
-    Route::resource('articles', 'ArticleController')->except(['show']);
-
-    Route::get('withdraws', 'WithdrawController@index')->name('withdraws.index');
-    Route::post('withdraws/request', 'WithdrawController@request')->name('withdraws.request');
-
-    Route::get('referrals', 'UserController@referrals')->name('referrals');
-
-    Route::match(['get', 'post'], 'username', 'UserController@setusername')->name('set.username');
-
-    Route::match(['get', 'post'], 'settings', 'UserController@settings')->name('settings');
-
-    Route::post('email-change', 'UserController@emailChangeRequest')->name('email.change.request');
-
-    Route::get('email-change/{username}/{key}', 'UserController@emailChangeProcess')->name('email.change.process');
-
-    Route::post('password-change', 'UserController@passwordChange')->name('password.change');
-});
