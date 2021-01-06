@@ -35,18 +35,14 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('member.dashboard') }}">{{ __('Member Area') }}</a>
-            </li>
+            
             <!-- Notifications Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="fas fa-user-cog"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu dropdown-menu-right">
-                    <a href="{{ route('member.settings') }}" class="dropdown-item">
-                        <i class="far fa-user mr-2"></i> {{ __('My Settings') }}
-                    </a>
+                    
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('logout') }}" class="dropdown-item">
                         <i class="fas fa-sign-out-alt mr-2"></i> {{ __('Logout') }}
