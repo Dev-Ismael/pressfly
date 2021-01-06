@@ -70,28 +70,11 @@
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p><?= __('Dashboard') ?></p></a></li>
 
-                    <li class="nav-item has-treeview">
-                        <a class="nav-link" href="#">
-                            <i class="nav-icon far fa-file-alt"></i>
-                            <p>
-                                <?= __(' Articles') ?>
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.articles.index') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p>{{ __('List') }}</p></a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('admin.articles.indexNewPending') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p>{{ __('New Pending') }}</p></a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('admin.articles.indexUpdatePending') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Update Pending') ?></p></a></li>
-                        </ul>
-                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="{{ route('admin.articles.index') }}">
+                        <i class="nav-icon far fa-file-alt"></i>
+                        <p><?= __('Articles') ?></p></a></li>
+
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.comments.index') }}">
                             <i class="nav-icon fas fa-comments"></i>
