@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Category;
+use App\Comment;
 use App\Statistic;
+use App\User;
 
 class DashboardController extends AdminController
 {
@@ -111,6 +114,19 @@ class DashboardController extends AdminController
             ->limit(10)
             ->get();
 
+
+        // Custom SQL statments
+        $users = User::where('role' , 'member')->get();
+        $users = count($users);
+
+        $comments = Comment::get();
+        $comments = count($comments);
+
+        $categories = Category::get();
+        $categories = count($categories);
+
+
+
         return view('admin.dashboard', [
             'year_month' => $year_month,
             'CurrentMonthDays' => $CurrentMonthDays,
@@ -120,6 +136,9 @@ class DashboardController extends AdminController
             'articles' => $articles,
             'popular_articles' => $popular_articles,
             'new_articles' => $new_articles,
+            'users' => $users,
+            'comments' => $comments,
+            'categories' => $categories,
         ]);
     }
 }

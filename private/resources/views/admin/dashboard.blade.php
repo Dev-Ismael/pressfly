@@ -19,7 +19,7 @@
                 <span class="info-box-icon bg-primary elevation-1"><i class="far fa-file-alt"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">{{ __('Published Articles') }}</span>
+                    <span class="info-box-text">{{ __('Articles') }}</span>
                     <span class="info-box-number">{{ display_number($articles) }}</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -29,11 +29,11 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
-                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-money-bill-wave"></i></span>
+                <span class="info-box-icon bg-info elevation-1"> <i class="fas fa-users"></i> </span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">{{ __('Author Earnings') }}</span>
-                    <span class="info-box-number">{{ display_price_currency($author_earnings) }}</span>
+                    <span class="info-box-text">{{ __('Users') }}</span>
+                    <span class="info-box-number">{{ $users  }}</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -46,11 +46,11 @@
 
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
-                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-exchange-alt"></i></span>
+                <span class="info-box-icon bg-warning elevation-1"> <i class="fas fa-comments"></i> </span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">{{ __('Referral Earnings') }}</span>
-                    <span class="info-box-number">{{ display_price_currency($referral_earnings) }}</span>
+                    <span class="info-box-text">{{ __('Comments') }}</span>
+                    <span class="info-box-number">{{ $comments  }}</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -59,11 +59,11 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
-                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-eye"></i></span>
+                <span class="info-box-icon bg-danger elevation-1"> <i class="fas fa-align-left"></i> </span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">{{ __('Paid Views') }}</span>
-                    <span class="info-box-number">{{ display_number($total_views) }}</span>
+                    <span class="info-box-text">{{ __('Categories') }}</span>
+                    <span class="info-box-number">{{ $categories  }}</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
