@@ -77,8 +77,6 @@
                             {!! link_to_route('admin.articles.index', __('Slug'),
                                 array_merge(request()->query(), ['order' => 'slug', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
                         </th>
-                        <th>{{ __('Author') }}</th>
-                        <th>{{ __('Status') }}</th>
                         <th>{{ __('Updated') }}</th>
                         <th>
                             {!! link_to_route('admin.articles.index', __('Published'),
@@ -100,8 +98,6 @@
                                 <a href="{{ route('admin.articles.edit', [$article->id]) }}">{{ $article->title }}</a>
                             </td>
                             <td>{{ $article->slug }}</td>
-                            <td>{{ $article->user->username }}</td>
-                            <td>{{ get_article_statuses($article->status) }}</td>
                             <td>{{ display_date_timezone($article->updated_at) }}</td>
                             <td>{{ display_date_timezone($article->published_at) }}</td>
                             <td>{{ display_date_timezone($article->created_at) }}</td>
