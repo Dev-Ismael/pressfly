@@ -65,19 +65,9 @@ class UsersController extends AdminController
         ]);
     }
 
-    public function referrals()
+    public function show()
     {
-        $referrals = User::query()
-            ->whereNotNull('referred_by')
-            ->paginate(20);
-
-        foreach ($referrals as $referral) {
-            $referral->referred_by_username = User::find($referral->referred_by)->username;
-        }
-
-        return view('admin.users.referrals', [
-            'referrals' => $referrals,
-        ]);
+        return redirect('/admin');
     }
 
     /**

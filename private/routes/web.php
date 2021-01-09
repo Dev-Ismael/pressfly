@@ -172,7 +172,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
     Route::delete('/sidebars/{sidebar}/destroy', 'SidebarController@destroy')->where(['sidebar' => '[0-9]+'])
         ->name('sidebars.destroy');
 
-    Route::match(['get', 'post'], '/users/referrals', 'UsersController@referrals')->name('users.referrals');
     Route::resource('users', 'UsersController');
 
     Route::match(['get', 'post'], '/options', 'OptionController@index')->name('options.index');

@@ -126,9 +126,6 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('admin.users.create') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
                                     <p><?= __('Add') ?></p></a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.users.referrals') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Referrals') ?></p></a></li>
                         </ul>
                     </li>
 
