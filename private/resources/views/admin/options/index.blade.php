@@ -244,15 +244,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Signup Bonus') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['signup_bonus']['id']}][value]",
-                                    old("Options[{$settings['signup_bonus']['id']}][value]", $settings['signup_bonus']['value']),
-                                    ['class' => 'form-control', 'min' => 0, 'step' => 'any']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <div class="col-sm-2"><?= __('Enable Account Activation by Email') ?></div>
                             <div class="col-sm-10">
                                 {{ Form::select("Options[{$settings['account_activate_email']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
