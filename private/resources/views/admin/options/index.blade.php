@@ -156,16 +156,7 @@
                             </div>
                         </div>
 
-                        <h3>{{ __('Default Pages') }}</h3>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2">{{ __('Write and Get Paid Page') }}</div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['write_paid_page']['id']}][value]", $pages,
-                                    old("Options[{$settings['write_paid_page']['id']}][value]", $settings['write_paid_page']['value']),
-                                    ['placeholder' => '', 'class' => 'form-control']) }}
-                            </div>
-                        </div>
+                    
 
                         <div class="form-group row">
                             <div class="col-sm-2">{{ __('Privacy Page') }}</div>
