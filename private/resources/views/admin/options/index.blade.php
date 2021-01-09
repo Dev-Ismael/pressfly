@@ -154,23 +154,7 @@
 
                     
 
-                        <div class="form-group row">
-                            <div class="col-sm-2">{{ __('Privacy Page') }}</div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['privacy_page']['id']}][value]", $pages,
-                                    old("Options[{$settings['privacy_page']['id']}][value]", $settings['privacy_page']['value']),
-                                    ['placeholder' => '', 'class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2">{{ __('Terms of Use Page') }}</div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['terms_page']['id']}][value]", $pages,
-                                    old("Options[{$settings['terms_page']['id']}][value]", $settings['terms_page']['value']),
-                                    ['placeholder' => '', 'class' => 'form-control']) }}
-                            </div>
-                        </div>
+                        
 
                         <h3>{{ __('Mailchimp Newsletter') }}</h3>
 
