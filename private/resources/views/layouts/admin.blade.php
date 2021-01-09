@@ -110,10 +110,6 @@
                             <i class="nav-icon fas fa-ad"></i>
                             <p><?= __('Ads') ?></p></a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="{{ route('admin.prices') }}">
-                            <i class="nav-icon fas fa-dollar-sign"></i>
-                            <p>{{ __('Payout Rates') }}</p></a></li>
-
                     <li class="nav-item has-treeview">
                         <a class="nav-link nav-dropdown-toggle" href="#"><i
                                 class="nav-icon fas fa-hand-holding-usd"></i>

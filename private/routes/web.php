@@ -186,7 +186,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
 
     Route::match(['get', 'post'], '/options', 'OptionController@index')->name('options.index');
     Route::match(['get', 'post'], '/options/style', 'OptionController@style')->name('options.style');
-    Route::match(['get', 'post'], '/payout-rates', 'OptionController@prices')->name('prices');
     Route::get('/options/system', function () {
         return view('admin.options.system');
     })->name('options.system');

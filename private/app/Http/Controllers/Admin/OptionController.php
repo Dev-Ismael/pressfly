@@ -129,46 +129,5 @@ class OptionController extends AdminController
         return false;
     }
 
-    public function prices()
-    {
-        $prices = Option::where('name', 'payout_rates')->first();
 
-        $prices->value = unserialize($prices->value);
-
-        if (request()->isMethod('post')) {
-            $data = [];
-            foreach (request()->input('prices') as $country => $value) {
-                if (!empty($value[1])) {
-                    $data[$country] = [
-                        '1' => abs($value[1]),
-                        '2' => '',
-                        '3' => '',
-                    ];
-                } elseif (!empty($value[2]) && !empty($value[3])) {
-                    $data[$country] = [
-                        '1' => '',
-                        '2' => abs($value[2]),
-                        '3' => abs($value[3]),
-                    ];
-                } else {
-                    $data[$country] = [
-                        '1' => '',
-                        '2' => '',
-                        '3' => '',
-                    ];
-                }
-            }
-            unset($country, $value);
-
-            $prices->value = serialize($data);
-
-            $prices->update();
-
-            return redirect()->route('admin.prices');
-        }
-
-        return view('admin.options.prices', [
-            'prices' => $prices,
-        ]);
-    }
 }
