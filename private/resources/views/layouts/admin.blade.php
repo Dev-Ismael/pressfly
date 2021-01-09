@@ -110,23 +110,7 @@
                             <i class="nav-icon fas fa-ad"></i>
                             <p><?= __('Ads') ?></p></a></li>
 
-                    <li class="nav-item has-treeview">
-                        <a class="nav-link nav-dropdown-toggle" href="#"><i
-                                class="nav-icon fas fa-hand-holding-usd"></i>
-                            <p>
-                                <?= __('Withdrawals') ?>
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.withdraws.index') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p>{{ __('Requests') }}</p></a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.withdraws.methods') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Withdrawal Methods') ?></p></a></li>
-                        </ul>
-                    </li>
+
 
                     <li class="nav-item has-treeview">
                         <a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon fa fa-users"></i>
