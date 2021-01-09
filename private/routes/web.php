@@ -150,7 +150,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
 
     Route::get('pages/homepage', 'PageController@homepage')->name('pages.homepage');
     Route::post('pages/homepage/store', 'PageController@homepageStore')->name('pages.homepage.store');
-    Route::resource('pages', 'PageController')->except(['show']);
 
     //Route::get('/files', 'FileController@index')->name('files.index');
     Route::resource('files', 'FileController')->except(['show']);
