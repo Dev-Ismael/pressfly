@@ -22,8 +22,6 @@
                                             data-toggle="tab"><?= __('General') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#language" aria-controls="language" role="tab"
                                             data-toggle="tab"><?= __('Language') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#protection" aria-controls="protection" role="tab"
-                                            data-toggle="tab"><?= __('Protection') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#users" aria-controls="users" role="tab"
                                             data-toggle="tab"><?= __('Users') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#captcha" aria-controls="captcha" role="tab"
@@ -233,120 +231,6 @@
                     </div>
 
                     
-
-                    <div role="tabpanel" id="protection" class="tab-pane fade">
-                        <style>
-                            .proxy_service {
-                                /*margin-bottom: 15px;*/
-                            }
-
-                            .proxy_service label {
-                                display: block;
-                                font-weight: bold;
-                            }
-
-                            .proxy_service label span {
-                                font-weight: normal;
-                            }
-                        </style>
-
-                        <div class="alert alert-danger">
-                            {{ __('It is highly recommended to use a paid proxy/VPN service detection like IsProxyIP.com to protect your ads and prevent scammers from gaining earnings from your website.') }}
-                        </div>
-
-                        <div class="form-group row proxy_service">
-                            <div class="col-sm-2"><?= __('Proxy/VPN Service Detection') ?></div>
-                            <div class="col-sm-10">
-                                <label>
-                                    <input type="radio" name="Options[{{  $settings['proxy_service']['id'] }}][value]"
-                                           value="free"
-                                        {!! (old("Options[{$settings['proxy_service']['id']}][value]", $settings['proxy_service']['value']) === 'free') ? 'checked="checked"' : '' !!}
-                                    > Free<span> {{ __('(Not recommended) - Only detects the Public Proxies') }}</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="Options[{{  $settings['proxy_service']['id'] }}][value]"
-                                           value="isproxyip"
-                                        {!! (old("Options[{$settings['proxy_service']['id']}][value]", $settings['proxy_service']['value']) === 'isproxyip') ? 'checked="checked"' : '' !!}
-                                    > IsProxyIP.com<span> {{ __('(Highly recommended) - Detects Public Proxies, VPN, TOR, Hosting Data Centers, Web Proxies &amp; Bad Search Engine Robots.') }}</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group row conditional"
-                             data-condition="Options[<?= $settings['proxy_service']['id'] ?>][value] === 'isproxyip'">
-                            <div class="col-sm-2"><?= __('IsProxyIP API Key') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::text("Options[{$settings['isproxyip_key']['id']}][value]",
-                                    old("Options[{$settings['isproxyip_key']['id']}][value]", $settings['isproxyip_key']['value']),
-                                    ['class' => 'form-control']) }}
-
-                                <div class="help-block mt-2 alert alert-info">
-                                    <?= __('To get an API key you need to register at') ?>
-                                    <a href="https://isproxyip.com/pricing"
-                                       target="_blank">https://isproxyip.com/pricing</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3><?= __('reCAPTCHA v3 Settings') ?></h3>
-
-                        <div class="alert alert-danger">
-                            <?= __('reCAPTCHA v3 detects abusive traffic on your website without user friction. It returns a score for each request you send to reCAPTCHA and gives you more flexibility to fight against spam and abuse in your website. Learn more from here') ?>
-                            <a href="https://www.google.com/recaptcha/intro/v3.html" target="_blank"
-                               rel="nofollow noreferrer noopener">https://www.google.com/recaptcha/intro/v3.html</a>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('reCAPTCHA v3 Site key') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::text("Options[{$settings['recaptcha_v3_site_key']['id']}][value]",
-                                    old("Options[{$settings['recaptcha_v3_site_key']['id']}][value]", $settings['recaptcha_v3_site_key']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('reCAPTCHA v3 Secret key') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::text("Options[{$settings['recaptcha_v3_secret_key']['id']}][value]",
-                                    old("Options[{$settings['recaptcha_v3_secret_key']['id']}][value]", $settings['recaptcha_v3_secret_key']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('reCAPTCHA v3 Score') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['recaptcha_v3_score']['id']}][value]",
-                                    old("Options[{$settings['recaptcha_v3_score']['id']}][value]", $settings['recaptcha_v3_score']['value']),
-                                    ['class' => 'form-control', 'step' => '0.1', 'min' => '0', 'max' => '1']) }}
-                                <small class="form-text text-muted"></small>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Protect the article earnings with reCAPTCHA v3') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['recaptcha_v3_article']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                    old("Options[{$settings['recaptcha_v3_article']['id']}][value]", $settings['recaptcha_v3_article']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Enable Ads Protector') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['ads_protector']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                    old("Options[{$settings['ads_protector']['id']}][value]", $settings['ads_protector']['value']),
-                                    ['class' => 'form-control']) }}
-
-                                <div class="help-block mt-2 alert alert-info">
-                                    <?= __('Check the visitors with reCAPTCHA v3 score and against proxy/VPN. Make sure to add the correct reCAPTCHA v3 keys.') ?>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
 
                     <div role="tabpanel" id="users" class="tab-pane fade">
 
