@@ -88,9 +88,7 @@
                             <i class="nav-icon fa fa-tags"></i>
                             <p><?= __('Tags') ?></p></a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="{{ route('admin.pages.index') }}">
-                            <i class="nav-icon far fa-copy"></i>
-                            <p><?= __('Pages') ?></p></a></li>
+
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.files.index') }}">
                             <i class="nav-icon far fa-images"></i>
