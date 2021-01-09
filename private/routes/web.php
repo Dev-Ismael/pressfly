@@ -154,16 +154,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
     //Route::get('/files', 'FileController@index')->name('files.index');
     Route::resource('files', 'FileController')->except(['show']);
 
-    Route::get('withdraws', 'WithdrawController@index')->name('withdraws.index');
-    Route::match(['get', 'post'], 'withdraws/methods', 'WithdrawController@methods')->name('withdraws.methods');
-    Route::get('withdraws/{withdraw}', 'WithdrawController@show')->where(['withdraw' => '[0-9]+'])
-        ->name('withdraws.show');
-    Route::post('withdraws/{withdraw}/approve', 'WithdrawController@approve')->where(['withdraw' => '[0-9]+'])
-        ->name('withdraws.approve');
-    Route::post('withdraws/{withdraw}/complete', 'WithdrawController@complete')->where(['withdraw' => '[0-9]+'])
-        ->name('withdraws.complete');
-    Route::post('withdraws/{withdraw}/cancel', 'WithdrawController@cancel')->where(['withdraw' => '[0-9]+'])
-        ->name('withdraws.cancel');
+
 
     Route::get('/menus', 'MenuController@index')->name('menus.index');
     Route::post('/add-menu-item', 'MenuController@addMenuItem')->name('menu.item.add');
