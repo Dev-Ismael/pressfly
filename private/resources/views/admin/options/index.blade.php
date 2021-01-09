@@ -22,8 +22,6 @@
                                             data-toggle="tab"><?= __('General') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#language" aria-controls="language" role="tab"
                                             data-toggle="tab"><?= __('Language') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#earnings" aria-controls="earnings" role="tab"
-                                            data-toggle="tab"><?= __('Earnings') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#protection" aria-controls="protection" role="tab"
                                             data-toggle="tab"><?= __('Protection') ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#users" aria-controls="users" role="tab"
@@ -234,128 +232,7 @@
 
                     </div>
 
-                    <div role="tabpanel" id="earnings" class="tab-pane fade">
-                    <!--
-                    <div class="form-group row">
-                        <div class="col-sm-2"><?= __('Enable Pay Per View(PPV)') ?></div>
-                        <div class="col-sm-10">
-                            {{ Form::select("Options[{$settings['enable_ppv']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                old("Options[{$settings['enable_ppv']['id']}][value]", $settings['enable_ppv']['value']),
-                                ['class' => 'form-control']) }}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-2"><?= __('Enable Pay Per Article(PPA)') ?></div>
-                        <div class="col-sm-10">
-                            {{ Form::select("Options[{$settings['enable_ppa']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                old("Options[{$settings['enable_ppa']['id']}][value]", $settings['enable_ppa']['value']),
-                                ['class' => 'form-control']) }}
-                        </div>
-                    </div>
--->
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Enable Author Earnings') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['enable_author_earnings']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                    old("Options[{$settings['enable_author_earnings']['id']}][value]", $settings['enable_author_earnings']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-
-                        <div class="form-group row">
-                            <div
-                                class="col-sm-2"><?= __('How many first days after publication to generate earnings?') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['paid_days']['id']}][value]",
-                                    old("Options[{$settings['paid_days']['id']}][value]", $settings['paid_days']['value']),
-                                    ['class' => 'form-control', 'min' => 0, 'step' => 1, 'max' => 9999999]) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Paid Views Per Day') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['paid_views_day']['id']}][value]",
-                                    old("Options[{$settings['paid_views_day']['id']}][value]", $settings['paid_views_day']['value']),
-                                    ['class' => 'form-control', 'min' => 1, 'step' => 1]) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Force Disable Adblock') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['force_disable_adblock']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                    old("Options[{$settings['force_disable_adblock']['id']}][value]", $settings['force_disable_adblock']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <h3><?= __('Currency Settings') ?></h3>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Currency Code') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::text("Options[{$settings['currency_code']['id']}][value]",
-                                    old("Options[{$settings['currency_code']['id']}][value]", $settings['currency_code']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Currency Symbol') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::text("Options[{$settings['currency_symbol']['id']}][value]",
-                                    old("Options[{$settings['currency_symbol']['id']}][value]", $settings['currency_symbol']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Currency Symbol Position') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['currency_position']['id']}][value]", ['before' => __('Before Price'), 'after' => __('After Price')],
-                                    old("Options[{$settings['currency_position']['id']}][value]", $settings['currency_position']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Price Number of Decimals') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['price_decimals']['id']}][value]",
-                                    old("Options[{$settings['price_decimals']['id']}][value]", $settings['price_decimals']['value']),
-                                    ['class' => 'form-control', 'step' => 1, 'min' => 0, 'max' => 9]) }}
-                            </div>
-                        </div>
-
-
-                        <h3><?= __('Referral Settings') ?></h3>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Enable Referrals') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['enable_referrals']['id']}][value]", [1 => __('Yes'), 0 => __('No')],
-                                    old("Options[{$settings['enable_referrals']['id']}][value]", $settings['enable_referrals']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="row conditional"
-                             data-condition="Options[<?= $settings['enable_referrals']['id'] ?>][value] === '1'">
-                            <div class="col-sm-2"><?= __('Referral Percentage') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::number("Options[{$settings['referral_percentage']['id']}][value]",
-                                    old("Options[{$settings['referral_percentage']['id']}][value]", $settings['referral_percentage']['value']),
-                                    ['class' => 'form-control']) }}
-                                <small
-                                    class="form-text text-muted">{{  __('Enter the referral earning percentage. Ex. 20') }}</small>
-                            </div>
-                        </div>
-
-                    </div>
+                    
 
                     <div role="tabpanel" id="protection" class="tab-pane fade">
                         <style>
