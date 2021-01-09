@@ -547,62 +547,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('New Withdrawal Request') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_admin_new_withdrawal']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_admin_new_withdrawal']['id']}][value]", $settings['alert_admin_new_withdrawal']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
+                        
 
-                        <h3>{{ __('Member Notifications') }}</h3>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('New Article Approved') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_member_approved_new_article']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_member_approved_new_article']['id']}][value]", $settings['alert_member_approved_new_article']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Article Update Approved') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_member_approved_update_article']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_member_approved_update_article']['id']}][value]", $settings['alert_member_approved_update_article']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Approved Withdrawal Request') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_member_approved_withdraw']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_member_approved_withdraw']['id']}][value]", $settings['alert_member_approved_withdraw']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Completed Withdrawal Request') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_member_completed_withdraw']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_member_completed_withdraw']['id']}][value]", $settings['alert_member_completed_withdraw']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2"><?= __('Canceled Withdrawal Request') ?></div>
-                            <div class="col-sm-10">
-                                {{ Form::select("Options[{$settings['alert_member_canceled_withdraw']['id']}][value]", [0 => __('No'), 1 => __('Yes')],
-                                    old("Options[{$settings['alert_member_canceled_withdraw']['id']}][value]", $settings['alert_member_canceled_withdraw']['value']),
-                                    ['class' => 'form-control']) }}
-                            </div>
-                        </div>
-
+                        
                         <h3>{{ __('Sending Email Settings') }}</h3>
 
                         <div class="form-group row">
