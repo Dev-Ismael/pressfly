@@ -101,16 +101,29 @@ class ArticleController extends AdminController
             'slug',
             'summary',
             'content',
-            'status',
-            'user_id',
-            'disable_earnings',
+            // 'status',
+            // 'user_id',
+            // 'disable_earnings',
             'upload_featured_image',
             'main_category',
             'categories',
             'tags',
-            'message',
-            'read_time',
+            // 'message',
+            // 'read_time',
         ]);
+
+        // $title  =  str_replace( "." , "" , $data["title"] );
+        // $slug   =  str_replace( " " , "-" , $title );
+
+        $data += [
+            // "slug"               => $slug,
+            "status"             => 1 ,
+            "user_id"            => 1 ,
+            "disable_earnings"   => 1 ,
+            "message"            => "" ,
+            "read_time"          => 60 ,
+        ];
+           
 
         /**
          * @var \App\File|null $featured_image
