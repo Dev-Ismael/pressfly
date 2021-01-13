@@ -104,11 +104,23 @@
                 </ul>
             </div>
             <div class="top-menu">
-                {!! menu_display(get_style('top_menu'), [
-                'ul_class' => 'list-inline',
-                'li_class' => 'list-inline-item',
-                'a_class' => '',
-                ]) !!}
+                <ul class="list-inline">
+                    @if (Auth::check())
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <li class="list-inline-item"> <i class="far fa-user"></i> {{ ucfirst( Auth::user()->username) }} </li>
+                            </button>
+                            @if ( Auth::user()->role == "admin" )
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url("/admin") }}"> Dashboard </a>
+                                </div>
+                            @endif
+                        </div>
+                    @else
+                        <li class="list-inline-item"> <a href="{{ url("/login") }}"> Login </a> </li>
+                        <li class="list-inline-item"> <a href="{{ url("/register") }}"> Register </a> </li>
+                    @endif
+                </ul>
             </div>
         </div>
     </div>

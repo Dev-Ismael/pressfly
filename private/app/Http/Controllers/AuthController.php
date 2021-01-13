@@ -229,11 +229,7 @@ class AuthController extends Controller
                 $user->login_ip = get_ip();
                 $user->update();
 
-                if ('admin' == Auth::user()->role) {
-                    return redirect()->intended('admin');
-                }
-
-                return redirect()->intended('member');
+                return redirect('/');
             }
             session()->flash('danger', __('Invalid username or password, try again'));
             return redirect()->route('login')->withInput();
