@@ -110,11 +110,6 @@ Route::name('')->group(function () {
     Route::post('/comment/store', 'CommentController@store')->name('comment.add');
     Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 
-    Route::get('/author/{username}', 'AuthorController@show')->name('author.show');
-    Route::get('/author/{username}/feed', 'AuthorController@feed')->name('author.feed');
-    Route::post('/author/{username}/follow', 'AuthorController@follow')->name('author.follow');
-    Route::post('/author/{username}/unFollow', 'AuthorController@unFollow')->name('author.unfollow');
-
     Route::post('/newsletter/subscribe', 'NewsletterController@subscribe')->name('newsletter.subscribe');
     Route::match(['get', 'post'], '/search', 'SearchController@index')->name('search');
 
