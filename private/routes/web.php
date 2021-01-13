@@ -104,7 +104,8 @@ Route::name('')->group(function () {
         ->where(['slug' => '(.+)', 'tag' => '[0-9]+'])
         ->name('tag.feed');
 
-    Route::get('/page/{slug}', 'PageController@show')->name('page.show');
+    Route::get('/our_terms', 'PageController@terms')->name('page.terms');
+    Route::get('/our_privacy', 'PageController@privacy')->name('page.privacy');
 
     Route::post('/comment/store', 'CommentController@store')->name('comment.add');
     Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');

@@ -220,12 +220,12 @@
                 <div class="footer-menu">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href="page/privacy">
+                            <a href="{{ url("our_privacy") }}">
                                 <span>Privacy</span>
                             </a>
                         </li>
                         <li class="list-inline-item ">
-                            <a href="page/terms">
+                            <a href="{{ url("our_terms") }}">
                                 <span>Terms of Use</span>
                             </a>
                         </li>
