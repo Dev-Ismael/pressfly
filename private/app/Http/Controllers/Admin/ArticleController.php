@@ -224,15 +224,10 @@ class ArticleController extends AdminController
             'slug',
             'summary',
             'content',
-            'status',
-            'user_id',
-            'disable_earnings',
             'upload_featured_image',
             'main_category',
             'categories',
             'tags',
-            'message',
-            'read_time',
             'seo',
         ]);
 
@@ -248,19 +243,12 @@ class ArticleController extends AdminController
         $tags = $data['tags'] ?? [];
         $categories = $data['categories'];
 
-        $old_status = (int)$article->status;
-        $new_status = (int)$data['status'];
-        $reason = $data['message'] ?? null;
 
         $data['pay_type'] = 1;
-        //$data['price'] = (floatval($data['price'])) ? price_database_format($data['price']) : null;
-
-        $data['disable_earnings'] = (isset($data['disable_earnings']) && (bool)$data['disable_earnings']) ? 1 : null;
 
         $main_category = $data['main_category'];
 
-        unset($data['upload_featured_image'], $data['categories'], $data['main_category'], $data['tags'],
-            $data['message']);
+        unset( $data['upload_featured_image'] , $data['categories'] , $data['main_category'] , $data['tags']  );
 
         if ($article->update($data)) {
             $article->tags()->sync($tags);
@@ -276,10 +264,6 @@ class ArticleController extends AdminController
             $article->categories()->sync($sycCategories);
 
             \Cache::forget('homepage');
-
-            if ($reason) {
-                Mail::send(new MemberUpdateArticle($article, $reason));
-            }
 
             session()->flash('message', __('Article updated.'));
         }

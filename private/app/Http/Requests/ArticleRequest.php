@@ -96,28 +96,8 @@ class ArticleRequest extends FormRequest
                 },
             ];
 
-            $rules['status'] = ['required'];
-            $rules['user_id'] = ['required'];
         }
 
-        if ($this->route()->getPrefix() === '/member') {
-            $rules['category'] = [
-                'required',
-                function ($attribute, $value, $fail) {
-                    $categories = Category::where('status', 1)->pluck('id')->toArray();
-                    if (!in_array($value, $categories)) {
-                        return $fail(__('Invalid category.'));
-                    }
-                },
-            ];
-
-            if ($this->route()->getName() === 'member.articles.update') {
-                // Remove 'required' when editing articles
-                unset($rules['category'][0]);
-            }
-
-            $rules['reason'] = ['required'];
-        }
 
         return $rules;
     }
@@ -131,7 +111,6 @@ class ArticleRequest extends FormRequest
             'slug',
             'summary',
             'content',
-            'read_time',
         ]);
 
         if (isset($data['slug']) && !empty($data['slug'])) {

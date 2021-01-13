@@ -52,74 +52,6 @@
                             {{ Form::label('seo[description]', __('SEO Description')) }}
                             {{ Form::textarea('seo[description]', old('seo[description]', $article->seo['description']), ['class' => 'form-control', 'rows' => 3]) }}
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card card-primary card-outline">
-                    <div class="card-header"><?= __('Article Settings') ?></div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="user_id">{{ __('User') }}</label>
-                            <select class="form-control select2" name="user_id" id="user_id" required>
-                                <option value="">{{ __('Choose') }}</option>
-                                @foreach($users as $key=>$val)
-                                    <option
-                                        value="{{ $key }}" {{ (($key == (int)old('user_id', $article->user_id))? "selected":"") }}>
-                                        {{$val}}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <?php
-                        /*
-                        <div class="form-group">
-                            {{ Form::label('pay_type', 'Pay Type') }}
-                            {{ Form::select('pay_type', get_allowed_types(), old('pay_type', $article->pay_type),
-                                ['placeholder' => __('Pay Type'), 'class' => 'form-control', 'required' => true]) }}
-                        </div>
-
-                        <div class="form-group conditional" data-condition="pay_type === '2'">
-                            {{ Form::label('price', __('Price')) }}
-                            {{ Form::number('price', old('price', $article->price), ['class' => 'form-control',
-                                'step' => 'any', 'min' => 0]) }}
-                            <small class="form-text text-muted">{{ __('For Pay Per Article, you should add a price that you '.
-                            'will pay to the author upon approving the article.') }}</small>
-                        </div>
-                        */
-                        ?>
-
-                        <div class="form-group">
-                            {{ Form::label('disable_earnings', __('Disable Earnings')) }}
-                            {{ Form::select('disable_earnings', [0 => __('No'), 1 => __('Yes')],
-                                old('disable_earnings', $article->disable_earnings), ['class' => 'form-control select2',
-                                'placeholder' => null]) }}
-                        </div>
-
-                        <div class="form-group">
-                            {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
-                            {{ Form::number('read_time', old('read_time', $article->read_time), ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
-                        </div>
-
-                        <?php
-                        $article_statuses = array_intersect_key(get_article_statuses(), array_flip([1, 2, 7]));
-                        ?>
-                        <div class="form-group">
-                            <label for="status">{{ __('Status') }}</label>
-                            <select class="form-control select2" name="status" id="status" required>
-                                <option value="">{{ __('Choose') }}</option>
-                                @foreach($article_statuses as $key=>$val)
-                                    <option
-                                        value="{{ $key }}" {{ (($key == old('status', $article->status))? "selected":"") }}>{{$val}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            {{ Form::label('message', __('Message to the Author')) }}
-                            {{ Form::textarea('message', old('message'), ['class' => 'form-control', 'rows' => 5]) }}
-                        </div>
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">{{ __('Submit') }}</button>
@@ -127,6 +59,9 @@
 
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-3">
+                
 
                 <div class="card card-primary card-outline">
                     <div class="card-header"><?= __('Featured Image') ?></div>
