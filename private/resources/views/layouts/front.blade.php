@@ -163,16 +163,7 @@
             {!! menu_display(get_style('main_menu'), ['ul_class' => 'navbar-nav mr-auto','a_class'  => 'nav-link']) !!}
 
             <ul class="navbar-nav my-2 my-lg-0">
-                <?php
-                $write_paid_page = \App\Page::find(get_option('write_paid_page'));
-                ?>
-                @if($write_paid_page)
-                    <li class="nav-item get-paid">
-                        <a class="nav-link" href="{{ $write_paid_page->permalink() }}">
-                            <i class="fas fa-pencil-alt"></i> {{ __('Write & Get Paid') }}
-                        </a>
-                    </li>
-                @endif
+               
                 <li class="nav-item mini-search-menu-item">
                     <form method="get" action="{{ route('search') }}" class="d-flex justify-content-center">
                         <input name="q" class="form-control" type="search" required
@@ -227,11 +218,18 @@
         <div class="row">
             <div class="col text-left">
                 <div class="footer-menu">
-                    {!! menu_display(get_style('footer_menu'), [
-                    'ul_class' => 'list-inline mb-0',
-                    'li_class' => 'list-inline-item',
-                    'a_class' => '',
-                    ]) !!}
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="page/privacy">
+                                <span>Privacy</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a href="page/terms">
+                                <span>Terms of Use</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col text-right">
