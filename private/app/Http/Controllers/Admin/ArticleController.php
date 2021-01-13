@@ -101,29 +101,11 @@ class ArticleController extends AdminController
             'slug',
             'summary',
             'content',
-            // 'status',
-            // 'user_id',
-            // 'disable_earnings',
             'upload_featured_image',
             'main_category',
             'categories',
             'tags',
-            // 'message',
-            // 'read_time',
         ]);
-
-        // $title  =  str_replace( "." , "" , $data["title"] );
-        // $slug   =  str_replace( " " , "-" , $title );
-
-        $data += [
-            // "slug"               => $slug,
-            "status"             => 1 ,
-            "user_id"            => 1 ,
-            "disable_earnings"   => 1 ,
-            "message"            => "" ,
-            "read_time"          => 60 ,
-        ];
-           
 
         /**
          * @var \App\File|null $featured_image
@@ -137,6 +119,7 @@ class ArticleController extends AdminController
         $tags = $data['tags'] ?? [];
         $categories = $data['categories'];
 
+        $data['status'] = 1 ;
         $status = (int)$data['status'];
 
         if ($status === 1) {
@@ -145,14 +128,10 @@ class ArticleController extends AdminController
         }
 
         $data['pay_type'] = 1;
-        //$data['price'] = (floatval($data['price'])) ? price_database_format($data['price']) : null;
-
-        $data['disable_earnings'] = (isset($data['disable_earnings']) && (bool)$data['disable_earnings']) ? 1 : null;
 
         $main_category = $data['main_category'];
 
-        unset($data['upload_featured_image'], $data['main_category'], $data['categories'], $data['tags'],
-            $data['message']);
+        unset( $data['upload_featured_image'] , $data['main_category'] , $data['categories'] , $data['tags'] );
 
         $article = Article::create($data);
 
