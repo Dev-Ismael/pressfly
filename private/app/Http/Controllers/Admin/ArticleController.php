@@ -119,6 +119,7 @@ class ArticleController extends AdminController
         $tags = $data['tags'] ?? [];
         $categories = $data['categories'];
 
+        $data['user_id'] = 1 ;
         $data['status'] = 1 ;
         $status = (int)$data['status'];
 
