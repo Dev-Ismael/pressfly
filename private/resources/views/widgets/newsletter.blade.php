@@ -5,7 +5,7 @@ $widget = array_merge([
 ], $widget);
 ?>
 
-<div class="widget newsletter {{ $widget['class'] }}">
+{{-- <div class="widget newsletter {{ $widget['class'] }}">
     <div class="block-header">
         <div class="block-title"><span>{{ $widget['title'] }}</span></div>
     </div>
@@ -23,4 +23,4 @@ $widget = array_merge([
             </div>
         </form>
     </div>
-</div>
+</div> --}}
