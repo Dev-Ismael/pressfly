@@ -20,6 +20,7 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/claviska/jquery-minicolors@2.3.4/jquery.minicolors.min.css">
     <link rel="stylesheet" href="{{ asset('assets/dashboard/css/app.css?v=' . APP_VERSION) }}">
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/custom_style.css') }}">
 
     @stack('header')
 </head>
