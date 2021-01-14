@@ -159,25 +159,7 @@
                         </a>
                     </div>
 
-                    <div class="article-newsletter">
-                        <p>
-                            <i class="far fa-envelope"></i> {{ __('Enjoyed this article? Stay informed by joining our newsletter!') }}
-                        </p>
-
-                        <form method="post" action="{{ route('newsletter.subscribe') }}"
-                              class="newsletter-subscribe form-inline">
-                            @csrf
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="mail@example.com" class="form-control"
-                                       required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="{{ __('Subscribe') }}">
-                            </div>
-                        </form>
-                    </div>
-
+                    
                     <div id="comments" class="article-comments mb-3">
                         <div class="block-header">
                             <div class="block-title"><span>{{ __('Comments') }}</span></div>
@@ -210,7 +192,7 @@
                                 </form>
                             </div>
                         @endguest
-                    </div>
+                    </>
 
                     @if($relatedArticles = $article->relatedArticles())
                         <div class="widget article-related mb-3">
