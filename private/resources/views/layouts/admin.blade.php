@@ -194,13 +194,13 @@
 
     <!-- Main Footer -->
     <footer class="main-footer">
-        <!-- To the right -->
-        <div class="float-right d-none d-sm-inline">
-            <span>{{ __('Version') }}</span> {{ APP_VERSION }}
-        </div>
-        <!-- Default to the left -->
-        <strong>{{ __('Copyright') }} &copy; {{ now()->format("Y") }} {{ get_option('site_name') }}
-            .</strong> {{ __('All rights reserved.') }}
+        
+        <strong style="color: #000; font-weight:400">
+            All Right Reversed © 2021 | This Site is made with 
+            <i class="fas fa-heart" style="color: #f00;"></i> 
+            <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a> .
+        </strong>
+
     </footer>
 </div>
 
