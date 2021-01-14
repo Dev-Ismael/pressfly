@@ -99,7 +99,7 @@
                                     </a>
                                     <span class="text-muted">
                                         <i class="fa fa-calendar"></i> {{ display_date_timezone($new_article->created_at) }} -
-                                        <i class="fa fa-user"></i> {{ $new_article->user->name }}
+                                        
                                     </span>
                                 </li>
                             @endforeach
@@ -128,7 +128,6 @@
                                     <span class="text-muted">
                                         <i class="fa fa-calendar"></i> {{ display_date_timezone($popular_article->article->created_at) }} -
                                         <i class="fa fa-eye"></i> {{ $popular_article->views }} -
-                                        <i class="fa fa-user"></i> {{ $popular_article->article->user->name }}
                                     </span>
                                 </li>
                             @endforeach
