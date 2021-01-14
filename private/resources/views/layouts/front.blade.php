@@ -69,17 +69,17 @@
                 <ul class="list-inline">
                     @if(get_option('facebook_url'))
                         <li class="list-inline-item">
-                            <a href="{{ get_option('facebook_url') }}" class="fab fa-facebook-f fa-fw"
+                            <a href="{{ get_option('facebook_url') }}" class="fab fa-facebook-square" 
                                target="_blank"></a></li>
                     @endif
                     @if(get_option('twitter_url'))
                         <li class="list-inline-item">
-                            <a href="{{ get_option('twitter_url') }}" class="fab fa-twitter fa-fw"
+                            <a href="{{ get_option('twitter_url') }}" class="fab fa-twitter-square" 
                                target="_blank"></a></li>
                     @endif
                     @if(get_option('google_plus_url'))
                         <li class="list-inline-item">
-                            <a href="{{ get_option('google_plus_url') }}" class="fab fa-google fa-fw"
+                            <a href="{{ get_option('google_plus_url') }}" class="fab fa-google-plus-square"
                                target="_blank"></a></li>
                     @endif
                     @if(get_option('youtube_url'))
@@ -194,48 +194,103 @@
 <footer class="footer mt-3">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+
+            <div class="col-lg-4 logo-box">
+                <div class="col-inner">
+                
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        @if(get_style('logo_image'))
+                            <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
+                        @else
+                            {{ get_option('site_name') }}
+                        @endif
+                    </a>
+
+                    <p class="site-info">
+                        TopicLix.com best articles and news in all fields according to the original professional rules of the profession of journalism, which give priority in the journalism industry to produce news and information with absolute credibility, depth of analysis, and transparency of information
+                    </p>
+
+                    <div class="top-social social-icons">
+                        <ul class="list-inline">
+                            @if(get_option('facebook_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('facebook_url') }}" class="fab fa-facebook-square" 
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('twitter_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('twitter_url') }}" class="fab fa-twitter-square"
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('google_plus_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('google_plus_url') }}" class="fab fa-google-plus-square" 
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('youtube_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('youtube_url') }}" class="fab fa-youtube fa-fw"
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('pinterest_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('pinterest_url') }}" class="fab fa-pinterest fa-fw"
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('instagram_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('instagram_url') }}" class="fab fa-instagram fa-fw"
+                                       target="_blank"></a></li>
+                            @endif
+                            @if(get_option('vk_url'))
+                                <li class="list-inline-item">
+                                    <a href="{{ get_option('vk_url') }}" class="fab fa-vk fa-fw"
+                                       target="_blank"></a></li>
+                            @endif
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="col-lg-4 offset-lg-4">
                 <div class="col-inner">
                     {!! \App\Sidebar::sidebarDisplay( get_style('footer1_sidebar') ) !!}
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="col-inner">
-                    {!! \App\Sidebar::sidebarDisplay( get_style('footer2_sidebar') ) !!}
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="col-inner">
-                    {!! \App\Sidebar::sidebarDisplay( get_style('footer3_sidebar') ) !!}
-                </div>
-            </div>
+            
         </div>
     </div>
 
-    <div class="container">
-        <div class="separator"></div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col text-left">
-                <div class="footer-menu">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a href="{{ url("our_privacy") }}">
-                                <span>Privacy</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item ">
-                            <a href="{{ url("our_terms") }}">
-                                <span>Terms of Use</span>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-left">
+                    <div class="footer-menu">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a href="{{ url("our_privacy") }}">
+                                    <span>Privacy</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="{{ url("our_terms") }}">
+                                    <span>Terms of Use</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col text-right">
-                {{ __('Copyright') }} &copy; {{ get_option('site_name') }} {{ date("Y") }}
+                <div class="col-md-8 text-right">
+                    
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This Site is made with <i class="fas fa-heart" style="color: #f00;"></i> by <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a>
+                    </p>
+    
+                </div>
             </div>
         </div>
     </div>

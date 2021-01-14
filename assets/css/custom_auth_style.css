@@ -80,7 +80,7 @@ p.title.text-center{
 /*=====logo-image ======*/
 .auth .logo-image{
 	margin-top: 40px;
-	height: 80px;
+    height: 100px;
 }
 /*===== Form =====*/
 .auth{

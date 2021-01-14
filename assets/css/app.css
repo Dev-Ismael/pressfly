@@ -13,7 +13,7 @@
 body {
     font-family: var(--primary-font);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
     color: var(--text-color);
 }
@@ -151,7 +151,7 @@ img {
 
 /** header **/
 .navbar-main {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.514);
     margin-bottom: 30px;
 }
 

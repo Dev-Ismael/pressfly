@@ -2,7 +2,7 @@
 
 return array (
   'APP_INSTALLED' => 1,
-  'APP_NAME' => NULL,
+  'APP_NAME' => 'TopicLix',
   'APP_ENV' => 'production',
   'APP_KEY' => 'gIsTeXaMxyRKgbVoxtZecCjKJzXa3wyn',
   'APP_SECRET_KEY' => '00012fe8b9c07c9ea05fb008b08d220e4eadd257',

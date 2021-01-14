@@ -28,7 +28,8 @@ body{
     text-decoration: none;
 }
 .top-nav .top-social a{
-    margin-top: 5px;
+    margin-top: 7px;
+    font-size: 25px;
 }
 .top-nav button.btn.dropdown-toggle{
     background-color: #d4d4d4;
@@ -46,7 +47,6 @@ body{
     background-color: #05386c;
     color: #fff;
 }
-
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
@@ -54,6 +54,15 @@ body{
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
+}
+.header .logo img{
+    box-shadow: 0px 0px 17px 1px #00000059;
+    height: 140px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
 }
 .navbar-light .navbar-nav .nav-link:hover{
     color: rgb(143, 143, 143);
@@ -217,6 +226,13 @@ a.read-more:hover{
 .block-item-title a:hover{
     color: #05386c
 }
+.block-title span{
+    color: #000 !important;
+    font-size: 30px;
+}
+.grid-item-overlay{
+    color: #fff;
+}
 /*========== ICONS ===========*/
 .nav-item.search-menu-item .fa-search.fa-fw{
     color: #05386c
@@ -226,4 +242,56 @@ a.read-more:hover{
 }
 input[type=submit]{
     border-radius: 20px;
+}
+/*========= Footer =============*/
+footer.footer {
+    background-color: #05386c !important;
+    padding-bottom: 0px;
+    margin-bottom: 0px
+}
+.logo-box{
+    padding: 20px ;
+    background-color: #042d56;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+footer .site-info{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #fff;
+}
+.logo-box img{
+    height: 100px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+footer .social-icons a{
+    font-size: 30px !important;
+    color: #fff;
+    margin-right: 15px;
+}
+footer .social-icons a:hover{
+    text-decoration: none;
+}
+footer.footer .separator{
+    border-bottom: 2px solid #fff6;
+    margin: 20px 0;
+}
+footer .block-title span{
+    color: #fff !important;
+}
+footer .copyright{
+    margin-top: 40px;
+    background-color: #000 !important;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: #fff !important;
+    line-height: 16px;
 }
