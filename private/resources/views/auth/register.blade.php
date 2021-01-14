@@ -60,7 +60,7 @@
         @endif
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-sm">
+            <button type="submit" class="btn btn-blue btn-block btn-sm">
                 {{ __('Register') }}
             </button>
         </div>

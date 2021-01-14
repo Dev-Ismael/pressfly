@@ -27,16 +27,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/auth.css?v=' . APP_VERSION) }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom_auth_style.css') }}" rel="stylesheet">
 
     @stack('header')
 </head>
 <body>
 
+
+<div class="purble_background"></div>
+
 <div class="auth">
     <div class="auth-title">
         <a href="{{ url('/') }}">
             @if(get_style('logo_image'))
-                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
+                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" class="logo-image">
             @else
                 {{ get_option('site_name') }}
             @endif

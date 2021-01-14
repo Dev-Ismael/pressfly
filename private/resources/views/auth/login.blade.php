@@ -48,13 +48,11 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-sm">
+            <button type="submit" class="btn btn-blue btn-block btn-sm">
                 {{ __('Login') }}
             </button>
         </div>
 
-        <a href="{{ route('password.reset') }}">{{ __('I forgot my password') }}</a>
-        <br>
         <a href="{{ route('register') }}">{{ __('Register a new membership') }}</a>
     </form>
 
