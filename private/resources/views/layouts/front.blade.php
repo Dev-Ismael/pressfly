@@ -109,13 +109,14 @@
                     @if (Auth::check())
                         <div class="dropdown">
                             <button class="btn dropdown-toggle list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <li class="list-inline-item"> <i class="far fa-user"></i> {{ ucfirst( Auth::user()->username) }} </li>
+                                <li class="list-inline-item"> <i class="fas fa-user"></i> {{ ucfirst( Auth::user()->username) }} </li>
                             </button>
-                            @if ( Auth::user()->role == "admin" )
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ url("/admin") }}"> Dashboard </a>
-                                </div>
-                            @endif
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @if ( Auth::user()->role == "admin" )
+                                        <a class="dropdown-item" href="{{ url("/admin") }}"> <i class="fas fa-tachometer-alt"></i> Dashboard </a>
+                                @endif
+                                <a class="dropdown-item" href="{{ url("/logout") }}"> <i class="fas fa-sign-out-alt"></i> LogOut </a>
+                            </div>
                         </div>
                     @else
                         <li class="list-inline-item"> <a href="{{ url("/login") }}"> Login </a> </li>

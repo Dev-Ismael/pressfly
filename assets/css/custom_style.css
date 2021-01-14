@@ -19,20 +19,34 @@ body{
 .top-nav {
     background-color: #101010;
 }
-.top-nav  .top-social a {
-    color: #ffffff;
+.top-nav a{
+    color: #fff;
     font-size: 20px;
-    margin-top: 25%;
 }
-.top-nav .top-social a:hover{
+.top-nav a:hover{
     color: #c7c7c7;
     text-decoration: none;
+}
+.top-nav .top-social a{
+    margin-top: 5px;
 }
 .top-nav button.btn.dropdown-toggle{
     background-color: #d4d4d4;
     border-color: #d4d4d4;
     color: #000;
 }
+.top-nav .dropdown-menu{
+    padding: 10px 0px;
+}
+.top-nav a.dropdown-item{
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+}
+.top-nav a.dropdown-item:hover{
+    background-color: #05386c;
+    color: #fff;
+}
+
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
