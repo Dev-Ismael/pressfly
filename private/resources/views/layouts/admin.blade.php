@@ -198,7 +198,7 @@
         <strong style="color: #000; font-weight:400">
             All Right Reversed © 2021 | This Site is made with 
             <i class="fas fa-heart" style="color: #f00;"></i> 
-            <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a> .
+            <a href="https://www.facebook.com/PovamiSoftware" target="_blank" style="text-decoration: underline">Povami Software</a> .
         </strong>
 
     </footer>

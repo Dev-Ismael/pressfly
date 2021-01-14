@@ -287,7 +287,7 @@
                     <p>
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This Site is made with <i class="fas fa-heart" style="color: #f00;"></i> by <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a>
+                        All rights reserved | This Site is made with <i class="fas fa-heart" style="color: #f00;"></i> by <a href="https://www.facebook.com/PovamiSoftware" target="_blank" style="text-decoration: underline">Povami Software</a>
                     </p>
     
                 </div>
