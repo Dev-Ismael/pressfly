@@ -50,6 +50,7 @@
     @if(get_option('language_direction', 'ltr') === 'rtl')
         <link href="{{ asset('assets/css/rtl.css?v=' . APP_VERSION) }}" rel="stylesheet">
     @endif
+    <link href="{{ asset('assets/css/custom_style.css') }}" rel="stylesheet">
 
     @include('_partials.header_css')
 
@@ -107,7 +108,7 @@
                 <ul class="list-inline">
                     @if (Auth::check())
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn dropdown-toggle list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <li class="list-inline-item"> <i class="far fa-user"></i> {{ ucfirst( Auth::user()->username) }} </li>
                             </button>
                             @if ( Auth::user()->role == "admin" )

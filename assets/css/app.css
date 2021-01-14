@@ -1663,7 +1663,6 @@ footer.footer .separator {
  */
 .main-listing .block-item-overlay {
     position: relative;
-    z-index: 10;
     margin: -75px 8% 0 8%;
     padding: 20px;
     background-color: #ffffff;
