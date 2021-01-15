@@ -99,6 +99,7 @@ class ArticleController extends MemberController
             'tags',
             'reason',
             'read_time',
+            'seo',
         ]);
 
         /**
