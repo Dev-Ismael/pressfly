@@ -58,6 +58,7 @@
                         array_merge(request()->query(), ['order' => 'title', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
                     </th>
                     <th>{{ __('Status') }}</th>
+                    <th>{{ __('Link') }}</th>
                     <th>{{ __('Updated') }}</th>
                     <th>
                         {!! link_to_route('member.articles.index', __('Published'),
@@ -76,6 +77,7 @@
                             <a href="{{ route('member.articles.edit', [$article->id]) }}">{{ $article->title }}</a>
                         </td>
                         <td>{{ get_article_statuses($article->status) }}</td>
+                        <td> <a href="https://topiclix.com/{{get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}">  http://topiclix.com/{{get_article_statuses($article->slug)}} </a> </td>
                         <td>{{ display_date_timezone($article->updated_at) }}</td>
                         <td>{{ display_date_timezone($article->published_at) }}</td>
                         <td>
