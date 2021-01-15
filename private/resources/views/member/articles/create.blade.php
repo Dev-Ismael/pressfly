@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="form-group">
-                    {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif']) }}
+                    {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif' , 'class' => 'form-control', 'required' => true]) }}
                 </div>
 
                 <div class="form-group">
