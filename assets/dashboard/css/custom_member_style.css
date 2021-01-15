@@ -77,6 +77,10 @@ td .d-inline-flex a.btn.btn-sm{
     font-size: 14px;
     margin-right: 2px;
 }
+/*=======  ======*/
+div#mceu_22{
+    display: none !important;
+}
 /*======= Footer ======*/
 footer.footer{
     padding: 20px 0;
