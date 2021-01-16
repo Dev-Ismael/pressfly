@@ -77,7 +77,7 @@
                             <a href="{{ route('member.articles.edit', [$article->id]) }}">{{ $article->title }}</a>
                         </td>
                         <td>{{ get_article_statuses($article->status) }}</td>
-                        <td> <a href="https://topiclix.com/{{get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}">  http://topiclix.com/{{get_article_statuses($article->slug)}} </a> </td>
+                        <td> <a href="https://topiclix.com/{{get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  http://topiclix.com/{{get_article_statuses($article->slug)}} </a> </td>
                         <td>{{ display_date_timezone($article->updated_at) }}</td>
                         <td>{{ display_date_timezone($article->published_at) }}</td>
                         <td>

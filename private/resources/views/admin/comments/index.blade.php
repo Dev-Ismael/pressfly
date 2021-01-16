@@ -46,8 +46,7 @@
                             <td>{{ $comment->user->username }}</td>
                             <td>{{ get_comment_statuses($comment->status) }}</td>
                             <td>{{ $comment->content }}</td>
-                            <td><a href="{{ $comment->article->permalink() }}"
-                                   target="_blank">{{ $comment->article->title  }}</a></td>
+                            <td> <a href="https://topiclix.com/{{get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  http://topiclix.com/{{get_article_statuses($article->slug)}} </a> </td>
                             <td>{{ display_date_timezone($comment->updated_at) }}</td>
                             <td>{{ display_date_timezone($comment->created_at) }}</td>
                             <td>
