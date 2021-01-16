@@ -13,7 +13,7 @@
 
                 <div class="form-group">
                     {{ Form::label('title', __('Title')) }}
-                    {{ Form::text('title', old('title'), ['class' => 'form-control', 'required' => true]) }}
+                    {{ Form::text('title', old('title'), ['class' => 'form-control', 'required' => true , 'minlength' => 18 ]) }}
                 </div>
 
                 <div class="form-group" style="display: none">
@@ -36,12 +36,12 @@
 
                 <div class="form-group">
                     {{ Form::label('summary', __('Summary')) }}
-                    {{ Form::textarea('summary', old('summary'), ['class' => 'form-control', 'rows' => 3, 'required' => true]) }}
+                    {{ Form::textarea('summary', old('summary'), ['class' => 'form-control', 'rows' => 3, 'required' => true  , 'minlength' => 40  ]) }}
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('content', __('Content')) }}
-                    {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor']) }}
+                    {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' , 'minlength' => 1800  ]) }}
                 </div>
 
                 <div class="form-group">

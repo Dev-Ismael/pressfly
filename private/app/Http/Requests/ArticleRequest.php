@@ -27,10 +27,10 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'title' => 'required',
+            'title' => 'required|min:18',
             'slug' => 'required',
-            'summary' => 'required',
-            'content' => 'required',
+            'summary' => 'required|min:40',
+            'content' => 'required|min:1800',
             'upload_featured_image' => [
                 'mimes:' . get_option('upload_filetypes'),
                 'max:' . get_option('fileupload_max'),
