@@ -91,15 +91,7 @@
                                     <i class="fas fa-edit"></i>
                                 </a>
 
-                                <form name="{{$form = uniqid('fd_')}}" style="display:none;" method="post"
-                                      action="{{ route('member.articles.destroy', [$article->id]) }}">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-                                </form>
-                                <a href="#" class="btn btn-sm btn-danger "
-                                   onclick="if (confirm(&quot;Are you sure?&quot;)) { document.{{$form}}.submit(); } event.returnValue = false; return false;">
-                                    <i class="fa fa-trash"></i>
-                                </a>
+                                
                             </div>
                         </td>
                     </tr>
