@@ -32,7 +32,6 @@ class ArticleRequest extends FormRequest
             'summary' => 'required',
             'content' => 'required',
             'upload_featured_image' => [
-                'required', 
                 'mimes:' . get_option('upload_filetypes'),
                 'max:' . get_option('fileupload_max'),
             ],
