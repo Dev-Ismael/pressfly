@@ -21,7 +21,7 @@ class CommentController extends AdminController
         ];
 
         $comments = Comment::orderBy($orderBy['col'], $orderBy['dir'])
-            ->paginate(20);
+        ->with("article")->paginate(20);
 
         $orderBy['dir'] = ($orderBy['dir'] === 'asc') ? 'desc' : 'asc';
 
@@ -29,6 +29,7 @@ class CommentController extends AdminController
             'comments' => $comments,
             'orderBy' => $orderBy,
         ]);
+        // return $comments;
     }
 
     /**
