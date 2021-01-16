@@ -4,6 +4,37 @@
 
 @section('content')
 
+
+
+    <div class="row bg-success p-2 mb-3 text-white member-rules">
+        <div class="col-md-6 english">
+            <p class="rule-title"> Site Terms and Conditions : </p>
+
+            <ul class="list-unstyled">
+                <li> - No illegal means to get visits to your articles </li>
+                <li> - The visit is not counted if the visitor stays for less than 30 seconds </li>
+                <li> - Articles are not accepted if they violate the conditions </li>
+                <li> - Article review within 24 hours  </li>
+                <li> - The essay must be at least 400 words </li>
+                <li> - Your account will be banned if you violate the conditions above </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 arabic">
+            <p class="rule-title">  : قوانين وشروط الموقع </p>
+            <ul class="list-unstyled">
+                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقلاتك -  </li>
+                <li> لا يتم احتساب الزيارة اذا بقي الزائر مدة اقل من من 30 ثانية -  </li>
+                <li> لا يتم قبول المقالات اذا خالفت الشروط - </li>
+                <li>  يتم مراجعة المقال في خلال 24 ساعة  - </li>
+                <li>  يجب ان لا يقل المقال عن 400 كلمة - </li>
+                <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي - </li>
+            </ul>
+        </div>
+
+    </div>
+
+
     <form method="get" action="{{ route('member.dashboard') }}" class="d-flex justify-content-center">
         <div class="form-group">
             {!!
