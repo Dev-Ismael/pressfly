@@ -266,6 +266,25 @@
             <a href="https://www.facebook.com/PovamiSoftware" target="_blank">Povami Software</a> .
         </strong>
     </footer>
+
+
+
+
+        <!-- Scroll To Top-->
+        <div id="scroll-to-top">
+            <i class="fas fa-arrow-circle-up" style="color: #6a6298"></i>
+        </div>
+
+        <!-- fixed icons-->
+        <div id="fixed-icons">
+            <a target="_blank" href="https://www.facebook.com/Writte-Me-104654531613450/?ref=page_internal">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUed9WLGfVYS4GElOhDWNIP9heqM7BEnUnRA&usqp=CAU" alt="face-icon">
+            </a>
+        </div>
+
+
+
+
 </div>
 
 <!-- Bootstrap and necessary plugins-->

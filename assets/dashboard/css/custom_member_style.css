@@ -116,3 +116,70 @@ footer.footer div.col.text-right{
       color: #ffffff;
       font-size: 16px;  
 }
+ /*==== scroll-to-top ====*/
+
+ #scroll-to-top{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 25px;
+    bottom: 30px;
+    border-radius: 50%;
+    z-index: 10000;
+    cursor: pointer;
+    opacity: 0.9;
+    display: none
+  }
+  #scroll-to-top i{
+    font-size: 45px;
+  }
+  @media (max-width:767px){
+    #scroll-to-top{
+      width: 40px;
+      height: 40px;
+      right: 25px;
+      bottom: 25px;
+    }
+    #scroll-to-top i{
+      font-size: 35px;
+    }
+  }
+/*===== fixed icons =====*/
+#fixed-icons{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 35px;
+    bottom: 124px;
+    border-radius: 50%;
+    z-index: 10000;
+    cursor: pointer;
+  }
+  #fixed-icons img{
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #000;
+  }
+  @media (max-width:767px){
+    #fixed-icons{
+      width: 40px;
+      height: 40px;
+      right: 30px;
+      bottom: 105px;
+    }
+    #fixed-icons img{
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      box-shadow: 0px 0px 3px 0px #000;
+    }
+  }
