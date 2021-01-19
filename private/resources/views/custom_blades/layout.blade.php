@@ -99,9 +99,9 @@
                     <p>You don't need to have a degree or have finished a course in order to pursue a writing career online. If you can write, go ahead and start your career with us.</p>
                     <ul class="ftco-footer-social list-unstyled mb-0">
 
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/Writte-Me-104654531613450" target="_blanck"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href=""><span class="icon-instagram"></span></a></li>
                         
                     </ul>
                     </div>
@@ -153,7 +153,7 @@
 
         <!-- fixed icons-->
         <div id="fixed-icons">
-            <a target="_blank" href="https://www.facebook.com/Writte-Me-104654531613450/?ref=page_internal">
+            <a target="_blank" href="https://www.facebook.com/Writte-Me-104654531613450">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUed9WLGfVYS4GElOhDWNIP9heqM7BEnUnRA&usqp=CAU" alt="face-icon">
             </a>
         </div>

@@ -328,8 +328,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td> <i class="fas fa-dog"></i> Vets</td>
-                                    <td> <a href="https://vets.topiclix.com" target="_blank"> vets.topiclix.com </a> </td>
+                                    <td> <i class="fas fa-dog"></i> Pets</td>
+                                    <td> <a href="https://pets.topiclix.com" target="_blank"> pets.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -348,11 +348,6 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">6</th>
-                                    <td> <i class="fas fa-plane"></i> LifeStyle & Travel & architecture</td>
-                                    <td> <a href="https://lifstyle.topiclix.com" target="_blank">lifstyle.topiclix.com </a> </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
                                     <td> <i class="fas fa-tshirt"></i> Fashion & beauty & spa</td>
                                     <td> <a href="https://fashion.topiclix.com" target="_blank"> fashion.topiclix.com </a> </td>
                                 </tr>
@@ -377,7 +372,7 @@
                                 <tr>
                                     <th scope="row">2</th>
                                     <td class="arabic-text">الحيوانات الاليفة  <i class="fas fa-dog"></i>  </td>
-                                    <td> <a href="https://vets.topiclix.com" target="_blank"> vets.arabia.topiclix.com </a> </td>
+                                    <td> <a href="https://pets.topiclix.com" target="_blank"> pets.arabia.topiclix.com </a> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -396,11 +391,6 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">6</th>
-                                    <td class="arabic-text">السياحة و السفر  <i class="fas fa-plane"></i>  </td>
-                                    <td> <a href="https://lifstyle.arabia.topiclix.com" target="_blank">lifstyle.arabia.topiclix.com </a> </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
                                     <td class="arabic-text">الموضة و الجمال  <i class="fas fa-tshirt"></i>  </td>
                                     <td> <a href="https://fashion.arabia.topiclix.com" target="_blank"> fashion.arabia.topiclix.com </a> </td>
                                 </tr>

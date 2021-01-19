@@ -277,7 +277,7 @@
 
         <!-- fixed icons-->
         <div id="fixed-icons">
-            <a target="_blank" href="https://www.facebook.com/Writte-Me-104654531613450/?ref=page_internal">
+            <a target="_blank" href="https://www.facebook.com/Writte-Me-104654531613450">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUed9WLGfVYS4GElOhDWNIP9heqM7BEnUnRA&usqp=CAU" alt="face-icon">
             </a>
         </div>
