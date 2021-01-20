@@ -9,31 +9,32 @@
 
 
 
-    <div class="row bg-success p-2 mb-3 text-white member-rules">
-        <div class="col-md-6 english">
-            <p class="rule-title"> Terms of writing the article  : </p>
 
-            <ul class="list-unstyled">
-                <li> - Article review within 24 hours  </li>
-                <li> - The essay must be at least 400 words </li>
-                <li> - The article must be exclusive and not copied </li>
-                <li> - A non-copyrighted image of the article must be uploaded </li>
-                <li> - SEO should be set in an organized way to accept the post  </li>
-                <li> - Articles that contain violating links, referral links, or shorten links are not accepted </li>
-                <li> -Articles with contrary content (pornography - violence - terrorist - bloody - drugs) are not accepted </li>
+    <div class="row bg-success p-2 mb-3 text-white member-rules">
+
+        <div class="col-md-6 english">
+            <p class="rule-title"> Site Terms and Conditions : </p>
+            <ul>
+                <li> No illegal means to get visits to your articles </li>
+                <li> The visit is not counted if the visitor stays for less than 30 seconds </li>
+                <li> Articles are not accepted if they violate the conditions </li>
+                <li> Article review within 24 hours  </li>
+                <li> The essay must be at least 400 words </li>
+                <li> Use an attractive and organized title for article </li>
+                <li> Your account will be banned if you violate the conditions above </li>
             </ul>
         </div>
 
         <div class="col-md-6 arabic">
-            <p class="rule-title">  : شروط كتابة المقال </p>
-            <ul class="list-unstyled">
-                <li>  يتم مراجعة المقال في خلال 24 ساعة  - </li>
-                <li>  يجب ان لا يقل المقال عن 400 كلمة - </li>
-                <li> يجب ان يكون المقال حصري و غير منسوخ - </li>
-                <li>  يجب رفع صورة ليس بها حقوق الطبع و النشر تعبر عن المقال -  </li>
-                <li> يجب ضبط السيو بطريقة منظمة لقبول المقال - </li>
-                <li>  لا يتم قبول المقالات التي تحتوي علي روابط مخالفة او روابط احالة او اختصار روابط - </li>
-                <li> (لا يتم قبول المقالات ذات المحتوي المخالف ( الاباحي - العنف - الارهابي - الدموي - المخدرات - </li>
+            <p class="rule-title"> : قوانين وشروط الموقع </p>
+            <ul>
+                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك  </li>
+                <li> لا يتم احتساب الزيارة اذا بقي الزائر مدة اقل من من 30 ثانية  </li>
+                <li> لا يتم قبول المقالات اذا خالفت الشروط </li>
+                <li>  يتم مراجعة المقال في خلال 24 ساعة  </li>
+                <li>  يجب ان لا يقل المقال عن 400 كلمة </li>
+                <li> استخدم عنوان منظم و جذاب للمقالة </li>
+                <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي </li>
             </ul>
         </div>
 
@@ -98,17 +99,20 @@
                     <div class="card-body">
                         <div class="form-group">
                             {{ Form::label('seo[title]', __('SEO Title')) }}
-                            {{ Form::text('seo[title]', old('seo[title]'), ['class' => 'form-control' , 'required' => true ]) }}
+                            {{ Form::text('seo[title]', old('seo[title]'), ['class' => 'form-control' , 'required' => true , 'minlength' => 18 ]) }}
+                            <small class="form-text text-muted"><?= __('SEO title ex: Corona virus statistics .') ?></small>
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::text('seo[keywords]', old('seo[keywords]'), ['class' => 'form-control' , 'required' => true ]) }}
+                            {{ Form::text('seo[keywords]', old('seo[keywords]'), ['class' => 'form-control' , 'required' => true  , 'minlength' => 50  ]) }}
+                            <small class="form-text text-muted"><?= __('SEO Keywords ex: Corona , Corona virus statistics , Corona virus .') ?></small>
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('seo[description]', __('SEO Description')) }}
-                            {{ Form::textarea('seo[description]', old('seo[description]'), ['class' => 'form-control', 'rows' => 3 , 'required' => true ]) }}
+                            {{ Form::textarea('seo[description]', old('seo[description]'), ['class' => 'form-control', 'rows' => 3 , 'required' => true  , 'minlength' => 50   ]) }}
+                            <small class="form-text text-muted"><?= __('SEO Description is like article summary .') ?></small>
                         </div>
                     </div>
                 </div>
