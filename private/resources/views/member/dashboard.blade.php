@@ -4,31 +4,64 @@
 
 @section('content')
 
+    <div class="row bg-danger p-2 mb-3 text-white member-rules warning">
+        
+        <div class="col-md-6 english">
+            <p>
+                <span class="warning-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Warning !!
+                </span>
+                <br>
+                <ul>
+                    <li> Deletion will be automatic for articles which have unorganized SEO , Please use <a href="https://keywordtool.io" target="_blank" style="color:#fff;text-decoration:underline"> https://keywordtool.io </a> for SEO keywords for get more views </li> 
+                    <li> Please review the article correctly category name In order not to delete the article </li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col-md-6 arabic">
+            <p class="text-right">
+                <span class="warning-title">
+                    !! تحذير لحسابك 
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+                <br>
+                <ul class="text-right">
+                    <li> سوف يتم الحذف التلقائي للمقالات التي تحتوي علي SEO ضعيف و غير منظم من فضلك استخدم موقع  <a href="https://keywordtool.io" target="_blank" dir="ltr" style="color:#fff;text-decoration:underline">  https://keywordtool.io  </a> &nbsp;   للحصول علي كلمات مفتاحية جيدة يستهدف الدول التي تريد الحصول علي زيارات منها بشكل اكبر </li> 
+                    <li> من فضلك راجع القسم المناسب الخاص بمقالتك جيدا حتي لا يتم حذف المقالة </li>
+                </ul>
+            </p>
+        </div>
+
+    </div>
 
 
     <div class="row bg-success p-2 mb-3 text-white member-rules">
+
         <div class="col-md-6 english">
             <p class="rule-title"> Site Terms and Conditions : </p>
-
-            <ul class="list-unstyled">
-                <li> - No illegal means to get visits to your articles </li>
-                <li> - The visit is not counted if the visitor stays for less than 30 seconds </li>
-                <li> - Articles are not accepted if they violate the conditions </li>
-                <li> - Article review within 24 hours  </li>
-                <li> - The essay must be at least 400 words </li>
-                <li> - Your account will be banned if you violate the conditions above </li>
+            <ul>
+                <li> No illegal means to get visits to your articles </li>
+                <li> The visit is not counted if the visitor stays for less than 30 seconds </li>
+                <li> Articles are not accepted if they violate the conditions </li>
+                <li> Article review within 24 hours  </li>
+                <li> The essay must be at least 400 words </li>
+                <li> Use an attractive and organized title for article </li>
+                <li> Your account will be banned if you violate the conditions above </li>
             </ul>
         </div>
 
         <div class="col-md-6 arabic">
-            <p class="rule-title">  : قوانين وشروط الموقع </p>
-            <ul class="list-unstyled">
-                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك -  </li>
-                <li> لا يتم احتساب الزيارة اذا بقي الزائر مدة اقل من من 30 ثانية -  </li>
-                <li> لا يتم قبول المقالات اذا خالفت الشروط - </li>
-                <li>  يتم مراجعة المقال في خلال 24 ساعة  - </li>
-                <li>  يجب ان لا يقل المقال عن 400 كلمة - </li>
-                <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي - </li>
+            <p class="rule-title"> : قوانين وشروط الموقع </p>
+            <ul>
+                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك  </li>
+                <li> لا يتم احتساب الزيارة اذا بقي الزائر مدة اقل من من 30 ثانية  </li>
+                <li> لا يتم قبول المقالات اذا خالفت الشروط </li>
+                <li>  يتم مراجعة المقال في خلال 24 ساعة  </li>
+                <li>  يجب ان لا يقل المقال عن 400 كلمة </li>
+                <li> استخدم عنوان منظم و جذاب للمقالة </li>
+                <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي </li>
             </ul>
         </div>
 

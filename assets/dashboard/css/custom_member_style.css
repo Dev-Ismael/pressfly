@@ -93,17 +93,29 @@ div#mceu_22{
     font-size: 22px;
     border-bottom: 3px dotted #fff;
 }
-
 .member-rules li{
     font-size: 16px;
 }
-.member-rules .arabic li{
-    font-size: 18px;
-}
 .member-rules .arabic{
+    font-family: 'cairo';
     text-align: right ;
     float: right ;
 }
+.member-rules ul{
+    margin-top: -10px;
+    padding-left: 1rem;
+}
+.member-rules .arabic ul{
+    padding-right: 1rem;
+}
+.member-rules .arabic ul li{
+    direction:rtl;
+}
+.member-rules .warning-title{
+    font-size: 24px;
+    font-weight: 800;
+}
+
 /*======= Footer ======*/
 footer.footer{
     padding: 20px 0;

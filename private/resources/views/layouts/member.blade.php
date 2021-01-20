@@ -31,6 +31,13 @@
         href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+
+    <!--- Google Arabic Font --->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+    
+
     <!-- Styles -->
     <link href="{{ asset('assets/css/app.css?v=' . APP_VERSION) }}" rel="stylesheet">
     @if(get_option('language_direction', 'ltr') === 'rtl')
