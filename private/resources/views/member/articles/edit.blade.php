@@ -18,7 +18,7 @@
                            value="{{ old('title', $article_update->title) }}">
                 </div>
 
-                <div class="form-group" style="display: none">
+                <div class="form-group d-none invisible">
                     <label for="slug">{{ __('Slug(URL Key)') }}</label>
                     <input type="text" name="slug" id="slug" class="form-control"
                            value="{{ old('slug', $article_update->slug) }}">
@@ -30,24 +30,31 @@
                               required>{{ old('summary', $article_update->summary) }}</textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group d-none ">
                     <label for="content">{{ __('Content') }}</label>
                     <textarea id="content" name="content" class="form-control text-editor"
-                              required>{{ old('content', $article_update->content) }}</textarea>
+                            >{{ old('content', $article_update->content) }}</textarea>
                 </div>
 
+                <!------ Show saved file ------->
                 <div class="form-group row d-flex align-items-center">
-                    <label for="upload_featured_image" class="col-2 col-form-label">
-                        @if($article_update->featured_image_id)
-                            <img src="{{ asset(\App\File::find($article_update->featured_image_id)->file) }}"
-                                 style="max-width: 100%;">
+                    <label for="upload_featured_image" class="col-12 col-form-label">
+                        @if($articleFile)
+                            <img src="{{ asset($articleFile->file) }}"
+                            style="max-width: 100%;">
                         @endif
                     </label>
-                    <div class="col-12">
-                        <input type="file" class="form-control" name="upload_featured_image" accept=".jpg,.jpeg,.png,.gif">
+                </div>
+
+
+                <div class="form-group">
+                    <h3>Article Content</h3>
+                    <div class="article-content">
+                    {!! $article->getFinalContent() !!}
                     </div>
                 </div>
 
+                
                 <div class="form-group">
                     <label for="reason">{{ __('Message to the Reviewer') }}</label>
                     <textarea id="reason" name="reason" class="form-control" rows="5"
@@ -56,6 +63,31 @@
                         <?= __('You must give a brief description of any changes you have made.') ?>
                     </small>
                 </div>
+
+
+                <div class="card card-primary card-outline">
+                    <div class="card-header"><?= __('SEO ') ?></div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            {{ Form::label('seo[title]', __('SEO Title')) }}
+                            {{ Form::text('seo[title]', old('seo[title]' , $article->seo['title'] ), ['class' => 'form-control' , 'required' => true , 'minlength' => 18 ]) }}
+                            <small class="form-text text-muted"><?= __('SEO title ex: Corona virus statistics .') ?></small>
+                        </div>
+    
+                        <div class="form-group">
+                            {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
+                            {{ Form::text('seo[keywords]', old('seo[keywords]' , $article->seo['keywords'] ), ['class' => 'form-control' , 'required' => true  , 'minlength' => 50  ]) }}
+                            <small class="form-text text-muted"><?= __('SEO Keywords ex: Corona , Corona virus statistics , Corona virus .') ?></small>
+                        </div>
+    
+                        <div class="form-group">
+                            {{ Form::label('seo[description]', __('SEO Description')) }}
+                            {{ Form::textarea('seo[description]', old('seo[description]' , $article->seo['description'] ), ['class' => 'form-control', 'rows' => 3 , 'required' => true  , 'minlength' => 50   ]) }}
+                            <small class="form-text text-muted"><?= __('SEO Description is like article summary .') ?></small>
+                        </div>
+                    </div>
+                </div>
+              
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>

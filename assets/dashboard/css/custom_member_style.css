@@ -47,6 +47,16 @@ body.member-settings main > .row > .col-sm-9{
 .card .card-body{
     overflow-x: auto;
 }
+/*======= card ======*/
+.card-body .article-content{
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 /*======= pagination ======*/
 .pagination {
     margin-left: 2rem;

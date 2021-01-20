@@ -8,6 +8,7 @@ use App\Http\Requests\ArticleRequest;
 use App\Mail\AdminNewArticle;
 use App\Mail\AdminUpdateArticle;
 use App\Tag;
+use App\File;
 use Illuminate\Support\Facades\Mail;
 
 class ArticleController extends MemberController
@@ -173,10 +174,15 @@ class ArticleController extends MemberController
             $article_update->featured_image_id = null;
         }
 
+        // Get Article File
+        $articleFile = File::find($article->featured_image_id);
+
         return view('member.articles.edit', [
             'article' => $article,
+            'articleFile' => $articleFile,
             'article_update' => $article_update,
         ]);
+
     }
 
     /**
