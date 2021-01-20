@@ -93,7 +93,7 @@
                 <a href="{{ route('member.dashboard') }}" class="list-group-item list-group-item-action">
                     <i class="fas fa-tachometer-alt"></i> {{ __('Dashboard') }}
                 </a>
-                <a href="{{ route('member.feed') }}" class="list-group-item list-group-item-action">
+                <a href="{{ route('member.feed') }}" class="list-group-item list-group-item-action d-none">
                     <i class="far fa-newspaper"></i> {{ __('Feed') }}
                 </a>
                 <a href="{{ route('member.articles.index') }}" class="list-group-item list-group-item-action">

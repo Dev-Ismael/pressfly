@@ -43,8 +43,8 @@
                                  style="max-width: 100%;">
                         @endif
                     </label>
-                    <div class="col-10">
-                        <input type="file" name="upload_featured_image" accept=".jpg,.jpeg,.png,.gif">
+                    <div class="col-12">
+                        <input type="file" class="form-control" name="upload_featured_image" accept=".jpg,.jpeg,.png,.gif">
                     </div>
                 </div>
 
