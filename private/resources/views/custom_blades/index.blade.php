@@ -190,7 +190,7 @@
                         <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18 text-center">
                                 <div class="text">
-                                    <strong class="number" data-number="42000">0</strong>
+                                    <strong class="number" data-number="62000">0</strong>
                                     <span> <i class="far fa-newspaper"></i> Total Article</span>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                         <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18 text-center">
                                 <div class="text">
-                                    <strong class="number" data-number="3200">0</strong>
+                                    <strong class="number" data-number="8200">0</strong>
                                     <span> <i class="fas fa-users"></i> Users</span>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                         <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18 text-center">
                                 <div class="text">
-                                    <strong class="number" data-number="98000">0</strong>
+                                    <strong class="number" data-number="128000">0</strong>
                                     <span> <i class="far fa-eye"></i> Daily Views</span>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                         <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
                             <div class="block-18 text-center">
                                 <div class="text">
-                                    <strong style="color:#fff">$</strong> <strong class="number" data-number="580">0</strong>
+                                    <strong style="color:#fff">$</strong> <strong class="number" data-number="680">0</strong>
                                     <span> <i class="fas fa-dollar-sign"></i> Daily withdraw</span>
                                 </div>
                             </div>
