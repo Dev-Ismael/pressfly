@@ -138,12 +138,12 @@
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.sidebars.index') }}">
                             <i class="nav-icon fa fa-columns"></i>
-                            <p>{{  __('Sidebars') }} </p></a></li> --}}
+                            <p>{{  __('Sidebars') }} </p></a></li> 
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.ads.index') }}">
                             <i class="nav-icon fas fa-ad"></i>
-                            <p><?= __('Ads') ?></p></a></li>
-
+                            <p> {{  __('Ads') }}</p></a></li>
+                    --}}
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.prices') }}">
                             <i class="nav-icon fas fa-dollar-sign"></i>
                             <p>{{ __('Payout Rates') }}</p></a></li>
@@ -186,11 +186,11 @@
                         </ul>
                     </li>
 
-                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.index') }}">
+                     {{-- <li class="nav-item"><a class="nav-link" href="{{ route('admin.options.index') }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>{{  __('Settings') }}</p></a></li>
 
-                    {{--   
+                      
                     <li class="nav-item has-treeview">
                         <a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon fas fa-cogs"></i>
                             <p>
