@@ -212,3 +212,10 @@ footer.footer div.col.text-right{
       box-shadow: 0px 0px 3px 0px #000;
     }
   }
+/*===== member show errors =====*/
+body.member-articles-create .col-sm-9 > .alert.alert-danger{
+    display: none !important;
+}
+body.member-articles-edit .col-sm-9 > .alert.alert-danger{
+    display: none !important;
+}

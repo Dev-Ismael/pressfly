@@ -10,6 +10,7 @@ use App\Mail\AdminUpdateArticle;
 use App\Tag;
 use App\File;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends MemberController
 {
@@ -88,6 +89,39 @@ class ArticleController extends MemberController
      */
     public function store(ArticleRequest $request)
     {
+
+
+        /*====== Custom Validation =====*/
+        $rules = [
+            'title' =>   'required|unique:articles|min:18',
+            'slug' => 'required|unique:articles',
+            'lang' => 'required',
+            'summary' => 'required|unique:articles|min:40',
+            'content' => 'required|unique:articles|min:2000',
+            'upload_featured_image' => 'required',
+            // 'seo' => [
+            //     'title' => 'min:18',
+            //     'keywords' => 'min:50',
+            //     'description' => 'min:50',
+            // ],
+        ];
+        $messages = [
+            'title.unique' => __('A title is already token.'),
+            'summary.unique' => __('This summary is exist.'),
+            'content.unique' => __('This content is exist.'),
+        ];
+        $validator = Validator::make(  $request->all() , $rules  , $messages  ); 
+        if( $validator -> fails()) {  
+            return redirect() -> back() 
+            ->withErrors($validator)
+                ->withInput();
+            // return response() -> json([
+            //     $validator -> errors()
+            // ]);
+        }
+
+
+        
         $data = $request->only([
             'title',
             'lang',

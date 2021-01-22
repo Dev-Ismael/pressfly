@@ -6,10 +6,6 @@
 
 
 
-
-
-
-
     <div class="row bg-success p-2 mb-3 text-white member-rules">
 
         <div class="col-md-6 english">
@@ -52,6 +48,9 @@
                 <div class="form-group">
                     {{ Form::label('title', __('Title')) }}
                     {{ Form::text('title', old('title'), ['class' => 'form-control', 'required' => true , 'minlength' => 18 ]) }}
+                    @error('title')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group" style="display: none">
@@ -64,32 +63,50 @@
                     {{ Form::label('lang', __('Language')) }}
                     {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ], old('lang'),
                         ['class' => 'form-control ', 'required' => true]) }} 
+                    @error('lang')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('category', __('Category')) }}
                     {{ Form::select('category', $categories, old('category'),
                         ['class' => 'form-control select2', 'required' => true]) }}
+                    @error('category')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('summary', __('Summary')) }}
                     {{ Form::textarea('summary', old('summary'), ['class' => 'form-control', 'rows' => 3, 'required' => true  , 'minlength' => 40  ]) }}
+                    @error('summary')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('content', __('Content')) }}
-                    {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' , 'minlength' => 1800  ]) }}
+                    {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' ]) }}
+                    @error('content')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif' , 'class' => 'form-control', 'required' => true]) }}
+                    @error('upload_featured_image')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('reason', __('Message to the Reviewer')) }}
                     {{ Form::textarea('reason', old('reason'), ['class' => 'form-control', 'rows' => 5, 'required' => true]) }}
                     <small class="form-text text-muted"><?= __('You must give a brief description of any changes you have made.') ?></small>
+                    @error('reason')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
                 
