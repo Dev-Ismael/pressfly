@@ -247,3 +247,30 @@ Route::namespace('Member')->prefix('member')->name('member.')->middleware(['role
 
     Route::post('password-change', 'UserController@passwordChange')->name('password.change');
 });
+
+
+// Moderator Routes
+Route::namespace('Moderator')->prefix('moderator')->name('moderator.')->middleware(['role:moderator'])->group(function () {
+
+
+    Route::get('/', 'ModeratorController@index')->name('index');
+
+
+
+    Route::match(['get', 'post'], '/articles/index/new-pending', 'ArticleController@indexNewPending')
+        ->name('articles.indexNewPending');
+    Route::get('/articles/{article}/new-pending/edit', 'ArticleController@newPendingEdit')
+        ->where(['article' => '[0-9]+'])->name('articles.newPendingEdit');
+    Route::put('/articles/{article}/new-pending/process', 'ArticleController@newPendingProcess')
+        ->where(['article' => '[0-9]+'])->name('articles.newPendingProcess');
+    Route::match(['get', 'post'], '/articles/index/update-pending', 'ArticleController@indexUpdatePending')
+        ->name('articles.indexUpdatePending');
+    Route::get('/articles/{article}/update-pending/edit', 'ArticleController@updatePendingEdit')
+        ->where(['article' => '[0-9]+'])->name('articles.updatePendingEdit');
+    Route::put('/articles/{article}/update-pending/process', 'ArticleController@updatePendingProcess')
+        ->where(['article' => '[0-9]+'])->name('articles.updatePendingProcess');
+
+    Route::resource('articles', 'ArticleController')->except(['show']);
+
+
+});

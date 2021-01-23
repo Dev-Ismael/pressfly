@@ -233,6 +233,10 @@ class AuthController extends Controller
                     return redirect()->intended('admin');
                 }
 
+                if ('moderator' == Auth::user()->role) {
+                    return redirect()->intended('moderator');
+                }
+
                 return redirect()->intended('member');
             }
             session()->flash('danger', __('Invalid username or password, try again'));

@@ -45,6 +45,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('member.dashboard') }}">{{ __('Member Area') }}</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('moderator.index') }}">{{ __('Moderator Area') }}</a>
+            </li>
             <!-- Notifications Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
