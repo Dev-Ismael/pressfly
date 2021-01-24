@@ -65,11 +65,46 @@
                         <li class="nav-item active"><a href="{{ url('/our_terms') }}" class="nav-link">Terms</a></li>
                         <li class="nav-item active"><a href="{{ url('/page/write-get-paid') }}" class="nav-link">Payout rates</a></li>
                         <div class="top-menu">
-                            {!! menu_display(get_style('top_menu'), [
-                            'ul_class' => 'list-inline',
-                            'li_class' => 'list-inline-item',
-                            'a_class' => '',
-                            ]) !!}
+                            <ul class="list-inline">
+                                @guest
+                                    <li class="list-inline-item">
+                                        <a href="{{ route("login") }}">
+                                            <span>Login</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="{{ route("register") }}">
+                                            <span>Register</span>
+                                        </a>
+                                    </li>
+                                @endguest
+                                @auth
+                                    @if ( Auth::user()->role == "admin" )
+                                        <li class="list-inline-item">
+                                            <a href="{{ route("admin.dashboard") }}">
+                                                <span>Admin Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="{{ route("member.dashboard") }}">
+                                                <span>Member Dashboard</span>
+                                            </a>
+                                        </li>
+                                    @elseif(  Auth::user()->role == "member"  )
+                                        <li class="list-inline-item">
+                                            <a href="{{ route("member.dashboard") }}">
+                                                <span>Member Dashboard</span>
+                                            </a>
+                                        </li>
+                                    @elseif(  Auth::user()->role == "moderator"  )
+                                        <li class="list-inline-item">
+                                            <a href="{{ route("moderator.index") }}">
+                                                <span>Moderator Dashboard</span>
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endauth
+                            </ul>
                         </div>
                     </ul>
                 </div>

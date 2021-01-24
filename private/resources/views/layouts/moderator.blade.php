@@ -42,6 +42,15 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
+            <!------ session links ------->
+            @if ( Auth::user()->role == "admin" )
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('member.dashboard') }}">{{ __('Member Area') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Administration Area') }}</a>
+                </li>
+            @endif
             <!-- Notifications Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
@@ -74,7 +83,6 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
-
 
                     <li class="nav-item has-treeview">
                         <a class="nav-link" href="#">

@@ -250,12 +250,10 @@ Route::namespace('Member')->prefix('member')->name('member.')->middleware(['role
 
 
 // Moderator Routes
-Route::namespace('Moderator')->prefix('moderator')->name('moderator.')->middleware(['role:moderator'])->group(function () {
+Route::namespace('Moderator')->prefix('moderator')->name('moderator.')->middleware(['role:moderator,admin'])->group(function () {
 
 
     Route::get('/', 'ModeratorController@index')->name('index');
-
-
 
     Route::match(['get', 'post'], '/articles/index/new-pending', 'ArticleController@indexNewPending')
         ->name('articles.indexNewPending');

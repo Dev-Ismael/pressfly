@@ -42,6 +42,7 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
+            <!------ session links ------>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('member.dashboard') }}">{{ __('Member Area') }}</a>
             </li>
