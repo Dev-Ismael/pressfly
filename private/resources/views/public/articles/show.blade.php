@@ -192,7 +192,7 @@
                                 </form>
                             </div>
                         @endguest
-                    </>
+                    </div>
 
                     @if($relatedArticles = $article->relatedArticles())
                         <div class="widget article-related mb-3">
