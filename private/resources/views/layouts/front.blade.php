@@ -66,43 +66,7 @@
     <div class="container">
         <div class="wrap-inner">
             <div class="top-social">
-                <ul class="list-inline">
-                    @if(get_option('facebook_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('facebook_url') }}" class="fab fa-facebook-square" 
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('twitter_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('twitter_url') }}" class="fab fa-twitter-square" 
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('google_plus_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('google_plus_url') }}" class="fab fa-google-plus-square"
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('youtube_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('youtube_url') }}" class="fab fa-youtube fa-fw"
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('pinterest_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('pinterest_url') }}" class="fab fa-pinterest fa-fw"
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('instagram_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('instagram_url') }}" class="fab fa-instagram fa-fw"
-                               target="_blank"></a></li>
-                    @endif
-                    @if(get_option('vk_url'))
-                        <li class="list-inline-item">
-                            <a href="{{ get_option('vk_url') }}" class="fab fa-vk fa-fw"
-                               target="_blank"></a></li>
-                    @endif
-                </ul>
+                
             </div>
             <div class="top-menu">
                 <ul class="list-inline">
@@ -119,8 +83,9 @@
                             </div>
                         </div>
                     @else
-                        <li class="list-inline-item"> <a href="{{ url("/login") }}"> Login </a> </li>
-                        <li class="list-inline-item"> <a href="{{ url("/register") }}"> Register </a> </li>
+                        <li class="list-inline-item"> <a href="{{ url("/login") }}"> <i class="fas fa-user"></i> Login </a> </li>
+                        <li class="list-inline-item" style="color: #fff ; font-size:20px "> | </li>
+                        <li class="list-inline-item"> <a href="{{ url("/register") }}">  <i class="fas fa-sign-in-alt"></i>  Register </a> </li>
                     @endif
                 </ul>
             </div>
