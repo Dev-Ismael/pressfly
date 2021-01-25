@@ -234,7 +234,7 @@ class AuthController extends Controller
                 }
 
                 if ('moderator' == Auth::user()->role) {
-                    return redirect()->intended('moderator');
+                    return redirect()->route("moderator.index");
                 }
 
                 return redirect()->intended('member');

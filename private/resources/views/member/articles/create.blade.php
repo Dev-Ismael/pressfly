@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="form-group">
-                    {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif' , 'class' => 'form-control', 'required' => true]) }}
+                    {{ Form::file('upload_featured_image', ['class' => 'form-control', 'required' => true]) }}
                     @error('upload_featured_image')
                         <p class="alert alert-danger mt-2">{{$message }}</p> 
                     @enderror
