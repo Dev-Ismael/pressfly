@@ -12,11 +12,12 @@
             <p class="rule-title"> Site Terms and Conditions : </p>
             <ul>
                 <li> No illegal means to get visits to your articles </li>
-                <li> The visit is not counted if the visitor stays for less than 30 seconds </li>
+                <li> The paid visit is not counted if the visitor stays for less than  <span style="font-weight: bolder">25 seconds</span> </li>
                 <li> Articles are not accepted if they violate the conditions </li>
                 <li> Article review within 24 hours  </li>
                 <li> The essay must be at least 400 words </li>
                 <li> Use an attractive and organized title for article </li>
+                <li> Articles are not accepted containing violence, blood, pornography, and politics... </li>
                 <li> Your account will be banned if you violate the conditions above </li>
             </ul>
         </div>
@@ -25,11 +26,12 @@
             <p class="rule-title"> : قوانين وشروط الموقع </p>
             <ul>
                 <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك  </li>
-                <li> لا يتم احتساب الزيارة اذا بقي الزائر مدة اقل من من 30 ثانية  </li>
+                <li> لا يتم احتساب الزيارة المدفوعة اذا بقي الزائر مدة اقل من من <span style="font-weight:bolder">25 ثانية</span>  </li>
                 <li> لا يتم قبول المقالات اذا خالفت الشروط </li>
                 <li>  يتم مراجعة المقال في خلال 24 ساعة  </li>
                 <li>  يجب ان لا يقل المقال عن 400 كلمة </li>
                 <li> استخدم عنوان منظم و جذاب للمقالة </li>
+                <li> لا يتم قبول المقالات التي محتواها به العنف , الدم , الاباحي , السياسي .... </li>
                 <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي </li>
             </ul>
         </div>
