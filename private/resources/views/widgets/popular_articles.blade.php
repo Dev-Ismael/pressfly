@@ -129,8 +129,6 @@ $popular_articles = $popular_articles->orderByDesc('views')
                     <small>
                         <i class="far fa-clock"></i> {{ display_date_timezone($popular_article->article->published_at) }}
                     </small>
-                    -
-                    <small><i class="far fa-user"></i> {{ $popular_article->article->user->name }}</small>
                 </div>
             </div>
         @endforeach
