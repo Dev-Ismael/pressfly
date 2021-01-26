@@ -134,7 +134,7 @@
 
                 @if (version_compare(PHP_VERSION, '7.2.0') < 0)
                     <div class="alert alert-danger" role="alert">
-                        <?= __("PressFly will work only on PHP <b>7.2.0</b> or higher starting from the next update so please ask your hosting company to upgrade the PHP version as soon as possible.") ?>
+                        <?= __("Writte.Me will work only on PHP <b>7.2.0</b> or higher starting from the next update so please ask your hosting company to upgrade the PHP version as soon as possible.") ?>
                     </div>
                 @endif
 
@@ -151,10 +151,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer">
-        <!-- To the right -->
-        <div class="float-right d-none d-sm-inline" style="color: #000; font-weight:400">
-            {{ get_option('site_name') }}
-        </div>
+
         <!-- Default to the left -->
         <strong style="color: #000; font-weight:400">
             All Right Reversed &copy; {{ now()->format("Y") }} | This Site is made with 
