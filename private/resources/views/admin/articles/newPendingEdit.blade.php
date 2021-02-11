@@ -82,7 +82,7 @@
 
                         <div class="form-group">
                             {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
-                            {{ Form::number('read_time', 25 , ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
+                            {{ Form::number('read_time', 20 , ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
                         </div>
 
                         <div class="form-group">

@@ -22,7 +22,7 @@
                     <a class="nav-link" href="#general" aria-controls="general" role="tab" data-toggle="tab">
                         {{ __("General") }}  </a>
                 </li>
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="#header" aria-controls="header" role="tab" data-toggle="tab">
                         {{ __("Header") }}  </a>
                 </li>
@@ -45,7 +45,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebars" aria-controls="sidebars" role="tab" data-toggle="tab">
                         {{ __("Sidebars") }}  </a>
-                </li> --}}
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#ads" aria-controls="ads" role="tab" data-toggle="tab">
                         {{ __("Ads") }}  </a>
