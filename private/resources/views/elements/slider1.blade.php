@@ -46,7 +46,7 @@ $articles = \App\Article::with(['user', 'featuredImage', 'mainCategory'])
             </div>
             <div class="item-meta">
                 <small class="text-muted">
-                    <i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Hits') }}
+                    <i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
                 </small>
                 -
                 <small class="text-muted">

@@ -53,7 +53,7 @@
                     <h1 class="article-title">{{ $article->title }}</h1>
 
                     <div class="article-meta">
-                        <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Hits') }}</small>
+                        <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}</small>
                         
                         <small>
                             <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
