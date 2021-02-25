@@ -171,7 +171,7 @@
                     </a>
 
                     <p class="site-info">
-                        TopicLix.com best articles and news in all fields according to the original professional rules of the profession of journalism, which give priority in the journalism industry to produce news and information with absolute credibility, depth of analysis, and transparency of information
+                        Alasyma.com best articles and news in all fields according to the original professional rules of the profession of journalism, which give priority in the journalism industry to produce news and information with absolute credibility, depth of analysis, and transparency of information
                     </p>
 
                     <div class="top-social social-icons">
