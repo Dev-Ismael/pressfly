@@ -438,7 +438,7 @@ class Elements
         }
 
         if ($ad->status === 1) {
-            return '<div id="ad-' . $id . '" class="ad-element"><div class="ad-inner">' . $ad->code . '</div></div>';
+
         }
 
         return '';
