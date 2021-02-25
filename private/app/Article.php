@@ -429,7 +429,8 @@ class Article extends AppModel
         $extension = (string)$this->featuredImage->extension;
 
         if (!$size) {
-            return asset($image);
+            // return asset($image);
+            return 'http://www.writte.me' . $image;
         }
 
         $sizes = Image::$sizes;
@@ -441,7 +442,8 @@ class Article extends AppModel
 
         $image = preg_replace($pattern, $replacement, $image);
 
-        return asset($image);
+        // return asset($image);
+        return 'http://www.writte.me' . $image;
     }
 
     public function getMainImageHTML($size = null)
