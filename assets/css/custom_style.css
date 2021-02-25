@@ -8,12 +8,12 @@ body::-webkit-scrollbar {
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #05386c;
+    background-color: #9a1818;
     border-radius:8px;
     right: -10px
 }
 body{
-    background-color: #05386c0a !important;
+    background-color: #9a18180a !important;
 }
 /*=========== top nav ==========*/
 .top-nav {
@@ -44,13 +44,13 @@ body{
     color: rgb(20, 20, 20);
 }
 .top-nav a.dropdown-item:hover{
-    background-color: #05386c;
+    background-color: #9a1818;
     color: #fff;
 }
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
-    background-color: #05386c !important;
+    background-color: #9a1818 !important;
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
@@ -198,14 +198,14 @@ body{
     padding: 7px 13px
 }
 .page-item.active .page-link{
-    background-color: #05386c;
-    border-color: #05386c;
+    background-color: #9a1818;
+    border-color: #9a1818;
 }
 /*===== button ======*/
 a.read-more{
     border-radius: 20px;
-    border: 1px solid #05386c;
-    background-color:  #05386c;
+    border: 1px solid #9a1818;
+    background-color:  #9a1818;
     color: #fff;
     text-decoration: none;
     padding: 7px 15px;
@@ -217,19 +217,19 @@ a.read-more{
 }
 /*============= Links ==================*/
 a {
-    color: #05386c
+    color: #9a1818
 }
 a:hover {
     color: #032344
 }
 a.read-more:hover{
-    border: 1px solid #05386c;
+    border: 1px solid #9a1818;
     background-color: #fff ;
-    color: #05386c;
+    color: #9a1818;
 }
 .widget .block-item-title a:hover,
 .block-item-title a:hover{
-    color: #05386c
+    color: #9a1818
 }
 .block-title span{
     color: #000 !important;
@@ -244,23 +244,23 @@ a.read-more:hover{
 }
 /*========== ICONS ===========*/
 .nav-item.search-menu-item .fa-search.fa-fw{
-    color: #05386c
+    color: #9a1818
 }
 .block-title span{
-    border-bottom: #05386c;
+    border-bottom: #9a1818;
 }
 input[type=submit]{
     border-radius: 20px;
 }
 /*========= Footer =============*/
 footer.footer {
-    background-color: #05386c !important;
+    background-color: #9a1818 !important;
     padding-bottom: 0px;
     margin-bottom: 0px
 }
 .logo-box{
     padding: 20px ;
-    background-color: #042d56;
+    background-color: #901515;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5) !important;
     border-radius: 8px;
     -webkit-border-radius: 8px;
