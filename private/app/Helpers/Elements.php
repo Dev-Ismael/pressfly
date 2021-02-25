@@ -438,7 +438,7 @@ class Elements
         }
 
         if ($ad->status === 1) {
-
+            return '';
         }
 
         return '';
