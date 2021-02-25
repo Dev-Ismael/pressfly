@@ -10,8 +10,9 @@
 
     <title>@yield('title', e(get_option('site_name')) )</title>
 
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='icon'/>
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='shortcut icon'/>
+    <!----- Favicon ----->
+    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="icon">
+    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="shortcut icon">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
