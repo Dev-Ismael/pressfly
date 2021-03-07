@@ -70,6 +70,13 @@
 
                 <!-- Here is where we loop through our $posts array, printing out post info -->
 
+                @php
+                    $auth_id = auth()->id();
+                    $site = 'https://alasyma.com/';
+                    if( $auth_id == 1 || $auth_id == 4 ){
+                        $site = 'https://topiclix.com/';
+                    }
+                @endphp
                 @foreach ($articles as $article)
                     <tr>
                         <td>{{ $article->id }}</td>
@@ -77,7 +84,7 @@
                             <a href="{{ route('member.articles.edit', [$article->id]) }}">{{ $article->title }}</a>
                         </td>
                         <td>{{ get_article_statuses($article->status) }}</td>
-                        <td> <a href="https://topiclix.com/{{get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  http://topiclix.com/{{get_article_statuses($article->slug)}} </a> </td>
+                        <td> <a href="{{ $site . "" . get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  {{ $site . "" . get_article_statuses($article->slug)}} </a> </td>
                         <td>{{ display_date_timezone($article->updated_at) }}</td>
                         <td>{{ display_date_timezone($article->published_at) }}</td>
                         <td>
