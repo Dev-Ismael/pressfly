@@ -53,8 +53,8 @@
                                                 </a>
                                             </div>
                                             <div class="block-item-meta">
-                                                <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
-                                                </small>
+                                                {{-- <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
+                                                </small> --}}
                                                 <small>
                                                     <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
                                                 </small>
@@ -88,8 +88,8 @@
                                             </a>
                                         </div>
                                         <div class="block-item-meta">
-                                            <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
-                                            </small>
+                                            {{-- <small><i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
+                                            </small> --}}
                                             <small>
                                                 <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
                                             </small>

@@ -45,10 +45,10 @@ $articles = \App\Article::with(['user', 'featuredImage', 'mainCategory'])
                 <a href="{{ route('article.show', ['slug' => $article->slug, 'article' => $article->id]) }}">{{ $article->title }}</a>
             </div>
             <div class="item-meta">
-                <small class="text-muted">
+                {{-- <small class="text-muted">
                     <i class="far fa-eye"></i> {{ display_number($article->hits) }} {{ __('Views') }}
                 </small>
-                -
+                - --}}
                 <small class="text-muted">
                     <i class="far fa-clock"></i> {{ display_date_timezone($article->published_at) }}
                 </small>
