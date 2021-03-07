@@ -111,12 +111,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-main sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            @if(get_style('logo_image'))
-                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-            @else
-                {{ get_option('site_name') }}
-            @endif
+        <a href="https://alasyma.com" class="navbar-brand">
+            <img src="https://i.ibb.co/fCt12Nx/Image-1.png" alt="Alasyma.com" height="80" style="border-radius: 10px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
