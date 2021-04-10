@@ -69,6 +69,11 @@ Route::get('/auth/{provider}/callback', 'AuthController@handleSocialProviderCall
 
 Route::post('upload/editor', 'UploadController@editor')->name('upload.editor');
 
+// Ads.txt Route
+Route::get('/ads.txt', function () {
+    return view("public.adsTxt") ;
+});
+
 // Install Routes
 Route::name('')->group(function () {
     Route::get('/install', 'InstallController@index')->name('install.index');
