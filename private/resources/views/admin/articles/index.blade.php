@@ -54,9 +54,9 @@
         <div class="card-header">
             <h5 class="m-0">
                 <i class="far fa-file-alt"></i> {{ __('Articles') }}
-                <button class="btn btn-primary btn-sm float-right"
+                {{-- <button class="btn btn-primary btn-sm float-right"
                         onclick="window.location.href='{{ route('admin.articles.create') }}'">
-                    <i class="fa fa-plus"></i> {{ __('Add Article') }}</button>
+                    <i class="fa fa-plus"></i> {{ __('Add Article') }}</button> --}}
             </h5>
         </div>
         <div class="card-body p-0">

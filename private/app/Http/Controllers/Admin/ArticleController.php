@@ -73,19 +73,19 @@ class ArticleController extends AdminController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    // public function create()
+    // {
         
 
-        $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
+    //     $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
-        $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
+    //     $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
-        return view('admin.articles.create', [
-            'categories' => $categories,
-            'tags' => $tags,
-        ]);
-    }
+    //     return view('admin.articles.create', [
+    //         'categories' => $categories,
+    //         'tags' => $tags,
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
