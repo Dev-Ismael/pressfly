@@ -85,18 +85,6 @@
                             {{ Form::number('read_time', 20 , ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
                         </div>
 
-                        <div class="form-group">
-                            <label for="user_id">{{ __('User') }}</label>
-                            <select class="form-control select2" name="user_id" id="user_id" required>
-                                <option value="">{{ __('Choose') }}</option>
-                                @foreach($users as $key=>$val)
-                                    <option
-                                        value="{{ $key }}" {{ (($key == (int)old('user_id', $article->user_id))? "selected":"") }}>
-                                        {{$val}}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
 
                         <?php
                         /*

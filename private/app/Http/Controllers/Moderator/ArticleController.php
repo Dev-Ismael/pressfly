@@ -75,14 +75,12 @@ class ArticleController extends ModeratorController
      */
     public function create()
     {
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
         $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
         return view('moderator.articles.create', [
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -179,7 +177,6 @@ class ArticleController extends ModeratorController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -187,7 +184,6 @@ class ArticleController extends ModeratorController
 
         return view('moderator.articles.edit', [
             'article' => $article,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -395,7 +391,6 @@ class ArticleController extends ModeratorController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -403,7 +398,6 @@ class ArticleController extends ModeratorController
 
         return view('moderator.articles.newPendingEdit', [
             'article' => $article,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -560,7 +554,6 @@ class ArticleController extends ModeratorController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -581,7 +574,6 @@ class ArticleController extends ModeratorController
         return view('moderator.articles.updatePendingEdit', [
             'article' => $article,
             'article_update' => $article_update,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
