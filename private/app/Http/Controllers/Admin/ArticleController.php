@@ -75,14 +75,13 @@ class ArticleController extends AdminController
      */
     public function create()
     {
-        $users = User::pluck('username', 'id');
+        
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
         $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
         return view('admin.articles.create', [
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -179,7 +178,7 @@ class ArticleController extends AdminController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
+        
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -187,7 +186,6 @@ class ArticleController extends AdminController
 
         return view('admin.articles.edit', [
             'article' => $article,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -395,7 +393,6 @@ class ArticleController extends AdminController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -403,7 +400,6 @@ class ArticleController extends AdminController
 
         return view('admin.articles.newPendingEdit', [
             'article' => $article,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);
@@ -560,7 +556,6 @@ class ArticleController extends AdminController
             abort(404);
         }
 
-        $users = User::pluck('username', 'id');
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -581,7 +576,6 @@ class ArticleController extends AdminController
         return view('admin.articles.updatePendingEdit', [
             'article' => $article,
             'article_update' => $article_update,
-            'users' => $users,
             'categories' => $categories,
             'tags' => $tags,
         ]);

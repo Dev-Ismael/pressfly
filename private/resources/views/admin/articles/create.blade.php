@@ -68,11 +68,6 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            {{ Form::label('user_id', 'User') }}
-                            {{ Form::select('user_id', $users, old('user_id'), ['placeholder' => __('Choose'),
-                            'class' => 'form-control select2', 'required' => true]) }}
-                        </div>
 
                         <?php
                         /*

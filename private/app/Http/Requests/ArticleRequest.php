@@ -97,7 +97,7 @@ class ArticleRequest extends FormRequest
             ];
 
             $rules['status'] = ['required'];
-            $rules['user_id'] = ['required'];
+            // $rules['user_id'] = ['required'];
         }
 
         if ($this->route()->getPrefix() === '/member') {
