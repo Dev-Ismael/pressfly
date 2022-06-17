@@ -868,3 +868,13 @@ $(function () {
 
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+
+// At click Ads Function
+$(function () {
+
+    $("div.ad-element").on("click", function(e){
+        e.preventDefault();
+    });
+
+});
