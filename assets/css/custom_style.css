@@ -21,7 +21,7 @@ body{
 }
 .top-nav a{
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
 }
 .top-nav a:hover{
     color: #c7c7c7;
@@ -32,9 +32,7 @@ body{
     font-size: 25px;
 }
 .top-nav button.btn.dropdown-toggle{
-    background-color: #d4d4d4;
-    border-color: #d4d4d4;
-    color: #000;
+    color: #fff;
 }
 .top-nav .dropdown-menu{
     padding: 10px 0px;
@@ -95,6 +93,9 @@ body{
     padding: 2px 8px;
     color: #ffffff;
     font-size: 12px;
+}
+.block-item-category a:hover{
+    color: #fff !important;
 }
 /*===== grid-item-img ====*/
 .grid-item-img{

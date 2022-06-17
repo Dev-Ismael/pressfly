@@ -137,9 +137,9 @@
                             <td>{{ display_date_timezone($user->created_at) }}</td>
                             <td>
                                 <div class="d-inline-flex">
-                                    <a class="btn btn-sm btn-primary" target="_blank" href="{{ $user->permalink() }}">
+                                    {{-- <a class="btn btn-sm btn-primary" target="_blank" href="{{ $user->permalink() }}">
                                         <i class="far fa-eye"></i>
-                                    </a>
+                                    </a> --}}
 
                                     <a href="{{ route('admin.users.edit', [$user->id]) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt"></i>
