@@ -2,6 +2,7 @@
 $articles = \App\Article::with(['user', 'featuredImage', 'mainCategory'])
     ->latest('created_at')
     ->where('status', 1)
+    ->where('lang' , 'english')
     ->paginate();
 ?>
 <style>

@@ -41,6 +41,7 @@ $popular_articles = \App\Statistic::query()
          * @var \Illuminate\Database\Eloquent\Builder $query
          */
         $query->whereIn('status', [1, 4]);
+        $query->where('lang' , 'english');
     });
 
 //        $popular_articles = $popular_articles->whereHas('article.categories', function ($query) {
@@ -74,6 +75,7 @@ if ($auto && $routeName === 'category.show' && $category) {
              */
             $query->whereIn('id', $widget['cats']);
             $query->where('status', 1);
+            $query->where('lang' , 'english');
         });
     }
 }
@@ -93,6 +95,7 @@ if ($auto && $routeName === 'tag.show' && $tag) {
              */
             $query->whereIn('id', $widget['tags']);
             $query->where('status', 1);
+            $query->where('lang', 'english');
         });
     }
 }

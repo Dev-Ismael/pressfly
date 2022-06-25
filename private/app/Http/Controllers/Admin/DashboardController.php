@@ -87,6 +87,7 @@ class DashboardController extends AdminController
         $articles = Article::query()
             ->whereBetween('published_at', [$date1, $date2])
             ->where('status', 1)
+            ->where('lang' , 'english')
             ->count();
 
         $popular_articles = Statistic::query()
@@ -110,6 +111,7 @@ class DashboardController extends AdminController
             ])
             ->whereBetween('published_at', [$date1, $date2])
             ->where('status', 1)
+            ->where('lang' , 'english')
             ->orderByDesc('published_at')
             ->limit(10)
             ->get();

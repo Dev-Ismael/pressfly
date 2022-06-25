@@ -17,6 +17,7 @@ if (isset($widget['cats']) && count($widget['cats'])) {
          */
         $query->whereIn('id', $widget['cats']);
         $query->where('status', 1);
+        $query->where('lang' , 'english');
     });
 }
 
@@ -27,11 +28,13 @@ if (isset($widget['tags']) && count($widget['tags'])) {
          */
         $query->whereIn('id', $widget['tags']);
         $query->where('status', 1);
+        $query->where('lang', 'english');
     });
 }
 
 $recent_articles = $recent_articles
     ->whereIn('status', [1, 4])
+    ->where('lang' , 'english')
     ->orderBy('published_at', 'desc')
     ->limit($widget['num'])
     ->get();

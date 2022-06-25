@@ -245,7 +245,7 @@ a.read-more:hover{
 }
 /*========== ICONS ===========*/
 .nav-item.search-menu-item .fa-search.fa-fw{
-    color: #05386c
+    color: #fff !important
 }
 .block-title span{
     border-bottom: #05386c;
