@@ -13,8 +13,9 @@
     <meta name="keywords" content="@yield('keywords', e(get_option('site_keywords')) )">
     <link rel="canonical" href="{{ url()->current() }}"/>
 
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='icon'/>
-    <link href='{{ asset(get_style('favicon', '/favicon.ico')) }}' type='image/x-icon' rel='shortcut icon'/>
+    <!----- Favicon ----->
+    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="icon">
+    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="shortcut icon">
 
     @if(get_option('language_direction', 'ltr') === 'rtl')
         <link href="https://cdn.jsdelivr.net/gh/RTLCSS/bootstrap@4.2.1-rtl/dist/css/rtl/bootstrap.min.css"
@@ -38,12 +39,8 @@
 
 <div class="auth">
     <div class="auth-title">
-        <a href="{{ url('/') }}">
-            @if(get_style('logo_image'))
-                <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}" class="logo-image">
-            @else
-                {{ get_option('site_name') }}
-            @endif
+        <a href="{{ url('/') }}" class="navbar-brand">
+            <img src="https://i.ibb.co/fCt12Nx/Image-1.png" alt="Alasyma.com" height="120" style="border-radius: 10px">
         </a>
     </div>
 
