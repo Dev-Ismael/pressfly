@@ -79,9 +79,10 @@
                         </td>
                         <td>{{ get_article_statuses($article->status) }}</td>
                         @php
-                            $site = 'https://alasyma.com/';
                             if( $article->lang == "english" ){
-                                $site = 'https://topiclix.com/';
+                                $site = 'https://jourlive.com/';
+                            }elseif ( $article->lang == "arabic" ) {
+                                $site = 'https://elnahrah.com/';
                             }
                         @endphp
                         <td> <a href="{{ $site . "" . get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  {{ $site . "" . get_article_statuses($article->slug)}} </a> </td>
