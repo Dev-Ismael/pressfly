@@ -1,19 +1,20 @@
+
 /*==============================================================*/
 /*============= Custom Style ===================================*/
 /*==============================================================*/
 /*=========== Scroll ==========*/
 body::-webkit-scrollbar {
-    background-color: #05396c54;
+    background-color: #2a817828;
     width: 10px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #05386c;
+    background-color: #2a8178;
     border-radius:8px;
     right: -10px
 }
 body{
-    background-color: #05386c0a !important;
+    background-color: #ebebeb !important;
 }
 /*=========== top nav ==========*/
 .top-nav {
@@ -42,13 +43,13 @@ body{
     color: rgb(20, 20, 20);
 }
 .top-nav a.dropdown-item:hover{
-    background-color: #05386c;
+    background-color: #2a8178;
     color: #fff;
 }
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
-    background-color: #05386c !important;
+    background-color: #2a8178 !important;
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
@@ -63,14 +64,20 @@ body{
     -o-border-radius: 7px;
 }
 .navbar-light .navbar-nav .nav-link:hover{
-    color: rgb(143, 143, 143);
+    color: rgb(209, 209, 209);
 }
-.form-control{
+/* .form-control{
     border-radius: 20px;
 }
+*/
 .menu-search button{
-    margin-left: 10px;
-    border-radius: 20px;
+    background-color: #2a8178;
+    border: 1px solid #2a8178;
+    color: #fff;
+}
+.menu-search button:hover{
+    border: 1px solid #2a8178 !important;
+    background-color: #1a544e !important;
 }
 .nav-item.search-menu-item .fa-search.fa-fw{
     font-size: 25px;
@@ -81,6 +88,7 @@ body{
 } */
 /*========= Posts Grid =======*/
 .block-item-category{
+    display: inline-table;
     z-index: 9999;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -199,14 +207,14 @@ body{
     padding: 7px 13px
 }
 .page-item.active .page-link{
-    background-color: #05386c;
-    border-color: #05386c;
+    background-color: #2a8178;
+    border-color: #2a8178;
 }
 /*===== button ======*/
 a.read-more{
     border-radius: 20px;
-    border: 1px solid #05386c;
-    background-color:  #05386c;
+    border: 1px solid #2a8178;
+    background-color:  #2a8178;
     color: #fff;
     text-decoration: none;
     padding: 7px 15px;
@@ -218,19 +226,19 @@ a.read-more{
 }
 /*============= Links ==================*/
 a {
-    color: #05386c
+    color: #2a8178
 }
 a:hover {
     color: #032344
 }
 a.read-more:hover{
-    border: 1px solid #05386c;
+    border: 1px solid #2a8178;
     background-color: #fff ;
-    color: #05386c;
+    color: #2a8178;
 }
 .widget .block-item-title a:hover,
 .block-item-title a:hover{
-    color: #05386c
+    color: #2a8178
 }
 .block-title span{
     color: #000 !important;
@@ -248,20 +256,20 @@ a.read-more:hover{
     color: #fff !important
 }
 .block-title span{
-    border-bottom: #05386c;
+    border-bottom: #2a8178;
 }
 input[type=submit]{
     border-radius: 20px;
 }
 /*========= Footer =============*/
 footer.footer {
-    background-color: #05386c !important;
+    background-color: #2a8178 !important;
     padding-bottom: 0px;
     margin-bottom: 0px
 }
 .logo-box{
     padding: 20px ;
-    background-color: #042d56;
+    background-color: #1a544e;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5) !important;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -297,6 +305,7 @@ footer.footer .separator{
 footer .block-title span{
     color: #fff !important;
 }
+footer .block-item-title a,
 footer .block-item-title a:hover{
     color: #fff !important;
 }
@@ -311,4 +320,8 @@ footer .copyright{
 footer .copyright .row{
     padding-top: 15px;
 
+}
+footer .block-item-meta,
+.block-item-meta a{
+    color: #cacaca;
 }

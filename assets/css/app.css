@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 :root {
     --primary-color: #dd0009;
-    --primary-font: "Nunito", sans-serif;
+    --primary-font: 'Montserrat', sans-serif;
     --second-font: "Roboto+Slab", serif;
     --link-color: #6f6f6f;
     --heading-color: #1c1c1c;
@@ -11,7 +12,7 @@
 
 /************************************************/
 body {
-    font-family: var(--primary-font);
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.5;
@@ -46,7 +47,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--primary-font);
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     color: var(--heading-color);
 }
@@ -315,7 +316,7 @@ img {
     display: inline-block;
     font-size: 25px;
     line-height: 1;
-    font-family: var(--second-font);
+    font-family: 'Josefin Sans', sans-serif;
     padding-bottom: 15px;
     border-bottom: solid var(--primary-color) 3px;
     margin-bottom: -1px;
@@ -536,7 +537,7 @@ a.read-more {
 }
 
 .grid-item-title a {
-    font-family: var(--primary-font);
+    font-family: 'Josefin Sans', sans-serif;
     /* font-size: 20px; */
     font-size: 1.2rem;
     line-height: 1;
@@ -1736,7 +1737,7 @@ footer.footer .separator {
 }
 
 .author .author-name a {
-    font-family: var(--second-font);
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     line-height: 1;
     color: var(--primary-color);
@@ -1960,7 +1961,7 @@ footer.footer .separator {
 }
 
 .article-title, .page-title {
-    font-family: var(--second-font);
+    font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -2069,7 +2070,7 @@ footer.footer .separator {
 }
 
 .author-details .author-name {
-    font-family: var(--second-font);
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     line-height: 1;
     color: var(--primary-color);

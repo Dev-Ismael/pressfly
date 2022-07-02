@@ -1,13 +1,13 @@
 /*=== Body ===*/
 body::-webkit-scrollbar ,
 body::-webkit-scrollbar {
-    background-color:#05386c65;
+    background-color:#2a817865;
     width:10px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb{
-    background-color:#05386c;
+    background-color:#2a8178;
     border-radius:8px;
     right: -10px
 }
@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb{
     color: rgba(255,255,255,.8);
 }
 [class*=sidebar-dark-] {
-    background-color: #05386c;
+    background-color: #2a8178;
 }
 .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
 .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
@@ -50,16 +50,16 @@ body::-webkit-scrollbar-thumb{
 }
 /*==== card-primary =====*/
 .card-primary.card-outline {
-    border-top: 3px solid #05386c;
+    border-top: 3px solid #2a8178;
 }
 /*==== Links , btn =====*/
 a {
-    color: #05386c;
+    color: #2a8178;
     text-decoration: none;
     background-color: transparent;
 }
 a:hover {
-    color: #05386cc9;
+    color: #2a8178c9;
     text-decoration: none;
 }
 .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
@@ -76,15 +76,15 @@ a:hover {
 }
 .btn-primary {
     color: #fff;
-    background-color: #05386c;
-    border-color: #05386c;
+    background-color: #2a8178;
+    border-color: #2a8178;
     box-shadow: none;
 }
 .btn-primary:hover, 
 .btn-primary:active, 
 .btn-primary:focus {
-    background-color: #05386cc9;
-    border-color: #05386cc9;
+    background-color: #2a8178c9;
+    border-color: #2a8178c9;
 }
 /*====== Card ========*/ 
 .card {
@@ -93,22 +93,22 @@ a:hover {
     overflow: hidden;
 }
 .card-header.text-white{
-    background-color: #05386c !important;
+    background-color: #2a8178 !important;
 }
 .card-body .list-group::-webkit-scrollbar ,
 .card-body .list-group::-webkit-scrollbar {
-    background-color:#05386c65;
+    background-color:#2a817865;
     width:10px;
     right: -10px
 }
 .card-body .list-group::-webkit-scrollbar-thumb,
 .card-body .list-group::-webkit-scrollbar-thumb{
-    background-color:#05386c;
+    background-color:#2a8178;
     border-radius:8px;
     right: -10px
 }
 .morris-hover-point{
-    color: #05386c !important;
+    color: #2a8178 !important;
 }
 .info-box .info-box-icon{
     border-radius: 50%  !important;
@@ -122,8 +122,8 @@ a:hover {
     font-size: 42px;
 }
 .page-item.active .page-link{
-    background-color: #05386c;
-    border-color: #05386c;
+    background-color: #2a8178;
+    border-color: #2a8178;
 }
 .form-inline{
     margin: 0px 5px !important;
@@ -170,6 +170,6 @@ td a.btn{
     -o-border-radius: 50% !important;
 }
 i.fas.fa-bars{
-    color: #05386c;
+    color: #2a8178;
     font-size: 24px;
 }

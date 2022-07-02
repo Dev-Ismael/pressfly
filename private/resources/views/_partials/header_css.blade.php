@@ -26,7 +26,7 @@ $google_fonts_embed_url = '//fonts.googleapis.com/css?family=' . implode('%7C', 
         --heading-color: #1c1c1c;
         --text-color: {{ $body_typography['color'] ?? '#616161' }};
         --subtext-color: #919191;
-        --border-color: #e5e5e5;
+        --border-color: #c7c7c7;
     }
 
     body {
