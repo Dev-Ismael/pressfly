@@ -424,15 +424,18 @@ class Article extends AppModel
 
     public function getMainImage($size = null)
     {
+        $storage_site = 'https://writte.me/';
         $image = (string)$this->featuredImage->file;
         if (!$image) {
-            return asset('assets/img/thumb.png');
+            // return asset('assets/img/thumb.png');
+            return $storage_site . 'assets/img/thumb.png';
         }
 
         $extension = (string)$this->featuredImage->extension;
 
         if (!$size) {
-            return asset($image);
+            // return asset($image);
+            return $storage_site . $image;
         }
 
         $sizes = Image::$sizes;
@@ -444,7 +447,8 @@ class Article extends AppModel
 
         $image = preg_replace($pattern, $replacement, $image);
 
-        return asset($image);
+        // return asset($image);
+        return $storage_site . $image;
     }
 
     public function getMainImageHTML($size = null)
