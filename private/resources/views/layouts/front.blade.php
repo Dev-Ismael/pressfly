@@ -11,9 +11,9 @@
 
 
     @if(Request::is('/'))
-        <title> Discover World With Jourlive </title>
-        <meta name="description" content="jourlive it is a platform that includes articles in all fields, including news, sports, technology , health and beauty , With all credibility in writing and in transmitting information, we strive to obtain the confidence of the reader">
-        <meta name="keywords" content="jourlive it is a platform that includes articles in all fields , bitcoin ,& ,crypto , fashion , forex , games , health , mobiles , news , others , pets , programs , sports  , stories , tech">
+        <title> اكتشف العالم اول باول مع مجلة النهاردة </title>
+        <meta name="description" content="مجلة النهاردة هي عبارة عن منصة تضم مقالات في جميع المجالات ، بما في ذلك الأخبار والرياضة والتكنولوجيا والصحة والجمال ، بكل مصداقية في الكتابة ونقل المعلومات ، نسعى جاهدين لنيل ثقة القارئ">
+        <meta name="keywords" content="مجلة النهاردة هي عبارة عن منصة تتضمن مقالات في جميع المجالات ، بيتكوين  ، تشفير ، أزياء ، فوركس ، ألعاب ، صحة ، هواتف محمولة ، أخبار ، أخرى ، حيوانات أليفة ، برامج ، رياضة ، قصص ، تكنولوجيا">
     @else
         <title>@yield('title', e(get_option('site_meta_title', get_option('site_name'))))</title>
         <meta name="description" content="@yield('description', e(get_option('site_description')))">
