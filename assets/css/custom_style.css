@@ -4,12 +4,12 @@
 /*==============================================================*/
 /*=========== Scroll ==========*/
 body::-webkit-scrollbar {
-    background-color: #39124628;
+    background-color: #84272728;
     width: 10px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #391246;
+    background-color: #842727;
     border-radius:8px;
     right: -10px
 }
@@ -43,13 +43,13 @@ body{
     color: rgb(20, 20, 20);
 }
 .top-nav a.dropdown-item:hover{
-    background-color: #391246;
+    background-color: #842727;
     color: #fff;
 }
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
-    background-color: #391246 !important;
+    background-color: #842727 !important;
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
@@ -71,12 +71,12 @@ body{
 }
 */
 .menu-search button{
-    background-color: #391246;
-    border: 1px solid #391246;
+    background-color: #842727;
+    border: 1px solid #842727;
     color: #fff;
 }
 .menu-search button:hover{
-    border: 1px solid #391246 !important;
+    border: 1px solid #842727 !important;
     background-color: #1a544e !important;
 }
 .nav-item.search-menu-item .fa-search.fa-fw{
@@ -220,14 +220,14 @@ body{
     padding: 7px 13px
 }
 .page-item.active .page-link{
-    background-color: #391246;
-    border-color: #391246;
+    background-color: #842727;
+    border-color: #842727;
 }
 /*===== button ======*/
 a.read-more{
     border-radius: 20px;
-    border: 1px solid #391246;
-    background-color:  #391246;
+    border: 1px solid #842727;
+    background-color:  #842727;
     color: #fff;
     text-decoration: none;
     padding: 7px 15px;
@@ -239,19 +239,19 @@ a.read-more{
 }
 /*============= Links ==================*/
 a {
-    color: #391246
+    color: #842727
 }
 a:hover {
     color: #032344
 }
 a.read-more:hover{
-    border: 1px solid #391246;
+    border: 1px solid #842727;
     background-color: #fff ;
-    color: #391246;
+    color: #842727;
 }
 .widget .block-item-title a:hover,
 .block-item-title a:hover{
-    color: #391246
+    color: #842727
 }
 .block-title span{
     color: #000 !important;
@@ -269,20 +269,20 @@ a.read-more:hover{
     color: #fff !important
 }
 .block-title span{
-    border-bottom: #391246;
+    border-bottom: #842727;
 }
 input[type=submit]{
     border-radius: 20px;
 }
 /*========= Footer =============*/
 footer.footer {
-    background-color: #391246 !important;
+    background-color: #842727 !important;
     padding-bottom: 0px;
     margin-bottom: 0px
 }
 .logo-box{
     padding: 20px ;
-    background-color: #250c2e   ;
+    background-color: #511717   ;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5) !important;
     border-radius: 8px;
     -webkit-border-radius: 8px;

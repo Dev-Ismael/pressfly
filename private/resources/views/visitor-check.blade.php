@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow"/>
     <title>{{ __('Just a moment...') }}</title>
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png"  type='image/x-icon' rel='icon'/>
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png"  type='image/x-icon' rel='shortcut icon'/>
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png"  type='image/x-icon' rel='icon'/>
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png"  type='image/x-icon' rel='shortcut icon'/>
     <style>
         html, body {
             width: 100%;

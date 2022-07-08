@@ -17,8 +17,8 @@
     <link rel="canonical" href="{{ url()->current() }}"/>
 
     <!----- Favicon ----->
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="icon">
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="shortcut icon">
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png" type="image/x-icon" rel="icon">
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png" type="image/x-icon" rel="shortcut icon">
 
     @if(get_option('language_direction', 'ltr') === 'rtl')
         <link href="https://cdn.jsdelivr.net/gh/RTLCSS/bootstrap@4.2.1-rtl/dist/css/rtl/bootstrap.min.css"
@@ -43,7 +43,7 @@
 <div class="auth">
     <div class="auth-title">
         <a href="{{ url('/') }}" class="navbar-brand">
-            <img src="https://i.ibb.co/Npnx6f7/logo.jpg" alt="jourlive.com" height="120" style="border-radius: 10px">
+            <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="jourlive.com" height="120" style="border-radius: 10px">
         </a>
     </div>
 

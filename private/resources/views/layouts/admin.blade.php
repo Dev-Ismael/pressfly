@@ -11,8 +11,8 @@
     <title>@yield('title', e(get_option('site_name')) )</title>
 
     <!----- Favicon ----->
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="icon">
-    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="shortcut icon">
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png" type="image/x-icon" rel="icon">
+    <link href="https://i.ibb.co/kGpy1cH/alnhrdh-favicon.png" type="image/x-icon" rel="shortcut icon">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">

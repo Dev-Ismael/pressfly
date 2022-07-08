@@ -2,12 +2,12 @@
 
 /*=========== Scroll ==========*/
 body::-webkit-scrollbar {
-    background-color: #39124628;
+    background-color: #84272728;
     width: 10px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #391246;
+    background-color: #842727;
     border-radius:8px;
     right: -10px
 }
@@ -23,10 +23,10 @@ body {
 }
 /*===== btn ======*/
 a{
-    color: #391246;
+    color: #842727;
 }
 a:hover{
-    color: #391246;
+    color: #842727;
 }
 a.forgot_password{
       display: none;
@@ -35,8 +35,8 @@ a.forgot_password{
     padding: 5px 10px;
     color: #fff;
     font-size: 20px;
-    background-color: #391246;
-    border-color: #391246;
+    background-color: #842727;
+    border-color: #842727;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -47,8 +47,8 @@ a.forgot_password{
 .btn-blue:active,
 .btn-blue:focus{
     color: #fff;
-    background-color: #391246d3;
-    border-color: #391246d3;
+    background-color: #842727d3;
+    border-color: #842727d3;
 }
 
 /*===== blue_background ======*/
@@ -56,7 +56,7 @@ a.forgot_password{
     position: relative;
     width: 100%;
     height: 350px;
-    background: #391246;
+    background: #842727;
     transform: skewY(-4deg);
     transform-origin: top left;
     -webkit-transform: skewY(-4deg);
@@ -66,13 +66,13 @@ a.forgot_password{
 }
 /*===== title ======*/
 p.title.text-center{
-    color: #391246;
+    color: #842727;
     font-size: 25px;
 }
 .underline{
     width: 30px;
     height: 3px;
-    background-color: #391246;
+    background-color: #842727;
     margin: 0px auto;
     margin-bottom: 20px;
     margin-top: -10px;
