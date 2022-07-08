@@ -57,7 +57,7 @@ class ArticleController extends AdminController
         $articles = Article::with('user')
             ->where($conditions)
             ->whereIn('status', [1, 2, 7])
-            ->where('lang' , 'english')
+            ->where('lang' , 'arabic')
             ->orderBy($orderBy['col'], $orderBy['dir'])
             ->paginate();
 

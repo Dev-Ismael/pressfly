@@ -27,7 +27,7 @@ class TagController extends Controller
 
         $articles = $tag->articles()
             ->whereIn('status', [1, 4])
-            ->where('lang' , 'english')
+            ->where('lang' , 'arabic')
             ->orderByDesc('published_at')
             ->paginate(10);
 
@@ -57,7 +57,7 @@ class TagController extends Controller
 
         $articles = $tag->articles()
             ->whereIn('status', [1, 4])
-            ->where('lang' , 'english')
+            ->where('lang' , 'arabic')
             ->orderByDesc('published_at')
             ->limit(15)
             ->get();
