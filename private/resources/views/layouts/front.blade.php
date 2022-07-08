@@ -43,8 +43,8 @@
     @endif
 
     <!----- Favicon ----->
-    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="icon">
-    <link href="https://i.ibb.co/xz62MK4/favicon.png" type="image/x-icon" rel="shortcut icon">
+    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="icon">
+    <link href="https://i.ibb.co/N78XLy9/logo-2.png" type="image/x-icon" rel="shortcut icon">
 
     @if (get_option('language_direction', 'ltr') === 'rtl')
         <link href="https://cdn.jsdelivr.net/gh/RTLCSS/bootstrap@4.2.1-rtl/dist/css/rtl/bootstrap.min.css"
@@ -122,7 +122,7 @@
             <div class="wrap-inner">
                 <div class="logo">
                     <a href="{{ url('/') }}" class="navbar-brand">
-                        <img src="https://i.ibb.co/fCt12Nx/Image-1.png" alt="Alasyma.com" height="120"
+                        <img src="https://i.ibb.co/Npnx6f7/logo.jpg" alt="jourlive.com" height="120"
                             style="border-radius: 10px">
                     </a>
                 </div>
@@ -135,12 +135,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light navbar-main sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                @if (get_style('logo_image'))
-                    <img src="{{ asset(get_style('logo_image')) }}" alt="{{ get_option('site_name') }}">
-                @else
-                    {{ get_option('site_name') }}
-                @endif
+            <a href="{{ url('/') }}" class="navbar-brand">
+                <img src="https://i.ibb.co/Npnx6f7/logo.jpg" alt="jourlive.com" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -189,7 +185,7 @@
                     <div class="col-inner">
 
                         <a href="{{ url('/') }}" class="navbar-brand">
-                            <img src="https://i.ibb.co/fCt12Nx/Image-1.png" alt="Alasyma.com" height="120"
+                            <img src="https://i.ibb.co/Npnx6f7/logo.jpg" alt="jourlive.com" height="120"
                                 style="border-radius: 10px">
                         </a>
 

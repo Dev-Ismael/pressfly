@@ -4,12 +4,12 @@
 /*==============================================================*/
 /*=========== Scroll ==========*/
 body::-webkit-scrollbar {
-    background-color: #2a817828;
+    background-color: #39124628;
     width: 10px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #2a8178;
+    background-color: #391246;
     border-radius:8px;
     right: -10px
 }
@@ -43,20 +43,20 @@ body{
     color: rgb(20, 20, 20);
 }
 .top-nav a.dropdown-item:hover{
-    background-color: #2a8178;
+    background-color: #391246;
     color: #fff;
 }
 /*=========== navbar ==========*/
 .navbar-main{
     z-index: 999999999999;
-    background-color: #2a8178 !important;
+    background-color: #391246 !important;
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
 }
 .header .logo img{
     box-shadow: 0px 0px 17px 1px #00000059;
-    height: 140px;
+    height: 100px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -71,16 +71,19 @@ body{
 }
 */
 .menu-search button{
-    background-color: #2a8178;
-    border: 1px solid #2a8178;
+    background-color: #391246;
+    border: 1px solid #391246;
     color: #fff;
 }
 .menu-search button:hover{
-    border: 1px solid #2a8178 !important;
+    border: 1px solid #391246 !important;
     background-color: #1a544e !important;
 }
 .nav-item.search-menu-item .fa-search.fa-fw{
     font-size: 25px;
+}
+.navbar-main .navbar-brand > img{
+    max-height: 60px !important;
 }
 /*==== remove contact us =======*/
 /* .navbar-light .navbar-nav li:last-of-type .nav-link{
@@ -207,14 +210,14 @@ body{
     padding: 7px 13px
 }
 .page-item.active .page-link{
-    background-color: #2a8178;
-    border-color: #2a8178;
+    background-color: #391246;
+    border-color: #391246;
 }
 /*===== button ======*/
 a.read-more{
     border-radius: 20px;
-    border: 1px solid #2a8178;
-    background-color:  #2a8178;
+    border: 1px solid #391246;
+    background-color:  #391246;
     color: #fff;
     text-decoration: none;
     padding: 7px 15px;
@@ -226,19 +229,19 @@ a.read-more{
 }
 /*============= Links ==================*/
 a {
-    color: #2a8178
+    color: #391246
 }
 a:hover {
     color: #032344
 }
 a.read-more:hover{
-    border: 1px solid #2a8178;
+    border: 1px solid #391246;
     background-color: #fff ;
-    color: #2a8178;
+    color: #391246;
 }
 .widget .block-item-title a:hover,
 .block-item-title a:hover{
-    color: #2a8178
+    color: #391246
 }
 .block-title span{
     color: #000 !important;
@@ -256,20 +259,20 @@ a.read-more:hover{
     color: #fff !important
 }
 .block-title span{
-    border-bottom: #2a8178;
+    border-bottom: #391246;
 }
 input[type=submit]{
     border-radius: 20px;
 }
 /*========= Footer =============*/
 footer.footer {
-    background-color: #2a8178 !important;
+    background-color: #391246 !important;
     padding-bottom: 0px;
     margin-bottom: 0px
 }
 .logo-box{
     padding: 20px ;
-    background-color: #1a544e;
+    background-color: #250c2e   ;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5) !important;
     border-radius: 8px;
     -webkit-border-radius: 8px;
