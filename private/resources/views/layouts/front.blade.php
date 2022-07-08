@@ -122,7 +122,7 @@
             <div class="wrap-inner">
                 <div class="logo">
                     <a href="{{ url('/') }}" class="navbar-brand">
-                        <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="jourlive.com" height="120"
+                        <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="alnhrdh.com" height="120"
                             style="border-radius: 10px">
                     </a>
                 </div>
@@ -136,7 +136,7 @@
     <nav class="navbar navbar-expand-lg navbar-light navbar-main sticky-top">
         <div class="container">
             <a href="{{ url('/') }}" class="navbar-brand">
-                <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="jourlive.com" >
+                <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="alnhrdh.com" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -185,15 +185,12 @@
                     <div class="col-inner">
 
                         <a href="{{ url('/') }}" class="navbar-brand">
-                            <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="jourlive.com" height="120"
+                            <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="alnhrdh.com" height="120"
                                 style="border-radius: 10px">
                         </a>
 
                         <p class="site-info">
-                            Jourlive.Com best articles and news in all fields according to the original professional
-                            rules of the profession of journalism, which give priority in the journalism industry to
-                            produce news and information with absolute credibility, depth of analysis, and transparency
-                            of information
+                            مجلة النهاردة أفضل المقالات والأخبار في جميع المجالات وفقًا للقواعد المهنية الأصلية لمهنة الصحافة ، والتي تعطي الأولوية في صناعة الصحافة لإنتاج الأخبار والمعلومات بمصداقية مطلقة وعمق تحليل وشفافية في المعلومات
                         </p>
 
                         <div class="top-social social-icons">

@@ -43,7 +43,7 @@
 <div class="auth">
     <div class="auth-title">
         <a href="{{ url('/') }}" class="navbar-brand">
-            <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="jourlive.com" height="120" style="border-radius: 10px">
+            <img src="https://i.ibb.co/zhvZFy5/alnhrdh-logo.jpg" alt="alnhrdh.com" height="120" style="border-radius: 10px">
         </a>
     </div>
 
