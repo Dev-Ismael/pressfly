@@ -322,26 +322,24 @@ footer .block-item-title a,
 footer .block-item-title a:hover{
     color: #fff !important;
 }
+footer .block-item-meta,
+footer .block-item-meta a{
+    color: #cacaca;
+}
 /*========= copyright =======*/
 footer .copyright{
     margin-top: 40px;
     background-color: #000 !important;
-    padding: 10px 0px;
+    padding: 20px 0px;
     font-size: 16px;
     color: #fff !important;
-    line-height: 16px;
 }
-footer .block-item-meta,
-.block-item-meta a{
-    color: #cacaca;
-}
+
 @media (max-width: 767.98px) {
     footer.footer .block-header{
         margin-top: 20px;
     }
-    footer .copyright .row >div ,
-    footer .copyright .row >p {
+    footer .copyright .row >div { 
         text-align: center !important;
-        margin: 20px 0px;
     }
 }
