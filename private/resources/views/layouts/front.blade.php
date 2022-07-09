@@ -97,18 +97,18 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     @if (Auth::user()->role == 'admin')
                                         <a class="dropdown-item" href="{{ url('/admin') }}"> <i
-                                                class="fas fa-tachometer-alt"></i> Dashboard </a>
+                                                class="fas fa-tachometer-alt"></i> {{ __('Dashboard') }} </a>
                                     @endif
                                     <a class="dropdown-item" href="{{ url('/logout') }}"> <i
-                                            class="fas fa-sign-out-alt"></i> LogOut </a>
+                                            class="fas fa-sign-out-alt"></i> {{ __('Logout') }} </a>
                                 </div>
                             </div>
                         @else
                             <li class="list-inline-item"> <a href="{{ url('/login') }}"> <i class="fas fa-user"></i>
-                                    Login </a> </li>
+                                {{ __('Login') }} </a> </li>
                             <li class="list-inline-item" style="color: #fff ; font-size:20px "> | </li>
                             <li class="list-inline-item"> <a href="{{ url('/register') }}"> <i
-                                        class="fas fa-sign-in-alt"></i> Register </a> </li>
+                                        class="fas fa-sign-in-alt"></i> {{ __('Register') }} </a> </li>
                         @endif
                     </ul>
                 </div>
