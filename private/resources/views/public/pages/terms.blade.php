@@ -1,32 +1,32 @@
 @extends('layouts.front')
 
 @section('title', "Terms")
-@section('description', "jourlive terms")
+@section('description', "alnhrdh terms")
 
 @section('content')
     <main role="main" class="container">
 
-        <h1 class="page-title"> Terms of Use </h1>
+        <h1 class="page-title"> شروط الاستخدام </h1>
 
         <div class="page-content">
             
-            <h3>1.Intellectual Property Rights Infringement</h3>
-            <p>It is our policy to respond to clear notices of alleged intellectual property rights infringement. Our Copyright Infringement Policy is designed to make submitting notices of alleged infringement to us as straightforward as possible while reducing the number of notices that we receive that are fraudulent or difficult to understand or verify. If you believe that your Intellectual Property Rights have been violated, please notify us on our Website and we will investigate.</p>
-            <h3>2. Disclaimer</h3>
-            <p>The materials on jourlive's website are provided on an 'as is' basis. jourlive makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            <p>Further, jourlive does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
-            <h3>3 . Limitations</h3>
-            <p>In no event shall jourlive or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on jourlive's website, even if jourlive or a jourlive authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
-            <h3>4 . Intellectual Property Rights Infringement</h3>
-            <p>It is our policy to respond to clear notices of alleged intellectual property rights infringement. Our Copyright Infringement Policy is designed to make submitting notices of alleged infringement to us as straightforward as possible while reducing the number of notices that we receive that are fraudulent or difficult to understand or verify. If you believe that your Intellectual Property Rights have been violated, please notify us on our Website and we will investigate.</p>
-            <h3>5. Accuracy of materials</h3>
-            <p>The materials appearing on jourlive's website could include technical, typographical, or photographic errors. jourlive does not warrant that any of the materials on its website are accurate, complete or current. jourlive may make changes to the materials contained on its website at any time without notice. However jourlive does not make any commitment to update the materials.</p>
-            <h3>6. Links</h3>
-            <p>jourlive has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by jourlive of the site. Use of any such linked website is at the user's own risk.</p>
-            <h3>7. Modifications</h3>
-            <p>jourlive may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
-            <h3>8. Governing Law</h3>
-            <p>These terms and conditions are governed by and construed in accordance with the laws of egypt and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+            <h3>1. التعدي على حقوق الملكية الفكرية</h3>
+            <p>إن سياستنا هي الاستجابة للإخطارات الواضحة بانتهاك حقوق الملكية الفكرية المزعوم. تم تصميم سياسة انتهاك حقوق الطبع والنشر الخاصة بنا لجعل إرسال إشعارات الانتهاك المزعوم إلينا مباشرًا قدر الإمكان مع تقليل عدد الإشعارات الاحتيالية التي نتلقاها والتي يصعب فهمها أو التحقق منها. إذا كنت تعتقد أن حقوق الملكية الفكرية الخاصة بك قد تم انتهاكها ، فيرجى إخطارنا على موقعنا الإلكتروني وسنقوم بالتحقيق في الأمر.</p>
+            <h3>2. إخلاء المسؤولية</h3>
+            <p>يتم توفير المواد على موقع مجلة النهاردة على أساس "كما هي". مجلة النهاردة لا تقدم أي ضمانات ، صريحة أو ضمنية ، وتخلي مسؤوليتها وتنفي بموجبها جميع الضمانات الأخرى بما في ذلك ، على سبيل المثال لا الحصر ، الضمانات الضمنية أو شروط القابلية للتسويق أو الملاءمة لغرض معين أو عدم التعدي على الملكية الفكرية أو أي انتهاك آخر للحقوق.</p>
+            <p>علاوة على ذلك ، لا تضمن مجلة النهاردة أو تقدم أي تعهدات فيما يتعلق بالدقة ، أو النتائج المحتملة ، أو موثوقية استخدام المواد الموجودة على موقعها الإلكتروني أو المتعلقة بهذه المواد أو على أي مواقع مرتبطة بهذا الموقع.</p>
+            <h3>3. محددات</h3>
+            <p>لن تكون مجلة النهاردة أو مورديها بأي حال من الأحوال مسؤولين عن أي أضرار (بما في ذلك ، على سبيل المثال لا الحصر ، الأضرار الناجمة عن فقدان البيانات أو الأرباح ، أو بسبب انقطاع الأعمال) الناشئة عن استخدام أو عدم القدرة على استخدام المواد الموجودة على موقع مجلة النهاردة ، حتى إذا تم إخطار مجلة النهاردة أو ممثل مجلة النهاردة شفويا أو كتابيا باحتمال حدوث مثل هذا الضرر. نظرًا لأن بعض الولايات القضائية لا تسمح بفرض قيود على الضمانات الضمنية أو قيود المسؤولية عن الأضرار التبعية أو العرضية ، فقد لا تنطبق هذه القيود عليك.</p>
+            <h3>4. التعدي على حقوق الملكية الفكرية</h3>
+            <p>إن سياستنا هي الاستجابة للإخطارات الواضحة بانتهاك حقوق الملكية الفكرية المزعوم. تم تصميم سياسة انتهاك حقوق الطبع والنشر الخاصة بنا لجعل إرسال إشعارات الانتهاك المزعوم إلينا مباشرًا قدر الإمكان مع تقليل عدد الإشعارات الاحتيالية التي نتلقاها والتي يصعب فهمها أو التحقق منها. إذا كنت تعتقد أن حقوق الملكية الفكرية الخاصة بك قد تم انتهاكها ، فيرجى إخطارنا على موقعنا الإلكتروني وسنقوم بالتحقيق في الأمر.</p>
+            <h3>5. دقة المواد</h3>
+            <p>يمكن أن تحتوي المواد التي تظهر على موقع مجلة النهاردة على أخطاء فنية أو مطبعية أو فوتوغرافية. مجلة النهاردة لا تضمن أن أيًا من المواد الموجودة على موقعها الإلكتروني دقيقة أو كاملة أو حديثة. قد تقوم مجلة النهاردة بإجراء تغييرات على المواد الواردة في موقعها على الإنترنت في أي وقت دون إشعار مسبق. ومع ذلك ، لا تقدم مجلة النهاردة أي التزام بتحديث المواد.</p>
+            <h3>6. الروابط</h3>
+            <p>مجلة لم يراجع النهاردة جميع المواقع المرتبطة بموقعه على الويب وليست مسؤولة عن محتويات أي موقع مرتبط من هذا القبيل. إن تضمين أي رابط لا يعني مصادقة مجلة النهاردة على الموقع. استخدام أي موقع مرتبط يكون على مسؤولية المستخدم الخاصة.</p>
+            <h3>7. التعديلات</h3>
+            <p>مجلة قد تقوم النهاردة بمراجعة شروط الخدمة هذه لموقعها على شبكة الإنترنت في أي وقت دون إشعار مسبق. باستخدام هذا الموقع ، فإنك توافق على الالتزام بالإصدار الحالي لشروط الخدمة هذه.</p>
+            <h3>8. القانون الحاكم</h3>
+            <p>تخضع هذه الشروط والأحكام لقوانين مصر ويتم تفسيرها وفقًا لها وأنت تخضع بشكل نهائي للاختصاص القضائي الحصري للمحاكم في تلك الدولة أو الموقع. </p>
         </div>
 
     </main><!-- /.container -->

@@ -260,24 +260,26 @@
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item">
                                     <a href="{{ url('our_privacy') }}">
-                                        <span>Privacy</span>
+                                        <span> الخصوصية</span>
                                     </a>
                                 </li>
                                 <li class="list-inline-item ">
                                     <a href="{{ url('our_terms') }}">
-                                        <span>Terms of Use</span>
+                                        <span>شروط الاستخدام</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-8 text-right">
-                            Copyright &copy;
+                            
+                            جميع الحقوق محفوظة 
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
-                            All rights reserved | This Site is made with <i class="fas fa-heart"
-                                style="color: #f00;"></i> by <a href="https://www.facebook.com/PovamiSoftware"
+                            &copy;
+                            | هذا الموقع انشي بواسطة <i class="fas fa-heart"
+                                style="color: #f00;"></i>  <a href="https://www.facebook.com/PovamiSoftware"
                                 target="_blank" style="text-decoration: underline">Povami Software</a>
 
                     </div>

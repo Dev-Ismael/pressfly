@@ -1,22 +1,22 @@
 @extends('layouts.front')
 
 @section('title', "Privacy")
-@section('description', "jourlive privacy")
+@section('description', "alnhrdh privacy")
 
 @section('content')
     <main role="main" class="container">
 
-        <h1 class="page-title"> Our Privacy </h1>
+        <h1 class="page-title"> الخصوصية </h1>
 
         <div class="page-content">
-            <p>Your privacy is important to us. It is jourlive's policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://alnhrdh.com/">https://alnhrdh.com/</a>, and other sites we own and operate.</p>
-            <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
-            <p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
-            <p>We don’t share any personally identifying information publicly or with third-parties, except when required to by law.</p>
-            <p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.</p>
-            <p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.</p>
-            <p>Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.</p>
-            <p>This policy is effective as of 1 January 2021.</p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">خصوصيتك مهمة بالنسبة لنا. </font><font style="vertical-align: inherit;" class="">تتمثل سياسة مجلة النهاردة في احترام خصوصيتك فيما يتعلق بأي معلومات قد نجمعها منك عبر موقعنا الإلكتروني </font></font><a href="https://alnhrdh.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">https://alnhrdh.com/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class=""> والمواقع الأخرى التي نمتلكها ونديرها.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">نحن نطلب المعلومات الشخصية فقط عندما نحتاجها حقًا لتقديم خدمة لك. </font><font style="vertical-align: inherit;">نجمعها بوسائل عادلة وقانونية بمعرفتك وموافقتك. </font><font style="vertical-align: inherit;">نخبرك أيضًا لماذا نقوم بجمعها وكيف سيتم استخدامها.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">نحن نحتفظ فقط بالمعلومات التي تم جمعها طالما كان ذلك ضروريًا لتزويدك بالخدمة المطلوبة. </font><font style="vertical-align: inherit;">ما هي البيانات التي نخزنها ، سنحميها ضمن الوسائل المقبولة تجاريًا لمنع الفقد والسرقة ، بالإضافة إلى الوصول غير المصرح به أو الكشف أو النسخ أو الاستخدام أو التعديل.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">لا نشارك أي معلومات تعريف شخصية علنًا أو مع أطراف ثالثة ، إلا عندما يقتضي القانون ذلك.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">قد يرتبط موقعنا الإلكتروني بمواقع خارجية لا نقوم بتشغيلها. </font><font style="vertical-align: inherit;">يرجى العلم أنه ليس لدينا أي سيطرة على محتوى وممارسات هذه المواقع ، ولا يمكننا قبول المسؤولية أو المسؤولية عن سياسات الخصوصية الخاصة بكل منها.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">لك مطلق الحرية في رفض طلبنا للحصول على معلوماتك الشخصية ، على أساس أننا قد لا نتمكن من تزويدك ببعض الخدمات التي تريدها.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">سيعتبر استمرار استخدامك لموقعنا على الويب بمثابة قبول لممارساتنا المتعلقة بالخصوصية والمعلومات الشخصية. </font><font style="vertical-align: inherit;">إذا كانت لديك أي أسئلة حول كيفية تعاملنا مع بيانات المستخدم والمعلومات الشخصية ، فلا تتردد في الاتصال بنا.</font></font></p>
+            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">هذه السياسة سارية اعتبارًا من 1 يناير 2021.</font></font></p>
         </div>
 
     </main><!-- /.container -->
