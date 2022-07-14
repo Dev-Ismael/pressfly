@@ -97,7 +97,7 @@ class ArticleController extends MemberController
             'slug' => 'required|unique:articles',
             'lang' => 'required',
             'summary' => 'required|unique:articles|min:40',
-            'content' => 'required|unique:articles|min:2000',
+            'content' => 'required|unique:articles|min:750',
             'upload_featured_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             // 'seo' => [
             //     'title' => 'min:18',
