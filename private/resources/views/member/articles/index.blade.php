@@ -82,7 +82,7 @@
                             if( $article->lang == "english" ){
                                 $site = 'https://jourlive.com/';
                             }elseif ( $article->lang == "arabic" ) {
-                                $site = 'https://elnahrah.com/';
+                                $site = 'https://alnhrdh.com/';
                             }
                         @endphp
                         <td> <a href="{{ $site . "" . get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  {{ $site . "" . get_article_statuses($article->slug)}} </a> </td>
