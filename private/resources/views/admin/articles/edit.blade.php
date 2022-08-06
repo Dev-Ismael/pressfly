@@ -24,7 +24,7 @@
                             {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('slug', __('Slug(URL Key)')) }}
                             {{ Form::text('slug', old('slug', $article->slug), ['class' => 'form-control']) }}
                         </div>
@@ -44,17 +44,17 @@
                 <div class="card card-primary card-outline">
                     <div class="card-header"><?= __('SEO ') ?></div>
                     <div class="card-body">
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('seo[title]', __('SEO Title')) }}
                             {{ Form::text('seo[title]', old('seo[title]', $article->seo['title']), ['class' => 'form-control']) }}
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::text('seo[keywords]', old('seo[keywords]', $article->seo['keywords']), ['class' => 'form-control']) }}
+                            {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article->seo['keywords']), ['class' => 'form-control']) }}
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('seo[description]', __('SEO Description')) }}
                             {{ Form::textarea('seo[description]', old('seo[description]', $article->seo['description']), ['class' => 'form-control', 'rows' => 3]) }}
                         </div>
@@ -85,14 +85,14 @@
                         */
                         ?>
 
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('disable_earnings', __('Disable Earnings')) }}
                             {{ Form::select('disable_earnings', [0 => __('No'), 1 => __('Yes')],
                                 old('disable_earnings', $article->disable_earnings), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
                             {{ Form::number('read_time', old('read_time', $article->read_time), ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
                         </div>
@@ -111,7 +111,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group d-none">
                             {{ Form::label('message', __('Message to the Author')) }}
                             {{ Form::textarea('message', old('message'), ['class' => 'form-control', 'rows' => 5]) }}
                         </div>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="card card-primary card-outline">
+                <div class="card card-primary card-outline d-none">
                     <div class="card-header"><?= __('Tags') ?></div>
                     <div class="card-body">
                         <div class="form-group">

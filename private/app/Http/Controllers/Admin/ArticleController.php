@@ -566,6 +566,7 @@ class ArticleController extends AdminController
         if (empty($article->tmp_content)) {
             $article_update = new \stdClass();
             $article_update->title = $article->title;
+            $article_update->lang = $article->lang;
             $article_update->slug = $article->slug;
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;

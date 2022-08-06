@@ -81,7 +81,7 @@
                         @php
                             if( $article->lang == "english" ){
                                 $site = 'https://jourlive.com/';
-                            }elseif ( $article->lang == "arabic" ) {
+                            }else{
                                 $site = 'https://alnhrdh.com/';
                             }
                         @endphp

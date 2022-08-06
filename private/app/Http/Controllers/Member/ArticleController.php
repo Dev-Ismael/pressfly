@@ -195,6 +195,7 @@ class ArticleController extends MemberController
         if (empty($article->tmp_content)) {
             $article_update = new \stdClass();
             $article_update->title = $article->title;
+            $article_update->lang = $article->lang;
             $article_update->slug = $article->slug;
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;
@@ -314,6 +315,7 @@ class ArticleController extends MemberController
         } else {
             $tmp_data = [
                 'title' => $data['title'],
+                'lang' => $data['lang'],
                 'slug' => $data['slug'],
                 'summary' => $data['summary'],
                 'content' => $data['content'],
