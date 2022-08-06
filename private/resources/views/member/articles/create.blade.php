@@ -12,9 +12,10 @@
             <p class="rule-title"> Site Terms and Conditions : </p>
             <ul>
                 <li> No illegal means to get visits to your articles </li>
-                <li> The paid visit is not counted if the visitor stays for less than  <span style="font-weight: bolder">25 seconds</span> </li>
+                <li> The paid visit is not counted if the visitor stays for less than <span style="font-weight: bolder">20
+                        seconds</span> </li>
                 <li> Articles are not accepted if they violate the conditions </li>
-                <li> Article review within 24 hours  </li>
+                <li> Article review within 24 hours </li>
                 <li> The essay must be at least 400 words </li>
                 <li> Use an attractive and organized title for article </li>
                 <li> Articles are not accepted containing violence, blood, pornography, and politics... </li>
@@ -25,11 +26,12 @@
         <div class="col-md-6 arabic">
             <p class="rule-title"> : قوانين وشروط الموقع </p>
             <ul>
-                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك  </li>
-                <li> لا يتم احتساب الزيارة المدفوعة اذا بقي الزائر مدة اقل من من <span style="font-weight:bolder">25 ثانية</span>  </li>
+                <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك </li>
+                <li> لا يتم احتساب الزيارة المدفوعة اذا بقي الزائر مدة اقل من من <span style="font-weight:bolder">20
+                        ثانية</span> </li>
                 <li> لا يتم قبول المقالات اذا خالفت الشروط </li>
-                <li>  يتم مراجعة المقال في خلال 24 ساعة  </li>
-                <li>  يجب ان لا يقل المقال عن 400 كلمة </li>
+                <li> يتم مراجعة المقال في خلال 24 ساعة </li>
+                <li> يجب ان لا يقل المقال عن 400 كلمة </li>
                 <li> استخدم عنوان منظم و جذاب للمقالة </li>
                 <li> لا يتم قبول المقالات التي محتواها به العنف , الدم , الاباحي , السياسي .... </li>
                 <li> يتم حظر حسابك اذا خالفت الشروط بالاعلي </li>
@@ -49,41 +51,42 @@
 
                 <div class="form-group">
                     {{ Form::label('title', __('Title')) }}
-                    {{ Form::text('title', old('title'), ['class' => 'form-control', 'required' => true , 'minlength' => 18 ]) }}
+                    {{ Form::text('title', old('title'), ['class' => 'form-control' , 'required' => true , 'minlength' => 18 , 'maxlength' => 100 ]) }}
                     @error('title')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <div class="form-group" style="display: none">
-                    {{ Form::label('slug', __('Slug(URL Key)')) }}
-                    {{ Form::text('slug', old('slug'), ['class' => 'form-control']) }}
-                </div>
-
-                <!---- Add Custom  ---->
                 <div class="form-group">
-                    {{ Form::label('lang', __('Language')) }}
-                    {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ], old('lang'),
-                        ['class' => 'form-control ', 'required' => true]) }} 
+                    <label for="lang">{{ __('Language') }}</label>
+                    <select class="form-control" id="lang" name="lang" required />
+                    <option class="d-none" disabled selected value="">Choose Language...</option>
+                    <option value="english"  {{ old('lang') == 'english' ? 'selected' : '' }}  >English</option>
+                    <option value="arabic"  {{ old('lang') == 'arabic' ? 'selected' : '' }}  >العربية</option>
+                    </select>
                     @error('lang')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {{ Form::label('category', __('Category')) }}
-                    {{ Form::select('category', $categories, old('category'),
-                        ['class' => 'form-control select2', 'required' => true]) }}
+                    <label for="category">{{ __('Category') }}</label>
+                    <select class="form-control" id="category" name="category" required />
+                        <option class="d-none" disabled selected value="">Choose Category...</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}" {{ old('category') == $category->id ? 'selected' : '' }} >{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                     @error('category')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('summary', __('Summary')) }}
-                    {{ Form::textarea('summary', old('summary'), ['class' => 'form-control', 'rows' => 3, 'required' => true  , 'minlength' => 40  ]) }}
+                    {{ Form::textarea('summary', old('summary'), ['class' => 'form-control', 'rows' => 3 , 'required' => true , 'minlength' => 100 , 'maxlength' => 255  ]) }}
                     @error('summary')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -91,47 +94,41 @@
                     {{ Form::label('content', __('Content')) }}
                     {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' ]) }}
                     @error('content')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {{ Form::file('upload_featured_image', ['class' => 'form-control', 'required' => true]) }}
+                    {{ Form::file('upload_featured_image', ['class' => 'form-control' , 'required' => true ]) }}
                     @error('upload_featured_image')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <div class="form-group">
+                <div class="form-group d-none">
                     {{ Form::label('reason', __('Message to the Reviewer')) }}
-                    {{ Form::textarea('reason', old('reason'), ['class' => 'form-control', 'rows' => 5, 'required' => true]) }}
-                    <small class="form-text text-muted"><?= __('You must give a brief description of any changes you have made.') ?></small>
+                    {{ Form::textarea('reason', old('reason'), ['class' => 'form-control', 'rows' => 5]) }}
+                    <small
+                        class="form-text text-muted"><?= __('You must give a brief description of any changes you have made.') ?></small>
                     @error('reason')
-                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
                 </div>
 
-                
-                
+
+
                 <div class="card card-primary card-outline">
-                    <div class="card-header"><?= __('SEO ') ?></div>
+                    <div class="card-header"><?= __('SEO Tools') ?></div>
                     <div class="card-body">
                         <div class="form-group">
-                            {{ Form::label('seo[title]', __('SEO Title')) }}
-                            {{ Form::text('seo[title]', old('seo[title]'), ['class' => 'form-control' , 'required' => true , 'minlength' => 18 ]) }}
-                            <small class="form-text text-muted"><?= __('SEO title ex: Corona virus statistics .') ?></small>
-                        </div>
-
-                        <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::text('seo[keywords]', old('seo[keywords]'), ['class' => 'form-control' , 'required' => true  , 'minlength' => 50  ]) }}
-                            <small class="form-text text-muted"><?= __('SEO Keywords ex: Corona , Corona virus statistics , Corona virus .') ?></small>
-                        </div>
-
-                        <div class="form-group">
-                            {{ Form::label('seo[description]', __('SEO Description')) }}
-                            {{ Form::textarea('seo[description]', old('seo[description]'), ['class' => 'form-control', 'rows' => 3 , 'required' => true  , 'minlength' => 50   ]) }}
-                            <small class="form-text text-muted"><?= __('SEO Description is like article summary .') ?></small>
+                            {{ Form::textarea('seo[keywords]', old('seo[keywords]'), ['class' => 'form-control', 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000]) }}
+                            <small class="form-text text-muted"> You can use <a href="https://keywordtool.io"
+                                    target="_blank" style="text-decoration:underline"> https://keywordtool.io </a> for SEO
+                                keywords for get more views </small>
+                            @error('seo.keywords')
+                                <p class="alert alert-danger mt-2">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>

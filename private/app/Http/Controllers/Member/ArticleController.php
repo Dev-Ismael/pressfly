@@ -71,7 +71,7 @@ class ArticleController extends MemberController
      */
     public function create()
     {
-        $categories = Category::where('status', 1)->pluck('name', 'id');
+        $categories = Category::select('name' , 'id')->where('status', 1)->get();
 
         $tags = Tag::where('status', 1)->pluck('name', 'id');
 
@@ -90,27 +90,12 @@ class ArticleController extends MemberController
     public function store(ArticleRequest $request)
     {
 
-
-        /*====== Custom Validation =====*/
-        $rules = [
-            'title' =>   'required|unique:articles|min:18',
-            'slug' => 'required|unique:articles',
-            'lang' => 'required',
-            'summary' => 'required|unique:articles|min:40',
-            'content' => 'required|unique:articles|min:750',
-            'upload_featured_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            // 'seo' => [
-            //     'title' => 'min:18',
-            //     'keywords' => 'min:50',
-            //     'description' => 'min:50',
-            // ],
-        ];
         $messages = [
             'title.unique' => __('A title is already token.'),
             'summary.unique' => __('This summary is exist.'),
             'content.unique' => __('This content is exist.'),
         ];
-        $validator = Validator::make(  $request->all() , $rules  , $messages  ); 
+        $validator = Validator::make(  $request->all() , $messages  ); 
         if( $validator -> fails()) {  
             return redirect() -> back() 
             ->withErrors($validator)
@@ -134,8 +119,16 @@ class ArticleController extends MemberController
             'tags',
             'reason',
             'read_time',
-            'seo',
+            // 'seo',
         ]);
+
+        // Get Seo.title -> Title  , Seo.Description -> Summary 
+        $seo  = [ 
+            'title'  => $request->title,
+            'keywords'  => $request['seo']['keywords'],
+            'description'  => $request->summary,
+        ]; 
+        $data +=['seo' => $seo];
 
         /**
          * @var \App\File|null $featured_image
@@ -211,10 +204,14 @@ class ArticleController extends MemberController
         // Get Article File
         $articleFile = File::find($article->featured_image_id);
 
+        // Get Categories
+        $categories = Category::select('name' , 'id')->where('status', 1)->get();
+
         return view('member.articles.edit', [
             'article' => $article,
             'articleFile' => $articleFile,
             'article_update' => $article_update,
+            'categories' => $categories,
         ]);
 
     }
@@ -244,22 +241,36 @@ class ArticleController extends MemberController
 
         $data = $request->only([
             'title',
+            'lang',
             'slug',
             'summary',
+            'category',
             'content',
-            'upload_featured_image',
+            // 'upload_featured_image',
             'reason',
             'read_time',
         ]);
 
-        /**
-         * @var \App\File|null $featured_image
-         */
-        $featured_image = \App\Helpers\Upload::process('upload_featured_image');
 
-        if ($featured_image) {
-            $data['featured_image_id'] = $featured_image->id;
-        }
+        
+        // Get Seo.title -> Title  , Seo.Description -> Summary 
+        $seo  = [ 
+            'title'  => $request->title,
+            'keywords'  => $request['seo']['keywords'],
+            'description'  => $request->summary,
+        ]; 
+        $data += [ 'seo' => $seo ];
+
+        // return $data;
+
+        // /**
+        //  * @var \App\File|null $featured_image
+        //  */
+        // $featured_image = \App\Helpers\Upload::process('upload_featured_image');
+
+        // if ($featured_image) {
+        //     $data['featured_image_id'] = $featured_image->id;
+        // }
 
         /**
          * 1=active, 2=Hard Disabled, 3=New Pending Review, 5=New Need Improvements, 4=Update Pending Review,
@@ -290,10 +301,12 @@ class ArticleController extends MemberController
         if (in_array($data['status'], [3, 5])) {
             $data_save = [
                 'title' => $data['title'],
+                'lang' => $data['lang'],
                 'slug' => $data['slug'],
                 'summary' => $data['summary'],
                 'content' => $data['content'],
-                'featured_image_id' => $data['featured_image_id'] ?? null,
+                'seo' => $data['seo'],
+                // 'featured_image_id' => $data['featured_image_id'] ?? null,
                 'read_time' => $data['read_time'],
                 'status' => $data['status'],
                 'tmp_content' => null,
@@ -304,7 +317,7 @@ class ArticleController extends MemberController
                 'slug' => $data['slug'],
                 'summary' => $data['summary'],
                 'content' => $data['content'],
-                'featured_image_id' => $data['featured_image_id'] ?? null,
+                // 'featured_image_id' => $data['featured_image_id'] ?? null,
                 'read_time' => $data['read_time'],
             ];
 
@@ -313,6 +326,10 @@ class ArticleController extends MemberController
                 'tmp_content' => $tmp_data,
             ];
         }
+
+        // Update Category
+        $category = $data['category'];
+        $article->categories()->sync([$category => ['main' => 1]]);
 
         if ($article->update($data_save)) {
             if ((bool)get_option('alert_admin_update_article', 1)) {

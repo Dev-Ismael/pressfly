@@ -14,26 +14,44 @@
 
                 <div class="form-group">
                     <label for="title">{{ __('Title') }}</label>
-                    <input type="text" name="title" id="title" class="form-control" required
-                           value="{{ old('title', $article_update->title) }}">
+                    <input type="text" name="title" id="title" class="form-control" minlength="18" maxlength="100"
+                           value="{{ old('title', $article_update->title) }}" required/>
+                    @error('title')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
 
-                <div class="form-group d-none invisible">
-                    <label for="slug">{{ __('Slug(URL Key)') }}</label>
-                    <input type="text" name="slug" id="slug" class="form-control"
-                           value="{{ old('slug', $article_update->slug) }}">
+                <div class="form-group">
+                    <label for="lang">{{ __('Language') }}</label>
+                    <select class="form-control" id="lang" name="lang" required/>
+                        <option value="english"  {{ $article->lang == 'english' ? 'selected' : '' }}  >English</option>
+                        <option value="arabic"  {{ $article->lang == 'arabic' ? 'selected' : '' }}  >العربية</option>
+                    </select>
+                    @error('lang')
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="category">{{ __('Category') }}</label>
+                    <select class="form-control" id="category" name="category" required/>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}" {{ $article->categories[0]->id == $category->id ? 'selected' : '' }} >{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('category')
+                        <p class="alert alert-danger mt-2">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="summary">{{ __('Summary') }}</label>
-                    <textarea id="summary" name="summary" class="form-control" rows="3"
+                    <textarea id="summary" name="summary" class="form-control" rows="3" minlength="100" maxlength="255"
                               required>{{ old('summary', $article_update->summary) }}</textarea>
+                    @error('summary')
+                        <p class="alert alert-danger mt-2">{{$message }}</p> 
+                    @enderror
                 </div>
-
-                <div class="form-group d-none ">
-                    <label for="content">{{ __('Content') }}</label>
-                    <textarea id="content" name="content" class="form-control text-editor"
-                            >{{ old('content', $article_update->content) }}</textarea>
                 </div>
 
                 <!------ Show saved file ------->
@@ -47,47 +65,49 @@
                 </div>
 
 
-                <div class="form-group">
-                    <h3>Article Content</h3>
-                    <div class="article-content">
-                    {!! $article->getFinalContent() !!}
-                    </div>
+                <div class="form-group d-none">
+                    <label for="content">{{ __('Content') }}</label>
+                    <textarea id="content" name="content" class="form-control text-editor"
+                            >{{ old('content', $article_update->content) }}</textarea>
                 </div>
-
-                
-                <div class="form-group">
+                         
+                <div class="form-group d-none">
                     <label for="reason">{{ __('Message to the Reviewer') }}</label>
                     <textarea id="reason" name="reason" class="form-control" rows="5"
-                              required>{{ old('reason') }}</textarea>
+                            >{{ old('reason') }}</textarea>
                     <small class="form-text text-muted">
-                        <?= __('You must give a brief description of any changes you have made.') ?>
+                        {{ __('You must give a brief description of any changes you have made.') }}
                     </small>
                 </div>
+                
 
 
-                <div class="card card-primary card-outline">
-                    <div class="card-header"><?= __('SEO ') ?></div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            {{ Form::label('seo[title]', __('SEO Title')) }}
-                            {{ Form::text('seo[title]', old('seo[title]' , $article->seo['title'] ), ['class' => 'form-control' , 'required' => true , 'minlength' => 18 ]) }}
-                            <small class="form-text text-muted"><?= __('SEO title ex: Corona virus statistics .') ?></small>
-                        </div>
-    
-                        <div class="form-group">
-                            {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::text('seo[keywords]', old('seo[keywords]' , $article->seo['keywords'] ), ['class' => 'form-control' , 'required' => true  , 'minlength' => 50  ]) }}
-                            <small class="form-text text-muted"><?= __('SEO Keywords ex: Corona , Corona virus statistics , Corona virus .') ?></small>
-                        </div>
-    
-                        <div class="form-group">
-                            {{ Form::label('seo[description]', __('SEO Description')) }}
-                            {{ Form::textarea('seo[description]', old('seo[description]' , $article->seo['description'] ), ['class' => 'form-control', 'rows' => 3 , 'required' => true  , 'minlength' => 50   ]) }}
-                            <small class="form-text text-muted"><?= __('SEO Description is like article summary .') ?></small>
+                <div class="form-group">
+                    <div class="container">
+                        <h3>Article Content</h3>
+                        <div class="article-content">
+                        {!! $article->getFinalContent() !!}
                         </div>
                     </div>
                 </div>
-              
+
+                <div class="form-group container">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header"><?= __('SEO Tools') ?></div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
+                                {{ Form::textarea('seo[keywords]', $article->seo['keywords'] , ['class' => 'form-control' , 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000  ]) }}
+                                <small class="form-text text-muted"> You can use <a href="https://keywordtool.io" target="_blank" style="text-decoration:underline"> https://keywordtool.io </a> for SEO keywords for get more views </small>
+                                @error('seo.keywords')
+                                    <p class="alert alert-danger mt-2">{{$message }}</p> 
+                                @enderror
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>

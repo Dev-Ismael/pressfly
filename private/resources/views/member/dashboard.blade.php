@@ -43,7 +43,7 @@
             <p class="rule-title"> Site Terms and Conditions : </p>
             <ul>
                 <li> No illegal means to get visits to your articles </li>
-                <li> The paid visit is not counted if the visitor stays for less than  <span style="font-weight: bolder">25 seconds</span> </li>
+                <li> The paid visit is not counted if the visitor stays for less than  <span style="font-weight: bolder">20 seconds</span> </li>
                 <li> Articles are not accepted if they violate the conditions </li>
                 <li> Article review within 24 hours  </li>
                 <li> The essay must be at least 400 words </li>
@@ -57,7 +57,7 @@
             <p class="rule-title"> : قوانين وشروط الموقع </p>
             <ul>
                 <li> ممنوع استخدام وسائل غير شرعية للحصول علي زيارات لمقالاتك  </li>
-                <li> لا يتم احتساب الزيارة المدفوعة اذا بقي الزائر مدة اقل من من <span style="font-weight:bolder">25 ثانية</span>  </li>
+                <li> لا يتم احتساب الزيارة المدفوعة اذا بقي الزائر مدة اقل من من <span style="font-weight:bolder">20 ثانية</span>  </li>
                 <li> لا يتم قبول المقالات اذا خالفت الشروط </li>
                 <li>  يتم مراجعة المقال في خلال 24 ساعة  </li>
                 <li>  يجب ان لا يقل المقال عن 400 كلمة </li>

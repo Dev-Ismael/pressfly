@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Article;
 use App\Category;
 use App\Tag;
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ArticleRequest extends FormRequest
@@ -27,11 +28,13 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'title' => 'required',
-            'slug' => 'required',
-            'summary' => 'required',
-            'content' => 'required',
+            'title'    => [ 'required' , 'string' , 'min:18' , 'max:100' , Rule::unique('articles', 'title')->ignore($this->article)],
+            'lang'     => [ 'required' , 'string' , 'max:50' ],
+            'category' => [ 'required' , 'string' , 'max:50' ],
+            'summary'  => [ 'required' , 'string' , 'min:100' , 'max:255' , Rule::unique('articles', 'summary')->ignore($this->article)],
+            'content'  => [ 'required' , 'string' , 'min:1000' , Rule::unique('articles', 'content')->ignore($this->article)],
             'upload_featured_image' => [
+                'required',
                 'mimes:' . get_option('upload_filetypes'),
                 'max:' . get_option('fileupload_max'),
             ],
@@ -39,6 +42,7 @@ class ArticleRequest extends FormRequest
                 'nullable',
                 'array',
             ],
+            'seo.keywords' => [ 'required' , 'string' , 'min:250' , 'max:1000' ],
             /*
             'pay_type' => [
                 'required',
@@ -66,6 +70,14 @@ class ArticleRequest extends FormRequest
         ];
 
         if ($this->route()->getPrefix() === '/admin') {
+
+
+            // remove required at category 
+            unset($rules['category'][0]);
+            // remove required at image 
+            unset($rules['upload_featured_image'][0]);
+
+
             $rules['categories'] = [
                 'required',
                 'array',
@@ -113,10 +125,13 @@ class ArticleRequest extends FormRequest
 
             if ($this->route()->getName() === 'member.articles.update') {
                 // Remove 'required' when editing articles
-                unset($rules['category'][0]);
+                // unset($rules['category'][0]);
+                // unset($rules['summary'][0]);
+                unset($rules['content']);
+                unset($rules['upload_featured_image']);
             }
 
-            $rules['reason'] = ['required'];
+            // $rules['reason'] = ['required'];
         }
 
         return $rules;
@@ -143,14 +158,17 @@ class ArticleRequest extends FormRequest
         $data['summary'] = Article::purifyStripHtml($data['summary']);
         $data['content'] = Article::purify($data['content']);
 
-        if (empty($data['read_time'])) {
-            // https://blog.medium.com/read-time-and-you-bc2048ab620c
-            $article_words = explode(' ', Article::purifyStripHtml($data['content']));
-            $article_words = array_filter($article_words, function ($word) {
-                return mb_strlen($word) > 3;
-            });
-            $data['read_time'] = floor((count($article_words) / 275) * 60); // In Seconds
-        }
+        // if (empty($data['read_time'])) {
+        //     // https://blog.medium.com/read-time-and-you-bc2048ab620c
+        //     $article_words = explode(' ', Article::purifyStripHtml($data['content']));
+        //     $article_words = array_filter($article_words, function ($word) {
+        //         return mb_strlen($word) > 3;
+        //     });
+        //     $data['read_time'] = floor((count($article_words) / 275) * 60); // In Seconds
+        // }
+
+        // Fixed read_time at 30 sec at all 
+        $data['read_time'] = 30;
 
         $this->merge($data);
     }
