@@ -83,6 +83,22 @@ a.list-group-item:active{
     color: #fff !important;
 
 }
+/*======= status ======*/
+td div.status-box{
+    border-radius: 3px;
+    padding: 5px 7px;
+    color: #fff;
+    display: inline-block;
+}
+td div.status-box.success{
+    background-color: #28a745;
+}
+td div.status-box.danger{
+    background-color: #dc3545;
+}
+td div.status-box.pendding{
+    background-color: #ffc107;
+}
 /*======= icon table circle ======*/
 td .d-inline-flex a.btn.btn-sm{
     border-radius: 50%;

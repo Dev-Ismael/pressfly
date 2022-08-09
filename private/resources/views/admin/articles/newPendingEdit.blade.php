@@ -77,8 +77,25 @@
                             <button type="submit" class="btn btn-danger btn-block" name="status"
                                     value="2">{{ __('Reject') }}</button>
                             <button type="submit" class="btn btn-info btn-block" name="status"
-                                    value="4">{{ __('Need Improvements') }}</button>
+                                    value="5">{{ __('Need Improvements') }}</button>
                         </div>
+
+                        
+                        <div class="form-group">
+                            {{ Form::label('review_messege', __('Review Messege')) }}
+                            {{ Form::select('review_messege', 
+                                [
+                                    'approved'          => 'Approved' ,
+                                    'wrong_title'       => "Wrong Title" ,
+                                    'copied_content'    => "Copied Content" ,
+                                    'wrong_category'    => "Wrong Category" ,
+                                    'bad_image'         => 'Bad Image' ,
+                                    'weak_seo'          => 'SEO Issue' ,
+                                ],
+                                old('review_messege'), ['class' => 'form-control select2',
+                                'placeholder' => null]) }}
+                        </div>
+
 
                         <div class="form-group d-none">
                             {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}

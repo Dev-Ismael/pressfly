@@ -861,10 +861,47 @@ $('.search-menu-item').on('click', 'a.nav-link', function (event) {
 
 $(function () {
     $('.toast').toast('show');
-
     if (typeof selectionSharer === "function") {
         $('.article-show .article-content').selectionSharer();
     }
-
     $('[data-toggle="tooltip"]').tooltip();
+
+
+
+
+    // Customize 
+    $("a.need_improvement").click(function(event){
+        
+        var review_messege = $(this).attr("review_messege");
+        var title = '';
+        var text = '';
+        var article_id     = $(this).attr("article_id");
+        
+        
+        if( review_messege == 'wrong_title' ){
+            title = 'Wrong Title';
+            text  = 'Please edit title , In order not to delete the article within a week!';
+        }else if( review_messege == 'wrong_category' ){
+            title = 'Wrong Choose Category';
+            text  = 'Please edit & review the article correctly category name In order not to delete the article within a week!';
+        }else if( review_messege == 'copied_content' ){
+            title = 'Copied Content';
+            text  = 'The content of this article contains many copied sentences... please use palgarism checker , Your article must be unique and attractive , in order not to delete the article within a week!';
+        }else if( review_messege == 'bad_image' ){
+            title = 'Bad Image Uploaded';
+            text  = 'Article dont have best image , please upload best image without copyright issues , in order not to delete the article within a week!';
+        }else if( review_messege == 'weak_seo' ){
+            title = 'Weak SEO Keywords';
+            text  = 'Your article dont have good SEO , edit seo keywords helps you to get more view , in order not to delete the article within a week!';
+        }
+
+        swal({
+            icon: 'error',
+            title: title,
+            text: text,
+            type: "error",
+            footer: 'Want to edit Article now  &nbsp; <u> <a href="/member/articles/'+ article_id +'/edit"> Click Here?</a> </u>'
+        });
+
+    });
 });

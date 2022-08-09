@@ -57,13 +57,13 @@
                         {!! link_to_route('member.articles.index', __('Title'),
                         array_merge(request()->query(), ['order' => 'title', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
                     </th>
-                    <th>{{ __('Status') }}</th>
-                    <th>{{ __('Link') }}</th>
+                    <th class="text-center" style="min-width: 120px">{{ __('Status') }}</th>
+                    <th>{{ __('Article Link') }}</th>
                     <th>{{ __('Updated') }}</th>
-                    <th>
+                    {{-- <th>
                         {!! link_to_route('member.articles.index', __('Published'),
                         array_merge(request()->query(), ['order' => 'published_at', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
-                    </th>
+                    </th> --}}
                     <th>{{ __('Actions') }}</th>
                 </tr>
                 </thead>
@@ -77,7 +77,20 @@
                         <td>
                             <a href="{{ route('member.articles.edit', [$article->id]) }}">{{ $article->title }}</a>
                         </td>
-                        <td>{{ get_article_statuses($article->status) }}</td>
+                        <td class="text-center" style="width:240px">
+                            <!--------------- Approved ------------------->
+                            @if ( $article->status == 1 )
+                                <div class="status-box success"> <i class="fas fa-check"></i> Approved </div>
+                            @elseif( $article->status == 3 )
+                                <div class="status-box pendding"> <i class="fas fa-spinner"></i> Pendding </div>
+                            @elseif( $article->status == 4 )
+                                <div class="status-box danger"> <i class="fas fa-exclamation-triangle"></i>
+                                    Need improvement
+                                    <br> 
+                                    <u> <a class="need_improvement text-white" href="#" article_id="{{ $article->id }}" review_messege="{{ $article->review_messege }}"> More Info </a> </u>
+                                </div>
+                            @endif
+                        </td>
                         @php
                             if( $article->lang == "english" ){
                                 $site = 'https://jourlive.com/';
@@ -85,9 +98,14 @@
                                 $site = 'https://alnhrdh.com/';
                             }
                         @endphp
-                        <td> <a href="{{ $site . "" . get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  {{ $site . "" . get_article_statuses($article->slug)}} </a> </td>
+                        <td> 
+                            @if( $article->status == 1 )
+                                <a href="{{ $site . "" . get_article_statuses($article->slug)}}-{{get_article_statuses($article->id)}}" target="_blank" >  {{ $site . "" . get_article_statuses($article->slug)}} </a> 
+                            @endif
+
+                        </td>
                         <td>{{ display_date_timezone($article->updated_at) }}</td>
-                        <td>{{ display_date_timezone($article->published_at) }}</td>
+                        {{-- <td>{{ display_date_timezone($article->published_at) }}</td> --}}
                         <td>
                             <div class="d-inline-flex">
                                 <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}" style="display: none">
