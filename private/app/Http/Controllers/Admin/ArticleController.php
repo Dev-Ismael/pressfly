@@ -681,4 +681,53 @@ class ArticleController extends AdminController
         return redirect()->route('admin.articles.indexUpdatePending');
     }
 
+
+
+    public function indexNeedImprovement()
+    {
+        $conditions = [];
+
+        if (request()->input('Filter')) {
+            $filter_fields = [
+                'title',
+                'user_id',
+                'slug',
+            ];
+
+            foreach (request()->input('Filter') as $param_name => $param_value) {
+                if (!$param_value) {
+                    continue;
+                }
+                //$value = urldecode($value);
+                if (in_array($param_name, $filter_fields)) {
+                    $like_params = ['title', 'slug'];
+
+                    if (in_array($param_name, $like_params)) {
+                        $conditions[] = [$param_name, 'like', '%' . $param_value . '%'];
+                    } else {
+                        $conditions[] = [$param_name, '=', $param_value];
+                    }
+                }
+            }
+        }
+
+        $orderBy = [
+            'col' => request()->input('order', 'id'),
+            'dir' => request()->input('dir', 'desc'),
+        ];
+
+        $articles = Article::with('user')
+            ->where($conditions)
+            ->where('status', 5)
+            ->orderBy($orderBy['col'], $orderBy['dir'])
+            ->paginate();
+
+        $orderBy['dir'] = ($orderBy['dir'] === 'asc') ? 'desc' : 'asc';
+
+        return view('admin.articles.indexNeedImprovement', [
+            'articles' => $articles,
+            'orderBy' => $orderBy,
+        ]);
+    }
+
 }

@@ -165,6 +165,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['role:ad
         ->where(['article' => '[0-9]+'])->name('articles.updatePendingEdit');
     Route::put('/articles/{article}/update-pending/process', 'ArticleController@updatePendingProcess')
         ->where(['article' => '[0-9]+'])->name('articles.updatePendingProcess');
+    
+    // Need Improvement
+    Route::match(['get', 'post'], '/articles/index/need-improvement', 'ArticleController@indexNeedImprovement')
+    ->name('articles.indexNeedImprovement');
 
     Route::resource('articles', 'ArticleController')->except(['show']);
 
