@@ -884,6 +884,9 @@ $(function () {
         }else if( review_messege == 'wrong_category' ){
             title = 'Wrong Choose Category';
             text  = 'Please edit & review the article correctly category name In order not to delete the article within a week!';
+        }else if( review_messege == 'bad_summary' ){
+            title = 'Wrong Summary';
+            text  = 'Please edit Summary , In order not to delete the article within a week!';
         }else if( review_messege == 'copied_content' ){
             title = 'Copied Content';
             text  = 'The content of this article contains many copied sentences... please use palgarism checker , Your article must be unique and attractive , in order not to delete the article within a week!';

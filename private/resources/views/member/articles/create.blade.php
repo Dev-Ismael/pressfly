@@ -99,6 +99,7 @@
                 </div>
 
                 <div class="form-group">
+                    {{ Form::label('upload_featured_image', __('Article Image')) }}
                     {{ Form::file('upload_featured_image', ['class' => 'form-control' , 'required' => true ]) }}
                     @error('upload_featured_image')
                         <p class="alert alert-danger mt-2">{{ $message }}</p>
@@ -133,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group pl-3">
                     {{ Form::submit(__('Submit'), ['class' => 'btn btn-primary']) }}
                 </div>
 

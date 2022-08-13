@@ -56,10 +56,10 @@
 
                         <div class="table-responsive">
                             <table class="table table-striped">
-                                <tr>
-                                    <th></th>
-                                    <th>{{ __('Old') }}</th>
-                                    <th>{{ __('New') }}</th>
+                                <tr class="w-100">
+                                    <th class="col-2"></th>
+                                    <th class="col-5">{{ __('Old') }}</th>
+                                    <th class="col-5">{{ __('New') }}</th>
                                 </tr>
 
                                 <tr>
@@ -98,20 +98,30 @@
                                     </td>
                                 </tr>
 
+                                
                                 <tr>
                                     <th>{{ __('Image') }}</th>
                                     <td>
                                         @if($article->featuredImage->file)
                                             <div class="form-group">
                                                 <img src="{{ url($article->featuredImage->file) }}"
-                                                     style="max-width: 300px;">
+                                                     style="max-width: 150px;">
                                             </div>
                                         @endif
                                     </td>
                                     <td>
-                                        
+                                        @if($article_update->featured_image_id)
+                                            <?php
+                                            $image = \App\File::find($article_update->featured_image_id)->file;
+                                            ?>
+                                            <div class="form-group">
+                                                <img src="{{ url($image) }}" style="max-width: 150px;">
+                                            </div>
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
                                     </td>
-                                </tr>
+                                </tr>   
 
                                 <tr>
                                     <th>{{ __('Summary') }}</th>
@@ -183,12 +193,13 @@
                             {{ Form::label('review_messege', __('Review Messege')) }}
                             {{ Form::select('review_messege', 
                                 [
-                                    'approved'          => 'Approved' ,
-                                    'wrong_title'       => "Wrong Title" ,
-                                    'copied_content'    => "Copied Content" ,
-                                    'wrong_category'    => "Wrong Category" ,
-                                    'bad_image'         => 'Bad Image' ,
-                                    'weak_seo'          => 'SEO Issue' ,
+                                    'approved'          => 'Approved',
+                                    'bad_title'         => "Bad Title",
+                                    'wrong_category'    => "Wrong Category",
+                                    'bad_summary'       => "Bad Summary",
+                                    'copied_content'    => "Copied Content",
+                                    'bad_image'         => 'Bad Image',
+                                    'weak_seo'          => 'SEO Issue',
                                 ],
                                 old('review_messege', $article->review_messege), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}

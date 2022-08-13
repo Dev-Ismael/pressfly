@@ -197,8 +197,10 @@ class ArticleController extends MemberController
             $article_update->title = $article->title;
             $article_update->lang = $article->lang;
             $article_update->slug = $article->slug;
+            $article_update->categories = $article->categories;
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;
+            $article_update->seo = $article->seo;
             $article_update->featured_image_id = null;
         }
 
@@ -247,7 +249,7 @@ class ArticleController extends MemberController
             'summary',
             'category',
             'content',
-            // 'upload_featured_image',
+            'upload_featured_image',
             'reason',
             'read_time',
         ]);
@@ -262,16 +264,23 @@ class ArticleController extends MemberController
         ]; 
         $data += [ 'seo' => $seo ];
 
-        // return $data;
 
         // /**
         //  * @var \App\File|null $featured_image
         //  */
-        // $featured_image = \App\Helpers\Upload::process('upload_featured_image');
 
-        // if ($featured_image) {
-        //     $data['featured_image_id'] = $featured_image->id;
-        // }
+        // return $article;
+        // if file uploaded
+        if($request->hasFile('upload_featured_image')){
+            $featured_image = \App\Helpers\Upload::process('upload_featured_image');
+            if ($featured_image) {
+                $data['featured_image_id'] = $featured_image->id;
+            }
+        }else{
+            $data['featured_image_id'] = $article->featured_image_id;
+        }
+        // return $data['featured_image_id'];
+
 
         /**
          * 1=active, 2=Hard Disabled, 3=New Pending Review, 5=New Need Improvements, 4=Update Pending Review,
@@ -283,12 +292,19 @@ class ArticleController extends MemberController
             $data['status'] = 4;
         }
 
-        if ($currentStatus === 5) {
+        // if article (new pending) => (new pending)
+        if ($currentStatus === 3) {
             $data['status'] = 3;
         }
 
+        // if article (New Need Improvements) => (Update Need Improvements) 
+        if ($currentStatus === 5) {
+            $data['status'] = 6;
+        }
+
+        // if article (Update Need Improvements) => (Update Need Improvements) 
         if ($currentStatus === 6) {
-            $data['status'] = 4;
+            $data['status'] = 6;
         }
 
         if (in_array($currentStatus, [3, 4])) {
@@ -307,7 +323,7 @@ class ArticleController extends MemberController
                 'summary' => $data['summary'],
                 'content' => $data['content'],
                 'seo' => $data['seo'],
-                // 'featured_image_id' => $data['featured_image_id'] ?? null,
+                'featured_image_id' => $data['featured_image_id'] ?? null,
                 'read_time' => $data['read_time'],
                 'status' => $data['status'],
                 'tmp_content' => null,
@@ -319,7 +335,7 @@ class ArticleController extends MemberController
                 'slug' => $data['slug'],
                 'summary' => $data['summary'],
                 'content' => $data['content'],
-                // 'featured_image_id' => $data['featured_image_id'] ?? null,
+                'featured_image_id' => $data['featured_image_id'] ?? null,
                 'read_time' => $data['read_time'],
             ];
 

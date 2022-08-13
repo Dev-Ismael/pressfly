@@ -4,41 +4,150 @@
 
 @section('content')
 
-    <form action="{{ route('admin.articles.newPendingProcess', $article->id) }}" method="post"
+    <form action="{{ route('admin.articles.updateNeedImprovementProcess', $article->id) }}" method="post"
           enctype="multipart/form-data">
         @csrf
         @method('put')
 
         <div class="row">
             <div class="col-sm-9">
-                <div class="card card-primary card-outline">
-                    <div class="card-header">{{ __('Edit Article') }}</div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            {{ Form::label('title', __('Title')) }}
-                            {{ Form::text('title', old('title', $article->title), ['class' => 'form-control', 'required' => true]) }}
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#article-new"
+                           role="tab">{{ __('New') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#article-diff" role="tab">{{ __('Diff') }}</a>
+                    </li>
+                </ul>
+                <div class="tab-content mb-4">
+                    <div class="tab-pane fade show active" id="article-new" role="tabpanel">
+                        <div class="card card-primary card-outline">
+                            <div class="card-header">{{ __('Edit Article') }}</div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    {{ Form::label('title', __('Title')) }}
+                                    {{ Form::text('title', old('title', $article_update->title), ['class' => 'form-control', 'required' => true]) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ Form::label('lang', __('Language')) }}
+                                    {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
+                                </div>
+
+                                <div class="form-group d-none">
+                                    {{ Form::label('slug', __('Slug(URL Key)')) }}
+                                    {{ Form::text('slug', old('slug', $article_update->slug), ['class' => 'form-control']) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ Form::label('summary', __('Summary')) }}
+                                    {{ Form::textarea('summary', old('summary', $article_update->summary), ['class' => 'form-control', 'rows' => 3, 'required' => true]) }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ Form::label('content', __('Content')) }}
+                                    {{ Form::textarea('content', old('content', $article_update->content), ['class' => 'form-control text-editor', 'required' => true]) }}
+                                </div>
+                            </div>
                         </div>
-                        
-                        <!----- Add Option Lang ----->
-                        <div class="form-group">
-                            {{ Form::label('lang', __('Language')) }}
-                            {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
+                    </div>
+                    <div class="tab-pane fade" id="article-diff" role="tabpanel">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <tr class="w-100">
+                                    <th class="col-2"></th>
+                                    <th class="col-5">{{ __('Old') }}</th>
+                                    <th class="col-5">{{ __('New') }}</th>
+                                </tr>
+
+                                <tr>
+                                    <th>{{ __('Title') }}</th>
+                                    <td>{{ $article->title }}</td>
+                                    <td>
+                                        @if($article->title != $article_update->title )
+                                            {{ $article_update->title }}
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>{{ __('Language') }}</th>
+                                    <td>{{ $article->lang }}</td>
+                                    <td>
+                                        @if($article->lang != $article_update->lang )
+                                            {{ $article_update->lang }}
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr class="d-none">
+                                    <th>{{ __('Slug') }}</th>
+                                    <td>{{ $article->slug }}</td>
+                                    <td>
+                                        @if($article->slug != $article_update->slug )
+                                            {{ $article_update->slug }}
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>{{ __('Image') }}</th>
+                                    <td>
+                                        @if($article->featuredImage->file)
+                                            <div class="form-group">
+                                                <img src="{{ url($article->featuredImage->file) }}"
+                                                     style="max-width: 150px;">
+                                            </div>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($article_update->featured_image_id)
+                                            <?php
+                                            $image = \App\File::find($article_update->featured_image_id)->file;
+                                            ?>
+                                            <div class="form-group">
+                                                <img src="{{ url($image) }}" style="max-width: 150px;">
+                                            </div>
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>{{ __('Summary') }}</th>
+                                    <td>{{ $article->summary }}</td>
+                                    <td>
+                                        @if($article->summary != $article_update->summary )
+                                            {{ $article_update->summary }}
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>{{ __('Content') }}</th>
+                                    <td>{!! $article->content !!}</td>
+                                    <td>
+                                        @if($article->content != $article_update->content )
+                                            {!! $article_update->content !!}
+                                        @else
+                                            {{ __('No change') }}
+                                        @endif
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
 
-                        <div class="form-group d-none">
-                            {{ Form::label('slug', __('Slug(URL Key)')) }}
-                            {{ Form::text('slug', old('slug', $article->slug), ['class' => 'form-control']) }}
-                        </div>
-
-                        <div class="form-group">
-                            {{ Form::label('summary', __('Summary')) }}
-                            {{ Form::textarea('summary', old('summary', $article->summary), ['class' => 'form-control', 'rows' => 3, 'required' => true]) }}
-                        </div>
-
-                        <div class="form-group">
-                            {{ Form::label('content', __('Content')) }}
-                            {{ Form::textarea('content', old('content', $article->content), ['class' => 'form-control text-editor', 'required' => true]) }}
-                        </div>
                     </div>
                 </div>
 
@@ -74,8 +183,6 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" name="status"
                                     value="1">{{ __('Approve') }}</button>
-                            <button type="submit" class="btn btn-danger btn-block" name="status"
-                                    value="2">{{ __('Reject') }}</button>
                             <button type="submit" class="btn btn-info btn-block" name="status"
                                     value="5">{{ __('Need Improvements') }}</button>
                         </div>
@@ -97,8 +204,8 @@
                                 'placeholder' => null]) }}
                         </div>
 
-
-                        <div class="form-group d-none">
+                        
+                        <div class="form-group  d-none">
                             {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
                             {{ Form::number('read_time', old('read_time', $article->read_time), ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
                         </div>
@@ -136,11 +243,10 @@
                     <div class="card-header"><?= __('Featured Image') ?></div>
                     <div class="card-body">
                         <div class="form-group">
-                            @if($article->featuredImage->file)
-                                <div class="form-group">
-                                    <img src="{{ url($article->featuredImage->file) }}" style="max-width: 100%;">
-                                </div>
-                            @endif
+                            <div class="form-group">
+                                <img src="{{ url($article->featuredImage->file) }}"
+                                style="max-width: 100%;">
+                            </div>
                             {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif']) }}
                         </div>
                     </div>
@@ -188,7 +294,7 @@
                     </div>
                 </div>
 
-                <div class="card card-primary card-outline  d-none">
+                <div class="card card-primary card-outline d-none">
                     <div class="card-header"><?= __('Tags') ?></div>
                     <div class="card-body">
                         <div class="form-group">
