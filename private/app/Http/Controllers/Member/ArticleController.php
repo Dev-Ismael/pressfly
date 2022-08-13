@@ -265,21 +265,24 @@ class ArticleController extends MemberController
         $data += [ 'seo' => $seo ];
 
 
-        // /**
-        //  * @var \App\File|null $featured_image
-        //  */
 
-        // return $article;
-        // if file uploaded
+
+        // if New file uploaded
         if($request->hasFile('upload_featured_image')){
+
+            // Delete Old Image
+            $old_image = \App\File::find($article->featured_image_id)->file;
+            \App\Helpers\Image::deleteImage($old_image);
+
+            // Upload New Image
             $featured_image = \App\Helpers\Upload::process('upload_featured_image');
             if ($featured_image) {
                 $data['featured_image_id'] = $featured_image->id;
             }
+
         }else{
             $data['featured_image_id'] = $article->featured_image_id;
         }
-        // return $data['featured_image_id'];
 
 
         /**
