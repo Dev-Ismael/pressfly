@@ -82,9 +82,9 @@
                             @if ( $article->status == 1 )
                                 <div class="status-box success"> <i class="fas fa-check"></i> Approved </div>
                             @elseif( $article->status == 3 || $article->status == 6 )
-                                <div class="status-box pendding"> <i class="fas fa-spinner"></i> Under review </div>
+                                <div class="status-box pendding"> <i class="fas fa-spinner fa-spin"></i> Pending </div>
                             @elseif( $article->status == 4 )
-                                <div class="status-box pendding"> <i class="fas fa-spinner"></i> Under review </div>
+                                <div class="status-box pendding"> <i class="fas fa-spinner fa-spin"></i> Pending </div>
                             @elseif( $article->status == 5 )
                                 <div class="status-box danger"> <i class="fas fa-exclamation-triangle"></i>
                                     Need improvement

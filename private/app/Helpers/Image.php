@@ -44,11 +44,11 @@ class Image
 
     public static function deleteImage($image_url)
     {
-        $image_path = public_path($image_url);
+        $file_path = public_path($image_url);
 
-        $file_info = pathinfo($image_path);
+        $file_info = pathinfo($file_path);
 
-        @unlink($image_path);
+        @unlink($file_path);
 
         array_map(
             'unlink',

@@ -1,5 +1,5 @@
+1- Access User Update all Article Before reviewing 
 2- delete image at delete Article
-2- delete Old image at Update Article
 3- add article status in article page
 4- 
 5- 

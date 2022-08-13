@@ -15,11 +15,12 @@
             </div>
         @elseif( $article->status == 3 )
             <div class="alert alert-warning status-box pendding" role="alert">
-                <i class="fas fa-spinner"></i>
+                <i class="fas fa-spinner fa-spin"></i>
                 &nbsp;
                 Your article is Still Pending... You can Edit it Before Reviewing
             </div>
         @endif
+        
     </div>
 
 

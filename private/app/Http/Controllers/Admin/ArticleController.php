@@ -322,7 +322,9 @@ class ArticleController extends AdminController
             \DB::table('comments')->where('article_id', $article->id)->delete();
             $article->statistics()->delete();
 
-            \App\Helpers\Image::deleteImage($article->featured_image);
+            $image = \App\File::find($article->featured_image_id)->file;
+            \App\Helpers\Image::deleteImage($image);
+    
         } else {
             session()->flash('message', 'Unable to delete this article.');
         }
