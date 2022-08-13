@@ -84,20 +84,22 @@ a.list-group-item:active{
 
 }
 /*======= status ======*/
-td div.status-box{
+div.status-box{
     border-radius: 3px;
-    padding: 5px 7px;
     color: #fff;
+}
+td div.status-box{
+    padding: 5px 7px;
     display: inline-block;
 }
-td div.status-box.success{
+div.status-box.success{
     background-color: #28a745;
 }
-td div.status-box.danger{
+div.status-box.danger{
     background-color: #dc3545;
 }
-td div.status-box.pendding{
-    background-color: #ffc107;
+div.status-box.pendding{
+    background-color: #f5c021;
 }
 /*======= icon table circle ======*/
 td .d-inline-flex a.btn.btn-sm{
