@@ -4,20 +4,36 @@
 
 @section('content')
 
-
+{{-- @if($errors->any())
+    {{ implode('', $errors->all('<div>:message</div>')) }}
+@endif --}}
     <div class="article-status-alert">
 
         @if ( $article->status == 1 )
             <div class="alert alert-success" role="alert">
                 <i class="fas fa-check"></i>
                 &nbsp;
-                Your article is Approved & published... if You Edit it & save article will review again
+                Your article is Approved & published... if You Edit it & save article will review again.
             </div>
         @elseif( $article->status == 3 )
             <div class="alert alert-warning status-box pendding" role="alert">
                 <i class="fas fa-spinner fa-spin"></i>
                 &nbsp;
-                Your article is Still Pending... You can Edit it Before Reviewing
+                Your article is Still Pending... You can edit it before final review.
+            </div>
+        @elseif( $article->status == 5 )
+            <div class="alert alert-warning status-box danger" role="alert">
+                <i class="fas fa-exclamation-triangle"></i>
+                &nbsp;
+                Your article Need improvements at
+                {{ Str::ucfirst($article->review_messege) }}
+                ... Please edit it and click save to review again.
+            </div>
+        @elseif( $article->status == 6 )
+            <div class="alert alert-warning status-box pendding" role="alert">
+                <i class="fas fa-spinner fa-spin"></i>
+                &nbsp;
+                Your New Update is Still Pending... You can Edit it before final review.
             </div>
         @endif
         
@@ -57,7 +73,7 @@
                     <label for="category">{{ __('Category') }}</label>
                     <select class="form-control" id="category" name="category" required/>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}" {{ $article_update->categories[0]->id == $category->id ? 'selected' : '' }} >{{ $category->name }}</option>
+                            <option value="{{ $category->id }}" {{ $article_update->category == $category->id ? 'selected' : '' }} >{{ $category->name }}</option>
                         @endforeach
                     </select>
                     @error('category')
@@ -77,7 +93,7 @@
 
 
                 <div class="img-field">
-                    @if( $article->review_messege == "bad_image" )
+                    @if( $article->review_messege == "image" )
                         <!------------- If isset need improvement ==> Show Image Input -------------->
                         <div class="form-group">
                             {{ Form::label('upload_featured_image', __('Change Article Image')) }}
@@ -119,7 +135,7 @@
                 
                 <div class="content-field">
                     <!------------- If isset need improvement ==> Content -------------->
-                    @if( $article->review_messege == "copied_content"  || $article->status == 3 )
+                    @if( $article->review_messege == "content"  || $article->status == 3 )
                         <div class="form-group">
                             <label for="content">{{ __('Content') }}</label>
                             <textarea id="content" name="content" class="form-control text-editor" required>{{ old('content', $article_update->content) }}</textarea>
@@ -165,7 +181,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                                {{ Form::textarea('seo[keywords]', $article_update->seo['keywords'] , ['class' => 'form-control' , 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000  ]) }}
+                                @if(empty($article->tmp_content))
+                                    {{ Form::textarea('seo[keywords]', $article_update->seo['keywords'] , ['class' => 'form-control' , 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000  ]) }}
+                                @else
+                                    {{ Form::textarea('seo[keywords]', $article_update->seo->keywords , ['class' => 'form-control' , 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000  ]) }}
+                                @endif
                                 <small class="form-text text-muted"> You can use <a href="https://keywordtool.io" target="_blank" style="text-decoration:underline"> https://keywordtool.io </a> for SEO keywords for get more views </small>
                                 @error('seo.keywords')
                                     <p class="alert alert-danger mt-2">{{$message }}</p> 

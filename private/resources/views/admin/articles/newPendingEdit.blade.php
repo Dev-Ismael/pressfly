@@ -85,13 +85,13 @@
                             {{ Form::label('review_messege', __('Review Messege')) }}
                             {{ Form::select('review_messege', 
                                 [
-                                    'approved'          => 'Approved',
-                                    'bad_title'         => "Bad Title",
-                                    'wrong_category'    => "Wrong Category",
-                                    'bad_summary'       => "Bad Summary",
-                                    'copied_content'    => "Copied Content",
-                                    'bad_image'         => 'Bad Image',
-                                    'weak_seo'          => 'SEO Issue',
+                                    ''           => 'Approved',
+                                    'title'      => "Bad Title",
+                                    'category'   => "Wrong Category",
+                                    'summary'    => "Bad Summary",
+                                    'content'    => "Copied Content",
+                                    'image'      => 'Bad Image',
+                                    'seo'        => 'SEO Issue',
                                 ],
                                 old('review_messege', $article->review_messege), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}

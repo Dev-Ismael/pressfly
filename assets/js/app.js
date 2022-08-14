@@ -878,22 +878,22 @@ $(function () {
         var article_id     = $(this).attr("article_id");
         
         
-        if( review_messege == 'wrong_title' ){
+        if( review_messege == 'title' ){
             title = 'Wrong Title';
             text  = 'Please edit title , In order not to delete the article within a week!';
-        }else if( review_messege == 'wrong_category' ){
+        }else if( review_messege == 'category' ){
             title = 'Wrong Choose Category';
             text  = 'Please edit & review the article correctly category name In order not to delete the article within a week!';
-        }else if( review_messege == 'bad_summary' ){
+        }else if( review_messege == 'summary' ){
             title = 'Wrong Summary';
             text  = 'Please edit Summary , In order not to delete the article within a week!';
-        }else if( review_messege == 'copied_content' ){
+        }else if( review_messege == 'content' ){
             title = 'Copied Content';
             text  = 'The content of this article contains many copied sentences... please use palgarism checker , Your article must be unique and attractive , in order not to delete the article within a week!';
-        }else if( review_messege == 'bad_image' ){
+        }else if( review_messege == 'image' ){
             title = 'Bad Image Uploaded';
             text  = 'Article dont have best image , please upload best image without copyright issues , in order not to delete the article within a week!';
-        }else if( review_messege == 'weak_seo' ){
+        }else if( review_messege == 'seo' ){
             title = 'Weak SEO Keywords';
             text  = 'Your article dont have good SEO , edit seo keywords helps you to get more view , in order not to delete the article within a week!';
         }

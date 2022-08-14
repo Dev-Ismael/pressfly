@@ -1,6 +1,6 @@
 1- Access User Update all Article Before reviewing 
 2- delete image at delete Article
-3- add article status in article page
-4- 
+3- Add article status in article page
+4- Add All new Feature to moderator
 5- 
 6- 

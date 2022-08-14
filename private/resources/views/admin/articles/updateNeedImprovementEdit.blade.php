@@ -32,7 +32,7 @@
 
                                 <div class="form-group">
                                     {{ Form::label('lang', __('Language')) }}
-                                    {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
+                                    {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article_update->lang), ['class' => 'form-control', 'required' => true]) }}
                                 </div>
 
                                 <div class="form-group d-none">
@@ -109,7 +109,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if($article_update->featured_image_id)
+                                        @if($article->featured_image_id != $article_update->featured_image_id)
                                             <?php
                                             $image = \App\File::find($article_update->featured_image_id)->file;
                                             ?>
@@ -192,13 +192,13 @@
                             {{ Form::label('review_messege', __('Review Messege')) }}
                             {{ Form::select('review_messege', 
                                 [
-                                    'approved'          => 'Approved',
-                                    'bad_title'         => "Bad Title",
-                                    'wrong_category'    => "Wrong Category",
-                                    'bad_summary'       => "Bad Summary",
-                                    'copied_content'    => "Copied Content",
-                                    'bad_image'         => 'Bad Image',
-                                    'weak_seo'          => 'SEO Issue',
+                                    ''           => 'Approved',
+                                    'title'      => "Bad Title",
+                                    'category'   => "Wrong Category",
+                                    'summary'    => "Bad Summary",
+                                    'content'    => "Copied Content",
+                                    'image'      => 'Bad Image',
+                                    'seo'        => 'SEO Issue',
                                 ],
                                 old('review_messege', $article->review_messege), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}
@@ -244,7 +244,10 @@
                     <div class="card-body">
                         <div class="form-group">
                             <div class="form-group">
-                                <img src="{{ url($article->featuredImage->file) }}"
+                                <?php
+                                    $image = \App\File::find($article_update->featured_image_id)->file;
+                                ?>
+                                <img src="{{ url($image) }}"
                                 style="max-width: 100%;">
                             </div>
                             {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif']) }}

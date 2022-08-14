@@ -197,13 +197,15 @@ class ArticleController extends MemberController
             $article_update->title = $article->title;
             $article_update->lang = $article->lang;
             $article_update->slug = $article->slug;
-            $article_update->categories = $article->categories;
+            $article_update->category = $article->categories[0]->id;
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;
             $article_update->seo = $article->seo;
             $article_update->featured_image_id = null;
+            $article_update->read_time = $article->read_time;
         }
-
+        // dd( (int) $article_update->category) ;
+        // dd( $article_update ) ;
         // Get Article File
         $articleFile = File::find($article->featured_image_id);
 
@@ -316,14 +318,20 @@ class ArticleController extends MemberController
 
         $reason = $data['reason'];
 
-        unset($data['upload_featured_image'], $data['reason']);
+        // Update Category
+        $category = $data['category'];
+        $article->categories()->sync([$category => ['main' => 1]]);
 
-        if (in_array($data['status'], [3, 5])) {
+        unset( $data['upload_featured_image'], $data['reason']);
+
+
+        if (in_array($data['status'], [3])) {
             $data_save = [
                 'title' => $data['title'],
                 'lang' => $data['lang'],
                 'slug' => $data['slug'],
                 'summary' => $data['summary'],
+                // 'category' => $data['category'],    // because it will save in DB
                 'content' => $data['content'],
                 'seo' => $data['seo'],
                 'featured_image_id' => $data['featured_image_id'] ?? null,
@@ -336,8 +344,10 @@ class ArticleController extends MemberController
                 'title' => $data['title'],
                 'lang' => $data['lang'],
                 'slug' => $data['slug'],
+                'category' => $data['category'],  // it will save in tmp
                 'summary' => $data['summary'],
                 'content' => $data['content'],
+                'seo' => $data['seo'],
                 'featured_image_id' => $data['featured_image_id'] ?? null,
                 'read_time' => $data['read_time'],
             ];
@@ -348,9 +358,6 @@ class ArticleController extends MemberController
             ];
         }
 
-        // Update Category
-        $category = $data['category'];
-        $article->categories()->sync([$category => ['main' => 1]]);
 
         if ($article->update($data_save)) {
             if ((bool)get_option('alert_admin_update_article', 1)) {
