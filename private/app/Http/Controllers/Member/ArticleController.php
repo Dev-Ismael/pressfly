@@ -201,7 +201,7 @@ class ArticleController extends MemberController
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;
             $article_update->seo = $article->seo;
-            $article_update->featured_image_id = null;
+            $article_update->featured_image_id = $article->featured_image_id;
             $article_update->read_time = $article->read_time;
         }
         // dd( (int) $article_update->category) ;
@@ -270,11 +270,17 @@ class ArticleController extends MemberController
 
 
         // if New file uploaded
-        if($request->hasFile('upload_featured_image')){
+        if( $request->hasFile('upload_featured_image') ){
 
             // Delete Old Image
             $old_image = \App\File::find($article->featured_image_id)->file;
             \App\Helpers\Image::deleteImage($old_image);
+            
+            // Delete Old Updated Image (if updated before review)
+            if (!empty($article->tmp_content)) {
+                $old_updated_image = \App\File::find($article->tmp_content->featured_image_id)->file;
+                \App\Helpers\Image::deleteImage($old_updated_image);
+            }
 
             // Upload New Image
             $featured_image = \App\Helpers\Upload::process('upload_featured_image');

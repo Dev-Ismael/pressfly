@@ -21,6 +21,12 @@
                 &nbsp;
                 Your article is Still Pending... You can edit it before final review.
             </div>
+        @elseif( $article->status == 4 )
+            <div class="alert alert-warning status-box pendding" role="alert">
+                <i class="fas fa-spinner fa-spin"></i>
+                &nbsp;
+                Your article will review again before published... You can edit it before final review.
+            </div>
         @elseif( $article->status == 5 )
             <div class="alert alert-warning status-box danger" role="alert">
                 <i class="fas fa-exclamation-triangle"></i>
@@ -97,8 +103,11 @@
                         <!------------- If isset need improvement ==> Show Image Input -------------->
                         <div class="form-group">
                             {{ Form::label('upload_featured_image', __('Change Article Image')) }}
-                            <a href="{{ url($article->featuredImage->file) }}" target="_blank">
-                                <img src="{{ asset($articleFile->file) }}" alt="article-img"
+                            <?php
+                                $image = \App\File::find($article_update->featured_image_id)->file;
+                            ?>
+                            <a href="{{ url($image) }}" target="_blank">
+                                <img src="{{ url($image) }}" alt="article-img"
                                 style="width:80px;border-radius:5px;margin:5px">
                             </a>
                             {{ Form::file('upload_featured_image', ['class' => 'form-control' , 'required' => true ]) }}
@@ -110,8 +119,11 @@
                         <!------------- If Article Still New Pending ==> Show Image Input -------------->
                         <div class="form-group">
                             {{ Form::label('upload_featured_image', __('Change Article Image')) }}
-                            <a href="{{ url($article->featuredImage->file) }}" target="_blank">
-                                <img src="{{ asset($articleFile->file) }}" alt="article-img"
+                            <?php
+                                $image = \App\File::find($article_update->featured_image_id)->file;
+                            ?>
+                            <a href="{{ url($image) }}" target="_blank">
+                                <img src="{{ url($image) }}" alt="article-img"
                                 style="width:80px;border-radius:5px;margin:5px">
                             </a>
                             {{ Form::file('upload_featured_image', ['class' => 'form-control' ]) }}
@@ -149,7 +161,7 @@
                             <div class="container">
                                 <h3>Article Content</h3>
                                 <div class="article-content">
-                                {!! $article->getFinalContent() !!}
+                                {!! $article_update->content !!}
                                 </div>
                             </div>
                         </div>

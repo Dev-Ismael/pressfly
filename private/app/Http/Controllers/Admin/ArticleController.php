@@ -657,6 +657,16 @@ class ArticleController extends AdminController
             $data['message']);
 
         $data['tmp_content'] = null;
+        
+        $new_status = (int)$data['status'];
+        if ($new_status === 1) {
+            // Article Update Approved
+            $data['published_at'] = now();
+        }
+        // if article approved remove review messege
+        if ($new_status === 1) {
+            $data['review_messege'] = Null;
+        }
 
         if ($article->update($data)) {
             $article->tags()->sync($tags);
@@ -881,6 +891,16 @@ class ArticleController extends AdminController
             $data['message']);
 
         $data['tmp_content'] = null;
+
+        $new_status = (int)$data['status'];
+        if ($new_status === 1) {
+            // Article Update Approved
+            $data['published_at'] = now();
+        }
+        // if article approved remove review messege
+        if ($new_status === 1) {
+            $data['review_messege'] = Null;
+        }
 
         if ($article->update($data)) {
             $article->tags()->sync($tags);

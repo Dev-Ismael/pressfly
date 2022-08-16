@@ -156,17 +156,17 @@
                     <div class="card-body">
                         <div class="form-group  d-none">
                             {{ Form::label('seo[title]', __('SEO Title')) }}
-                            {{ Form::text('seo[title]', old('seo[title]', $article->seo['title']), ['class' => 'form-control']) }}
+                            {{ Form::text('seo[title]', old('seo[title]', $article_update->seo->title ), ['class' => 'form-control']) }}
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article->seo['keywords']), ['class' => 'form-control']) }}
+                            {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article_update->seo->keywords), ['class' => 'form-control']) }}
                         </div>
 
                         <div class="form-group  d-none">
                             {{ Form::label('seo[description]', __('SEO Description')) }}
-                            {{ Form::textarea('seo[description]', old('seo[description]', $article->seo['description']), ['class' => 'form-control', 'rows' => 3]) }}
+                            {{ Form::textarea('seo[description]', old('seo[description]', $article_update->seo->description ), ['class' => 'form-control', 'rows' => 3]) }}
                         </div>
                     </div>
                 </div>
