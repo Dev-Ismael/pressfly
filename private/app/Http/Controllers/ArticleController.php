@@ -23,6 +23,10 @@ class ArticleController extends Controller
     {
         $article->load(['user', 'categories', 'tags']);
 
+        if ($article->lang != 'arabic') {
+            abort(404);
+        }
+        
         if ($article->user->status !== 1) {
             abort(404);
         }
