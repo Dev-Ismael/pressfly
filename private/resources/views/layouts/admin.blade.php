@@ -13,6 +13,10 @@
     <meta name="keywords" content="earn money , write article , earn money online , writte.me , writing management platform , freelancer writing , writing topics , writing a paragraph	 , earn money from writing articles , earn money from writing blogs , earn money from writing uk , earn money from writing work , earn money writing articles online india  , earn money writing articles online uk  ,  earn money writing book reviews  , earn money writing blog posts ,  earn money from home by writing , earn money from content writing , making money from creative writing , earn money in writing , can i make money from writing , can i make money from writing a blog">
     <link rel="canonical" href="{{ url()->current() }}"/>
 
+    <!------- FontAwesome  ------->
+    <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
+
+    
     <!-----FavIcon----->
     <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>
     <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='shortcut icon'/>

@@ -37,6 +37,13 @@
 
                         <div class="form-group">
                             {{ Form::label('content', __('Content')) }}
+                            <span class="clipboard-icon ml-2" style="cursor: pointer">
+                                <i class="fa-solid fa-clipboard fa-2x text-gray"></i>
+                                <i class="fa-solid fa-clipboard-check fa-2x text-success d-none"></i>
+                            </span>
+                            <div class="clipboard-content d-none">
+                                {!! $article->content !!}
+                            </div>
                             {{ Form::textarea('content', old('content', $article->content), ['class' => 'form-control text-editor', 'required' => true]) }}
                         </div>
                     </div>

@@ -868,8 +868,7 @@ $(function () {
 
 
 
-
-    // Customize 
+    // Customize Nedd imporvement Btn
     $("a.need_improvement").click(function(event){
         
         var review_messege = $(this).attr("review_messege");

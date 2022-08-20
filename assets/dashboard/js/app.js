@@ -20,3 +20,40 @@ $(function () {
 
     $('.select2').select2();
 });
+
+
+
+$(function () {
+    // clipboard-icon
+    $(".form-group span.clipboard-icon").click(function(){
+        
+        var clipboardIcons = $(this)
+
+        var content = clipboardIcons.siblings('div.clipboard-content');
+        // alert(content);
+
+        clipboardIcons.children('i').toggleClass('d-none');
+
+        setTimeout( function() { 
+            clipboardIcons.children('i').toggleClass('d-none');
+        }, 3000);
+
+        // clipboard Process
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(content).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+
+
+
+        
+
+
+
+
+
+    });
+});
+
+
