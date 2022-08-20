@@ -409,6 +409,48 @@ function recaptchav3_run() {
     });
 }
 
+
+
+
+
+
+
+
+
+
+
+// tinymce (Text Editior)
+tinymce.init({
+    selector: '.text-editor',
+    // directionality: '{{ get_option('language_direction', 'ltr') }}',
+    // language: '{{ file_exists(public_path('assets/vendors/tinymce/langs/' . app()->getLocale() . '.js')) ? app()->getLocale() : 'en' }}',
+    // content_css: '{{ asset('assets/css/editor.css') }}',
+    height: '500px',
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+    ],
+    paste_preprocess: function (plugin, args) {
+        // console.log("Attempted to paste: ", args.content);
+        // // replace copied text with empty string
+        
+        swal({
+            icon: 'error',
+            title: "Oh.. Content can't be copy/paste",
+            text: 'Article content must be uniqe for approved, So you should write an attractive content so can give you more view and make visitor stay long time reading your article. ',
+            type: "error",
+        });
+        
+        args.content = '';
+    },
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+
+
+
+
+
 /**
  * Report invalid link
  */

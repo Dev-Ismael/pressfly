@@ -178,6 +178,7 @@
 
 <script data-cfasync="false" src="{{ asset('assets/js/ads.js') }}"></script>
 
+<script src="{{ asset('assets/vendors/tinymce/tinymce.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
