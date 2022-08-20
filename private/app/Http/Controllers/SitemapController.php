@@ -34,7 +34,7 @@ class SitemapController extends Controller
 
         $articles = Article::query()
             ->select(['id', 'slug'])
-            ->whereIn('status', [1, 4])
+            ->whereIn('status', [1])
             ->where('lang' , 'arabic')
             ->get();
 
