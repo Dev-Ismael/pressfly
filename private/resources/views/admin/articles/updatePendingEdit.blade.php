@@ -204,7 +204,7 @@
                                     'title'      => "Bad Title",
                                     'category'   => "Wrong Category",
                                     'summary'    => "Bad Summary",
-                                    'content'    => "Copied Content",
+                                    'content'    => "Bad Content",
                                     'image'      => 'Bad Image',
                                     'seo'        => 'SEO Issue',
                                 ],

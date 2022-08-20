@@ -150,7 +150,10 @@
                     @if( $article->review_messege == "content"  || $article->status == 3 )
                         <div class="form-group">
                             <label for="content">{{ __('Content') }}</label>
-                            <textarea id="content" name="content" class="form-control text-editor" required>{{ old('content', $article_update->content) }}</textarea>
+                            <textarea name="content" class="form-control text-editor" id="content" cols="30" rows="10"
+                            onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off>
+                                {{ old('content', $article_update->content) }}
+                            </textarea>
                         </div>
                         @error('content')
                             <p class="alert alert-danger mt-2">{{ $message }}</p>

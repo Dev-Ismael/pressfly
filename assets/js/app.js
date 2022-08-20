@@ -887,7 +887,7 @@ $(function () {
             title = 'Wrong Summary';
             text  = 'Please edit Summary , In order not to delete the article within a week!';
         }else if( review_messege == 'content' ){
-            title = 'Copied Content';
+            title = 'Bad Content';
             text  = 'The content of this article contains many copied sentences... please use palgarism checker , Your article must be unique and attractive , in order not to delete the article within a week!';
         }else if( review_messege == 'image' ){
             title = 'Bad Image Uploaded';

@@ -92,7 +92,11 @@
 
                 <div class="form-group">
                     {{ Form::label('content', __('Content')) }}
-                    {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' ]) }}
+                    {{-- {{ Form::textarea('content', old('content'), ['class' => 'form-control text-editor' ]) }} --}}
+                    <textarea name="content" class="form-control text-editor" id="content" cols="30" rows="10"
+                    onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off>
+                        {{ old('content') }}
+                    </textarea>
                     @error('content')
                         <p class="alert alert-danger mt-2">{{ $message }}</p>
                     @enderror
