@@ -27,7 +27,7 @@ class ArticleController extends Controller
             abort(404);
         }
 
-        if (!in_array($article->status, [1, 4, 6])) {
+        if (!in_array($article->status, [1])) {
             abort(404);
         }
 

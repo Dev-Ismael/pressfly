@@ -33,7 +33,7 @@ if (isset($widget['tags']) && count($widget['tags'])) {
 }
 
 $recent_articles = $recent_articles
-    ->whereIn('status', [1, 4])
+    whereIn('status', [1])
     ->where('lang' , 'english')
     ->orderBy('published_at', 'desc')
     ->limit($widget['num'])

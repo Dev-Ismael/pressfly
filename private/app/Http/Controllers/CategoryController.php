@@ -26,7 +26,7 @@ class CategoryController extends Controller
         }
 
         $articles = $category->articles()
-            ->whereIn('status', [1, 4])
+            whereIn('status', [1])
             ->where('lang' , 'english')
             ->orderByDesc('published_at')
             ->paginate(10);
@@ -55,7 +55,7 @@ class CategoryController extends Controller
         }
 
         $articles = $category->articles()
-            ->whereIn('status', [1, 4])
+            whereIn('status', [1])
             ->where('lang' , 'english')
             ->orderByDesc('published_at')
             ->limit(15)

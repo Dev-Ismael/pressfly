@@ -40,7 +40,7 @@ $popular_articles = \App\Statistic::query()
         /**
          * @var \Illuminate\Database\Eloquent\Builder $query
          */
-        $query->whereIn('status', [1, 4]);
+        $querywhereIn('status', [1]);
         $query->where('lang' , 'english');
     });
 

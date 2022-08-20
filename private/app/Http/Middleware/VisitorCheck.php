@@ -17,55 +17,55 @@ class VisitorCheck
     public function handle($request, Closure $next)
     {
 
-        /******************************************
-        **  Customize Check Visitor 
-        *******************************************/
+        // /******************************************
+        // **  Customize Check Visitor 
+        // *******************************************/
         
-        // Cookie Variable
-        try {
-            //$cookie = decrypt(\Illuminate\Support\Facades\Cookie::get('visitor'));
-            $cookie = decrypt($_COOKIE['visitor']);
-        } catch (\Exception $exception) {
-            $cookie = null;
-        }
+        // // Cookie Variable
+        // try {
+        //     //$cookie = decrypt(\Illuminate\Support\Facades\Cookie::get('visitor'));
+        //     $cookie = decrypt($_COOKIE['visitor']);
+        // } catch (\Exception $exception) {
+        //     $cookie = null;
+        // }
         
-        // view_form_data Cookie Variable
-        $view_form_data =  encrypt([
-            't' => time(),
-            'ref' => $_SERVER['HTTP_REFERER'] ?? null,
-        ]);
-        $view_form_data = decrypt($view_form_data);
-        $view_form_data['g-recaptcha-response'] = $form_data['g-recaptcha-response'] ?? null;
-        $view_form_data['country'] = Statistic::get_country(get_ip());
+        // // view_form_data Cookie Variable
+        // $view_form_data =  encrypt([
+        //     't' => time(),
+        //     'ref' => $_SERVER['HTTP_REFERER'] ?? null,
+        // ]);
+        // $view_form_data = decrypt($view_form_data);
+        // $view_form_data['g-recaptcha-response'] = $form_data['g-recaptcha-response'] ?? null;
+        // $view_form_data['country'] = Statistic::get_country(get_ip());
         
-        // ( Reason 7 ) if valid country
-        if (is_null($view_form_data['country'])) {
-            // return "Error Because InValid country";
-            return abort(500);
-        }
+        // // ( Reason 7 ) if valid country
+        // if (is_null($view_form_data['country'])) {
+        //     // return "Error Because InValid country";
+        //     return abort(500);
+        // }
     
-        // ( Reason 8 ) if not disable cookie
-        if (is_array($cookie)) {
+        // // ( Reason 8 ) if not disable cookie
+        // if (is_array($cookie)) {
     
-            // ( Reason 9 ) if IP Changed
-            if ($cookie['ip'] != get_ip()) {
-                // return "Error Because Ip Changed";
-                return abort(500);
-            }
+        //     // ( Reason 9 ) if IP Changed
+        //     if ($cookie['ip'] != get_ip()) {
+        //         // return "Error Because Ip Changed";
+        //         return abort(500);
+        //     }
     
-            // // ( Reason 10 ) Check AdBlock
-            // if (!isset($_COOKIE['ab']) || in_array($_COOKIE['ab'], [0, 1])) {
-            //     // return "Error Because Ad Block";
-            //     return abort(500);
-            // }
+        //     // // ( Reason 10 ) Check AdBlock
+        //     // if (!isset($_COOKIE['ab']) || in_array($_COOKIE['ab'], [0, 1])) {
+        //     //     // return "Error Because Ad Block";
+        //     //     return abort(500);
+        //     // }
             
-        }
+        // }
     
-        // ( Reason 11 ) if proxy
-        if (isProxyIP()) {
-            // return "Error Because Proxy";
-            return abort(500);
-        }
+        // // ( Reason 11 ) if proxy
+        // if (isProxyIP()) {
+        //     // return "Error Because Proxy";
+        //     return abort(500);
+        // }
 
 
         if ((bool)get_option('ads_protector', 0) === false) {

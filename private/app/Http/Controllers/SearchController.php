@@ -13,7 +13,7 @@ class SearchController extends Controller
         if ($keyword) {
             $articles = Article::query()
                 ->with(['user', 'mainCategory'])
-                ->whereIn('status', [1, 4])
+                whereIn('status', [1])
                 ->where('lang' , 'english')
                 ->whereRaw("MATCH(title, summary, content) AGAINST (? IN NATURAL LANGUAGE MODE)", [$keyword])
                 ->paginate(10);
@@ -23,7 +23,7 @@ class SearchController extends Controller
             $articles = Article::query()
                 ->with(['user', 'mainCategory'])
                 ->selectRaw("*, MATCH(title, summary, content) AGAINST (? IN BOOLEAN MODE) AS score", [$keyword])
-                ->whereIn('status', [1, 4])
+                whereIn('status', [1])
                 ->whereRaw("MATCH(title, summary, content) AGAINST (? IN BOOLEAN MODE)", [$keyword])
                 ->orderBy('score', 'desc')
                 ->paginate(10);
@@ -32,7 +32,7 @@ class SearchController extends Controller
             /*
             $articles = Article::query()
                 ->with(['user', 'mainCategory'])
-                ->whereIn('status', [1, 4])
+                whereIn('status', [1])
                 ->where(function ($query) use ($keyword) {
                     // @var \Illuminate\Database\Eloquent\Builder $query
                     $query->where('title', 'like', '%' . $keyword . '%')
