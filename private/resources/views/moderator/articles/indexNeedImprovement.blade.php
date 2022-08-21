@@ -46,7 +46,7 @@
     <div class="card card-primary card-outline">
         <div class="card-header">
             <h5 class="m-0">
-                <i class="far fa-file-alt"></i> {{ __('New Articles') }}
+                <i class="far fa-file-alt"></i> {{ __('Need Improvements Articles') }}
             </h5>
         </div>
         <div class="card-body p-0">
@@ -62,10 +62,6 @@
                         <th>
                             {!! link_to_route('moderator.articles.indexNewPending', __('Title'),
                                 array_merge(request()->query(), ['order' => 'title', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
-                        </th>
-                        <th>
-                            {!! link_to_route('moderator.articles.indexNewPending', __('Slug'),
-                                array_merge(request()->query(), ['order' => 'slug', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
                         </th>
                         <th>{{ __('Author') }}</th>
                         <th>{{ __('Updated') }}</th>
@@ -86,9 +82,8 @@
                         <tr>
                             <td>{{ $article->id }}</td>
                             <td>
-                                <a href="{{ route('moderator.articles.newPendingEdit', [$article->id]) }}">{{ $article->title }}</a>
+                                {{ $article->title }}
                             </td>
-                            <td>{{ $article->slug }}</td>
                             <td>{{ $article->user->username }}</td>
                             <td>{{ display_date_timezone($article->updated_at) }}</td>
                             <td>{{ display_date_timezone($article->published_at) }}</td>

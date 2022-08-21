@@ -1,3 +1,2 @@
 1- Add All new Feature to moderator
-2- find arabic palgarism
-3- prevent user paste text in content field
+4- change povami link in footer

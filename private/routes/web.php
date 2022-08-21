@@ -283,6 +283,22 @@ Route::namespace('Moderator')->prefix('moderator')->name('moderator.')->middlewa
         ->where(['article' => '[0-9]+'])->name('articles.updatePendingEdit');
     Route::put('/articles/{article}/update-pending/process', 'ArticleController@updatePendingProcess')
         ->where(['article' => '[0-9]+'])->name('articles.updatePendingProcess');
+    
+    // Need Improvement (ignored)
+    Route::get('/articles/index/need-improvement', 'ArticleController@indexNeedImprovement')
+    ->name('articles.indexNeedImprovement');
+    
+    // index Updated Need Improvement
+    Route::get('/articles/index/update-need-improvement', 'ArticleController@indexUpdateNeedImprovement')
+    ->name('articles.indexUpdateNeedImprovement');
+    
+    // Updated Need Improvement edit
+    Route::get('/articles/{article}/update-need-improvement/edit', 'ArticleController@updateNeedImprovementEdit')
+        ->where(['article' => '[0-9]+'])->name('articles.updateNeedImprovementEdit');
+    
+    // Updated Need Improvement Process
+    Route::put('/articles/{article}/update-need-improvement/process', 'ArticleController@updateNeedImprovementProcess')
+        ->where(['article' => '[0-9]+'])->name('articles.updateNeedImprovementProcess');
 
     Route::resource('articles', 'ArticleController')->except(['show']);
 

@@ -4,8 +4,7 @@
 
 @section('content')
 
-    <form action="{{ route('moderator.articles.newPendingProcess', $article->id) }}" method="post"
-          enctype="multipart/form-data">
+    <form action="{{ route('moderator.articles.update', $article->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
 
@@ -18,13 +17,13 @@
                             {{ Form::label('title', __('Title')) }}
                             {{ Form::text('title', old('title', $article->title), ['class' => 'form-control', 'required' => true]) }}
                         </div>
-                        
+
                         <!----- Add Option Lang ----->
                         <div class="form-group">
                             {{ Form::label('lang', __('Language')) }}
                             {{ Form::select('lang', ["english" => "English" , "arabic" => "العربية" ] , old('lang', $article->lang), ['class' => 'form-control', 'required' => true]) }}
                         </div>
-
+                        
                         <div class="form-group d-none">
                             {{ Form::label('slug', __('Slug(URL Key)')) }}
                             {{ Form::text('slug', old('slug', $article->slug), ['class' => 'form-control']) }}
@@ -37,13 +36,6 @@
 
                         <div class="form-group">
                             {{ Form::label('content', __('Content')) }}
-                            <span class="clipboard-icon ml-2" style="cursor: pointer">
-                                <i class="fa-solid fa-clipboard fa-2x text-gray"></i>
-                                <i class="fa-solid fa-clipboard-check fa-2x text-success d-none"></i>
-                            </span>
-                            <div class="clipboard-content d-none">
-                                {!! $article->content !!}
-                            </div>
                             {{ Form::textarea('content', old('content', $article->content), ['class' => 'form-control text-editor', 'required' => true]) }}
                         </div>
                     </div>
@@ -52,7 +44,7 @@
                 <div class="card card-primary card-outline">
                     <div class="card-header"><?= __('SEO ') ?></div>
                     <div class="card-body">
-                        <div class="form-group  d-none">
+                        <div class="form-group d-none">
                             {{ Form::label('seo[title]', __('SEO Title')) }}
                             {{ Form::text('seo[title]', old('seo[title]', $article->seo['title']), ['class' => 'form-control']) }}
                         </div>
@@ -62,7 +54,7 @@
                             {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article->seo['keywords']), ['class' => 'form-control']) }}
                         </div>
 
-                        <div class="form-group  d-none">
+                        <div class="form-group d-none">
                             {{ Form::label('seo[description]', __('SEO Description')) }}
                             {{ Form::textarea('seo[description]', old('seo[description]', $article->seo['description']), ['class' => 'form-control', 'rows' => 3]) }}
                         </div>
@@ -73,42 +65,6 @@
                 <div class="card card-primary card-outline">
                     <div class="card-header"><?= __('Article Settings') ?></div>
                     <div class="card-body">
-                        <div class="form-group  d-none">
-                            {{ Form::label('message', __('Message to the Author')) }}
-                            {{ Form::textarea('message', old('message'), ['class' => 'form-control', 'rows' => 5]) }}
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block" name="status"
-                                    value="1">{{ __('Approve') }}</button>
-                            <button type="submit" class="btn btn-danger btn-block" name="status"
-                                    value="2">{{ __('Reject') }}</button>
-                            <button type="submit" class="btn btn-info btn-block" name="status"
-                                    value="5">{{ __('Need Improvements') }}</button>
-                        </div>
-
-                        
-                        <div class="form-group">
-                            {{ Form::label('review_messege', __('Review Messege')) }}
-                            {{ Form::select('review_messege', 
-                                [
-                                    ''           => 'Approved',
-                                    'title'      => "Bad Title",
-                                    'category'   => "Wrong Category",
-                                    'summary'    => "Bad Summary",
-                                    'content'    => "Bad Content",
-                                    'image'      => 'Bad Image',
-                                    'seo'        => 'SEO Issue',
-                                ],
-                                old('review_messege', $article->review_messege), ['class' => 'form-control select2',
-                                'placeholder' => null]) }}
-                        </div>
-
-
-                        <div class="form-group d-none">
-                            {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
-                            {{ Form::number('read_time', old('read_time', $article->read_time), ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
-                        </div>
 
 
                         <?php
@@ -129,11 +85,39 @@
                         */
                         ?>
 
-                        <div class="form-group  d-none">
+                        <div class="form-group d-none">
                             {{ Form::label('disable_earnings', __('Disable Earnings')) }}
                             {{ Form::select('disable_earnings', [0 => __('No'), 1 => __('Yes')],
                                 old('disable_earnings', $article->disable_earnings), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}
+                        </div>
+
+                        <div class="form-group d-none">
+                            {{ Form::label('read_time', __('Recommended Read Time(in seconds)')) }}
+                            {{ Form::number('read_time', old('read_time', $article->read_time), ['class' => 'form-control', 'min' => 0, 'step' => 1,]) }}
+                        </div>
+
+                        <?php
+                        $article_statuses = array_intersect_key(get_article_statuses(), array_flip([1, 2, 7]));
+                        ?>
+                        <div class="form-group">
+                            <label for="status">{{ __('Status') }}</label>
+                            <select class="form-control select2" name="status" id="status" required>
+                                <option value="">{{ __('Choose') }}</option>
+                                @foreach($article_statuses as $key=>$val)
+                                    <option
+                                        value="{{ $key }}" {{ (($key == old('status', $article->status))? "selected":"") }}>{{$val}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group d-none">
+                            {{ Form::label('message', __('Message to the Author')) }}
+                            {{ Form::textarea('message', old('message'), ['class' => 'form-control', 'rows' => 5]) }}
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">{{ __('Submit') }}</button>
                         </div>
 
                     </div>
@@ -195,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="card card-primary card-outline  d-none">
+                <div class="card card-primary card-outline d-none">
                     <div class="card-header"><?= __('Tags') ?></div>
                     <div class="card-body">
                         <div class="form-group">

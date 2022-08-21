@@ -13,6 +13,11 @@
     <meta name="keywords" content="earn money , write article , earn money online , writte.me , writing management platform , freelancer writing , writing topics , writing a paragraph	 , earn money from writing articles , earn money from writing blogs , earn money from writing uk , earn money from writing work , earn money writing articles online india  , earn money writing articles online uk  ,  earn money writing book reviews  , earn money writing blog posts ,  earn money from home by writing , earn money from content writing , making money from creative writing , earn money in writing , can i make money from writing , can i make money from writing a blog">
     <link rel="canonical" href="{{ url()->current() }}"/>
 
+    
+    <!------- FontAwesome  ------->
+    <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
+
+
     <!-----FavIcon----->
     <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='icon'/>
     <link href='https://i.ibb.co/BztsWqJ/favicon.png' type='image/x-icon' rel='shortcut icon'/>
@@ -93,6 +98,9 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('moderator.articles.index') }}">
+                                    <i class="nav-icon fa fa-angle-right"></i>
+                                    <p>{{ __('List') }}</p></a></li>
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('moderator.articles.indexNewPending') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
@@ -100,7 +108,15 @@
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('moderator.articles.indexUpdatePending') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Update Pending') ?></p></a></li>
+                                    <p><?= __('Edit Pending') ?></p></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                                    href="{{ route('moderator.articles.indexNeedImprovement') }}">
+                                    <i class="nav-icon fa fa-angle-right"></i>
+                                    <p><?= __('Need Improvements') ?></p></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                                    href="{{ route('moderator.articles.indexUpdateNeedImprovement') }}">
+                                    <i class="nav-icon fa fa-angle-right"></i>
+                                    <p><?= __('Edit Need Improvements') ?></p></a></li>
                         </ul>
                     </li>
 
@@ -181,6 +197,8 @@
 </div>
 
 <!-- Bootstrap and necessary plugins-->
+<script src="{{ asset('assets/vendors/tinymce/tinymce.min.js') }}"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>

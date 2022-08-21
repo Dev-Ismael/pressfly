@@ -69,7 +69,7 @@ class ArticleRequest extends FormRequest
             */
         ];
 
-        if ($this->route()->getPrefix() === '/admin') {
+        if ($this->route()->getPrefix() === '/admin' || $this->route()->getPrefix() === '/moderator') {
 
 
             // remove required at category 

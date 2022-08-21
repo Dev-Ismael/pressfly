@@ -6,6 +6,8 @@
 
 @extends('layouts.moderator')
 
+@section('title', e(__('Update Articles')))
+
 @section('content')
 
     <div class="card border">
@@ -75,6 +77,7 @@
                             {!! link_to_route('moderator.articles.indexUpdatePending', __('Created'),
                                 array_merge(request()->query(), ['order' => 'created_at', 'dir' => $orderBy['dir'], 'page' => 1]) ) !!}
                         </th>
+                        <th>{{ __('Actions') }}</th>
                     </tr>
                     </thead>
 
@@ -90,7 +93,21 @@
                             <td>{{ display_date_timezone($article->updated_at) }}</td>
                             <td>{{ display_date_timezone($article->published_at) }}</td>
                             <td>{{ display_date_timezone($article->created_at) }}</td>
+                            <td class="d-inline-flex">
+                                <div class="d-inline-flex">
+                                    <a class="btn btn-sm btn-primary" target="_blank" href="{{ $article->permalink() }}" style="display:none" >
+                                        <i class="fa fa-eye"></i></a>
 
+                                    @if((int)$article->pay_type === 2 && !(bool)$article->paid)
+                                        <a class="btn btn-sm btn-success"
+                                           href="{{ route('moderator.articles.pay', [$article->id]) }}">
+                                            <i class="fa fa-money"></i>
+                                        </a>
+                                    @endif
+
+                                    {!! delete_form('moderator.articles.destroy', $article->id) !!}
+                                </div>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

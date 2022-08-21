@@ -73,18 +73,19 @@ class ArticleController extends ModeratorController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    // public function create()
+    // {
+        
 
-        $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
+    //     $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
-        $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
+    //     $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
-        return view('moderator.articles.create', [
-            'categories' => $categories,
-            'tags' => $tags,
-        ]);
-    }
+    //     return view('moderator.articles.create', [
+    //         'categories' => $categories,
+    //         'tags' => $tags,
+    //     ]);
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -177,6 +178,7 @@ class ArticleController extends ModeratorController
             abort(404);
         }
 
+        
 
         $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
 
@@ -320,7 +322,9 @@ class ArticleController extends ModeratorController
             \DB::table('comments')->where('article_id', $article->id)->delete();
             $article->statistics()->delete();
 
-            \App\Helpers\Image::deleteImage($article->featured_image);
+            $image = \App\File::find($article->featured_image_id)->file;
+            \App\Helpers\Image::deleteImage($image);
+    
         } else {
             session()->flash('message', 'Unable to delete this article.');
         }
@@ -387,7 +391,7 @@ class ArticleController extends ModeratorController
      */
     public function newPendingEdit(Article $article)
     {
-        if ($article->status !== 3) {
+        if ($article->status !== 3 ) {
             abort(404);
         }
 
@@ -428,6 +432,7 @@ class ArticleController extends ModeratorController
             'upload_featured_image',
             'main_category',
             'categories',
+            'review_messege',
             'tags',
             'message',
             'read_time',
@@ -564,6 +569,7 @@ class ArticleController extends ModeratorController
         if (empty($article->tmp_content)) {
             $article_update = new \stdClass();
             $article_update->title = $article->title;
+            $article_update->lang = $article->lang;
             $article_update->slug = $article->slug;
             $article_update->summary = $article->summary;
             $article_update->content = $article->content;
@@ -604,6 +610,7 @@ class ArticleController extends ModeratorController
             'upload_featured_image',
             'main_category',
             'categories',
+            'review_messege',
             'tags',
             'message',
             'read_time',
@@ -650,6 +657,16 @@ class ArticleController extends ModeratorController
             $data['message']);
 
         $data['tmp_content'] = null;
+        
+        $new_status = (int)$data['status'];
+        if ($new_status === 1) {
+            // Article Update Approved
+            $data['published_at'] = now();
+        }
+        // if article approved remove review messege
+        if ($new_status === 1) {
+            $data['review_messege'] = Null;
+        }
 
         if ($article->update($data)) {
             $article->tags()->sync($tags);
@@ -675,5 +692,244 @@ class ArticleController extends ModeratorController
 
         return redirect()->route('moderator.articles.indexUpdatePending');
     }
+
+
+    public function indexNeedImprovement()
+    {
+        $conditions = [];
+
+        if (request()->input('Filter')) {
+            $filter_fields = [
+                'title',
+                'user_id',
+                'slug',
+            ];
+
+            foreach (request()->input('Filter') as $param_name => $param_value) {
+                if (!$param_value) {
+                    continue;
+                }
+                //$value = urldecode($value);
+                if (in_array($param_name, $filter_fields)) {
+                    $like_params = ['title', 'slug'];
+
+                    if (in_array($param_name, $like_params)) {
+                        $conditions[] = [$param_name, 'like', '%' . $param_value . '%'];
+                    } else {
+                        $conditions[] = [$param_name, '=', $param_value];
+                    }
+                }
+            }
+        }
+
+        $orderBy = [
+            'col' => request()->input('order', 'id'),
+            'dir' => request()->input('dir', 'desc'),
+        ];
+
+        $articles = Article::with('user')
+            ->where($conditions)
+            ->where('status', 5)
+            ->orderBy($orderBy['col'], $orderBy['dir'])
+            ->paginate();
+
+        $orderBy['dir'] = ($orderBy['dir'] === 'asc') ? 'desc' : 'asc';
+
+        return view('moderator.articles.indexNeedImprovement', [
+            'articles' => $articles,
+            'orderBy' => $orderBy,
+        ]);
+    }
+
+
+    
+
+    public function indexUpdateNeedImprovement()
+    {
+        $conditions = [];
+
+        if (request()->input('Filter')) {
+            $filter_fields = [
+                'title',
+                'user_id',
+                'slug',
+            ];
+
+            foreach (request()->input('Filter') as $param_name => $param_value) {
+                if (!$param_value) {
+                    continue;
+                }
+                //$value = urldecode($value);
+                if (in_array($param_name, $filter_fields)) {
+                    $like_params = ['title', 'slug'];
+
+                    if (in_array($param_name, $like_params)) {
+                        $conditions[] = [$param_name, 'like', '%' . $param_value . '%'];
+                    } else {
+                        $conditions[] = [$param_name, '=', $param_value];
+                    }
+                }
+            }
+        }
+
+        $orderBy = [
+            'col' => request()->input('order', 'id'),
+            'dir' => request()->input('dir', 'desc'),
+        ];
+
+        $articles = Article::with('user')
+            ->where($conditions)
+            ->where('status', 6)
+            ->orderBy($orderBy['col'], $orderBy['dir'])
+            ->paginate();
+
+        $orderBy['dir'] = ($orderBy['dir'] === 'asc') ? 'desc' : 'asc';
+
+        return view('moderator.articles.indexUpdateNeedImprovement', [
+            'articles' => $articles,
+            'orderBy' => $orderBy,
+        ]);
+    }
+
+
+    public function updateNeedImprovementEdit(Article $article)
+    {
+        if ($article->status !== 6) {
+            abort(404);
+        }
+
+
+        $categories = Category::where('status', 1)->orderBy('name')->pluck('name', 'id');
+
+        $tags = Tag::where('status', 1)->orderBy('name')->pluck('name', 'id');
+
+        $article_update = $article->tmp_content;
+
+        if (empty($article->tmp_content)) {
+            $article_update = new \stdClass();
+            $article_update->title = $article->title;
+            $article_update->lang = $article->lang;
+            $article_update->slug = $article->slug;
+            $article_update->summary = $article->summary;
+            $article_update->content = $article->content;
+            $article_update->featured_image_id = null;
+            $article_update->read_time = $article->read_time;
+        }
+        return view('moderator.articles.updateNeedImprovementEdit', [
+            'article' => $article,
+            'article_update' => $article_update,
+            'categories' => $categories,
+            'tags' => $tags,
+        ]);
+    }
+
+
+    public function updateNeedImprovementProcess(ArticleRequest $request, Article $article)
+    {
+        if ($article->status !== 6) {
+            abort(404);
+        }
+
+        //$validated = $request->validated();
+
+        $data = $request->only([
+            'title',
+            'slug',
+            'summary',
+            'content',
+            'status',
+            'user_id',
+            'disable_earnings',
+            'read_time',
+            'upload_featured_image',
+            'main_category',
+            'categories',
+            'review_messege',
+            'tags',
+            'message',
+            'read_time',
+            'seo',
+        ]);
+
+
+        if ((int)$data['status'] === 6) {
+            $article->update([
+                'status' => $data['status'],
+            ]);
+
+            if ((bool)get_option('alert_member_approved_update_article')) {
+                Mail::send(new MemberApprovedUpdateArticle($article, $data['message']));
+            }
+
+            session()->flash('message', __('Article updated.'));
+            return redirect()->route('moderator.articles.indexUpdateNeedImprovement');
+        }
+
+        /**
+         * @var \App\File|null $featured_image
+         */
+        $featured_image = \App\Helpers\Upload::process('upload_featured_image');
+
+        if ($featured_image) {
+            $data['featured_image_id'] = $featured_image->id;
+        } elseif (isset($article->tmp_content->featured_image_id) && !empty($article->tmp_content->featured_image_id)) {
+            $data['featured_image_id'] = $article->tmp_content->featured_image_id;
+        }
+
+        $tags = $data['tags'] ?? [];
+        $categories = $data['categories'];
+
+        $data['pay_type'] = 1;
+
+        $data['disable_earnings'] = (isset($data['disable_earnings']) && (bool)$data['disable_earnings']) ? 1 : null;
+
+        $main_category = $data['main_category'];
+
+        $message = $data['message'];
+
+        unset($data['upload_featured_image'], $data['categories'], $data['main_category'], $data['tags'],
+            $data['message']);
+
+        $data['tmp_content'] = null;
+
+        $new_status = (int)$data['status'];
+        if ($new_status === 1) {
+            // Article Update Approved
+            $data['published_at'] = now();
+        }
+        // if article approved remove review messege
+        if ($new_status === 1) {
+            $data['review_messege'] = Null;
+        }
+
+        if ($article->update($data)) {
+            $article->tags()->sync($tags);
+
+            $sycCategories = [];
+            foreach ($categories as $category) {
+                $category = (int)$category;
+                $main_category = (int)$main_category;
+
+                $sycCategories[$category] = ['main' => (int)($category === $main_category)];
+            }
+
+            $article->categories()->sync($sycCategories);
+
+            if ((bool)get_option('alert_member_approved_update_article')) {
+                Mail::send(new MemberApprovedUpdateArticle($article, $message));
+            }
+
+            \Cache::forget('homepage');
+
+            session()->flash('message', __('Article updated.'));
+        }
+
+        return redirect()->route('moderator.articles.indexUpdateNeedImprovement');
+    }
+
+
+
+
+
 
 }

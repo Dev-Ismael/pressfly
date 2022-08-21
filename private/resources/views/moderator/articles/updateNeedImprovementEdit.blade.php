@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <form action="{{ route('moderator.articles.updatePendingProcess', $article->id) }}" method="post"
+    <form action="{{ route('moderator.articles.updateNeedImprovementProcess', $article->id) }}" method="post"
           enctype="multipart/form-data">
         @csrf
         @method('put')
@@ -105,7 +105,6 @@
                                     </td>
                                 </tr>
 
-                                
                                 <tr>
                                     <th>{{ __('Image') }}</th>
                                     <td>
@@ -128,7 +127,7 @@
                                             {{ __('No change') }}
                                         @endif
                                     </td>
-                                </tr>   
+                                </tr>
 
                                 <tr>
                                     <th>{{ __('Summary') }}</th>
@@ -169,7 +168,7 @@
 
                         <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
-                            {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article_update->seo->keywords ), ['class' => 'form-control']) }}
+                            {{ Form::textarea('seo[keywords]', old('seo[keywords]', $article_update->seo->keywords), ['class' => 'form-control']) }}
                         </div>
 
                         <div class="form-group  d-none">
@@ -252,7 +251,10 @@
                     <div class="card-body">
                         <div class="form-group">
                             <div class="form-group">
-                                <img src="{{ url($article->featuredImage->file) }}"
+                                <?php
+                                    $image = \App\File::find($article_update->featured_image_id)->file;
+                                ?>
+                                <img src="{{ url($image) }}"
                                 style="max-width: 100%;">
                             </div>
                             {{ Form::file('upload_featured_image', ['accept' => '.jpg,.jpeg,.png,.gif']) }}
