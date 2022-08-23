@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $articles = Article::query()
             //->select(['id', 'slug'])
-            whereIn('status', [1])
+            ->whereIn('status', [1])
             ->where('lang' , 'english')
             ->orderByDesc('published_at')
             ->limit(15)

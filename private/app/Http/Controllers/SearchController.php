@@ -13,7 +13,7 @@ class SearchController extends Controller
         if ($keyword) {
             $articles = Article::query()
                 ->with(['user', 'mainCategory'])
-                whereIn('status', [1])
+                ->whereIn('status', [1])
                 ->where('lang' , 'english')
                 ->whereRaw("MATCH(title, summary, content) AGAINST (? IN NATURAL LANGUAGE MODE)", [$keyword])
                 ->paginate(10);

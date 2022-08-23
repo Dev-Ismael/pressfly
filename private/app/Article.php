@@ -118,7 +118,7 @@ class Article extends AppModel
                 $query->where('status', 1);
             })
             ->orderBy('published_at', 'desc')
-            whereIn('status', [1])
+            ->whereIn('status', [1])
             ->where('lang' , 'english')
             ->limit($count)
             ->get();
@@ -198,7 +198,7 @@ class Article extends AppModel
             }
 
             $query = $query->orderBy($args['order_by'], $args['order'])
-                whereIn('status', [1])
+                ->whereIn('status', [1])
                 ->where('lang' , 'english')
                 ->paginate($args['per_page']);
 
@@ -224,7 +224,7 @@ class Article extends AppModel
                     /**
                      * @var \Illuminate\Database\Eloquent\Builder $query
                      */
-                    $querywhereIn('status', [1]);
+                    $query->whereIn('status', [1]);
                     $query->where('lang' , 'english');
                 });
 
