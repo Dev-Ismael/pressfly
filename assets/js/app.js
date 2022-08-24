@@ -951,7 +951,7 @@ $(function () {
 });
 
 
-// tinymce (Text Editior) to admin dashboard
+// seo-example Alert
 $(function () {
 
     $(".form-group .seo-example").click(function (e) { 

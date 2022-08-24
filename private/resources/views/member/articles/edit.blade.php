@@ -4,9 +4,9 @@
 
 @section('content')
 
-{{-- @if($errors->any())
-    {{ implode('', $errors->all('<div>:message</div>')) }}
-@endif --}}
+@if($errors->any())
+    {{ implode('', $errors->all(':message')) }}
+@endif
     <div class="article-status-alert">
 
         @if ( $article->status == 1 )

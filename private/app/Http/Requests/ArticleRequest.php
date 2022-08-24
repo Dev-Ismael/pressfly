@@ -32,7 +32,7 @@ class ArticleRequest extends FormRequest
             'lang'     => [ 'required' , 'string' , 'max:50' ],
             'category' => [ 'required' , 'string' , 'max:50' ],
             'summary'  => [ 'required' , 'string' , 'min:100' , 'max:255' , Rule::unique('articles', 'summary')->ignore($this->article)],
-            'content'  => [ 'required' , 'string' , 'min:1000' , Rule::unique('articles', 'content')->ignore($this->article)],
+            'content'  => [ 'required' , 'string' , 'min:1500' , Rule::unique('articles', 'content')->ignore($this->article)],
             'upload_featured_image' => [
                 'required',
                 'mimes:' . get_option('upload_filetypes'),
@@ -76,6 +76,8 @@ class ArticleRequest extends FormRequest
             unset($rules['category'][0]);
             // remove required at image 
             unset($rules['upload_featured_image'][0]);
+            // remove required at content 
+            unset($rules['content']);
 
 
             $rules['categories'] = [
