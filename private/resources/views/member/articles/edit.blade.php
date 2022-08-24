@@ -196,6 +196,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
+                                <span class="seo-example d-inline"> 
+                                    {{-- <i class="fa-solid fa-file-circle-check fa-fade"></i> --}}
+                                    <i class="fa-solid fa-file-circle-check"></i>
+                                    <u> <span class="link"> Click to see example </span> </u>
+                                </span>
                                 @if(empty($article->tmp_content))
                                     {{ Form::textarea('seo[keywords]', $article_update->seo['keywords'] , ['class' => 'form-control' , 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000  ]) }}
                                 @else

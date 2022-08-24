@@ -1,2 +1,27 @@
-1- Add All new Feature to moderator
+1- fix show article at (where query) jourlive.com
+2- Add tech Seo at add member article
+3- Add picture of seo example for member in create & delete
+3- validation add request content 
+4- Add delete article btn at new pending
+5- Add (no-chages) at update edit pages
+6- Add delete all btn in need improvement
+7- fix proxy visits
+8- Add Arabic Categorires
+9- Add Google captcha for visits
+10- 
+11- 
+12- 
+13- 
+
+
+
+
+
 4- change povami link in footer
+
+
+
+name : nora
+username : nora2022
+email: nora@gmail.com
+password: nora2022

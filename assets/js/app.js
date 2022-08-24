@@ -949,3 +949,22 @@ $(function () {
 
     });
 });
+
+
+// tinymce (Text Editior) to admin dashboard
+$(function () {
+
+    $(".form-group .seo-example").click(function (e) { 
+        e.preventDefault();
+        swal({
+            title: 'SEO Keywords Example!',
+            imageUrl: 'https://i.ibb.co/YpFHFXr/photofunny-net.jpg',
+            imageWidth: 1000,
+            // imageHeight: 500,
+            imageAlt: 'SEO-Keywords-Example',
+        });
+    });
+
+
+
+});

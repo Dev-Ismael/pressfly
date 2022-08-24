@@ -127,6 +127,11 @@
                     <div class="card-body">
                         <div class="form-group">
                             {{ Form::label('seo[keywords]', __('SEO Keywords')) }}
+                            <span class="seo-example d-inline"> 
+                                {{-- <i class="fa-solid fa-file-circle-check fa-fade"></i> --}}
+                                <i class="fa-solid fa-file-circle-check"></i>
+                                <u> <span class="link"> Click to see example </span> </u>
+                            </span>
                             {{ Form::textarea('seo[keywords]', old('seo[keywords]'), ['class' => 'form-control', 'placeholder' => 'Ex: Corona , Corona virus statistics , Corona virus , Covid , Covid-19...' , 'required' => true , 'minlength' => 250 , 'maxlength' => 1000]) }}
                             <small class="form-text text-muted"> You can use <a href="https://keywordtool.io"
                                     target="_blank" style="text-decoration:underline"> https://keywordtool.io </a> for SEO

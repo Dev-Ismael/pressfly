@@ -237,3 +237,12 @@ body.member-articles-create .col-sm-9 > .alert.alert-danger{
 body.member-articles-edit .col-sm-9 > .alert.alert-danger{
     display: none !important;
 }
+/*======= Seo-example ======*/
+.seo-example{
+    background-color: #dc3545;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 3px;
+}
