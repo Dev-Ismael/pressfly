@@ -113,10 +113,10 @@
                                                     href="{{ route('admin.articles.indexUpdatePending') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
                                     <p><?= __('Edit Pending') ?></p></a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                        href="{{ route('admin.articles.indexUpdateNeedImprovement') }}">
-                        <i class="nav-icon fa fa-angle-right"></i>
-                        <p><?= __('Improvements Pending') ?></p></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                                    href="{{ route('admin.articles.indexUpdateNeedImprovement') }}">
+                                    <i class="nav-icon fa fa-angle-right"></i>
+                                    <p><?= __('Edit Improvement  Pending') ?></p></a></li>
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('admin.articles.indexNeedImprovement') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>

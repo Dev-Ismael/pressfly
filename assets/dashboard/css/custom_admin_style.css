@@ -12,6 +12,9 @@ body::-webkit-scrollbar-thumb{
     right: -10px
 }
 /*==== sidebar =====*/
+.main-sidebar, .main-sidebar::before{
+    width: 270px ;
+}
 .main-sidebar a.navbar-brand img{
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -47,6 +50,11 @@ body::-webkit-scrollbar-thumb{
     background-color: #2a1496;
     color: #fff;
     border-radius: 20px;
+}
+@media (min-width: 576px){ 
+    .content-wrapper, .main-footer, .main-header {
+        margin-left: 270px;
+    }
 }
 /*==== card-primary =====*/
 .card-primary.card-outline {

@@ -112,7 +112,7 @@
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('moderator.articles.indexUpdateNeedImprovement') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Improvements Pending') ?></p></a></li>
+                                    <p><?= __('Edit Improvement Pending') ?></p></a></li>
                             <li class="nav-item"><a class="nav-link"
                                         href="{{ route('moderator.articles.indexNeedImprovement') }}">
                             <i class="nav-icon fa fa-angle-right"></i>
