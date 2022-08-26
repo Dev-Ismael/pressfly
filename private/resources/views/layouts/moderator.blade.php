@@ -98,9 +98,9 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('moderator.articles.index') }}">
+                            {{-- <li class="nav-item"><a class="nav-link" href="{{ route('moderator.articles.index') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p>{{ __('List') }}</p></a></li>
+                                    <p>{{ __('List') }}</p></a></li> --}}
                             <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('moderator.articles.indexNewPending') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
@@ -110,13 +110,13 @@
                                     <i class="nav-icon fa fa-angle-right"></i>
                                     <p><?= __('Edit Pending') ?></p></a></li>
                             <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('moderator.articles.indexNeedImprovement') }}">
-                                    <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Need Improvements') ?></p></a></li>
-                            <li class="nav-item"><a class="nav-link"
                                                     href="{{ route('moderator.articles.indexUpdateNeedImprovement') }}">
                                     <i class="nav-icon fa fa-angle-right"></i>
-                                    <p><?= __('Edit Need Improvements') ?></p></a></li>
+                                    <p><?= __('Improvements Pending') ?></p></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                        href="{{ route('moderator.articles.indexNeedImprovement') }}">
+                            <i class="nav-icon fa fa-angle-right"></i>
+                            <p><?= __('Need Improvements') ?></p></a></li>
                         </ul>
                     </li>
 

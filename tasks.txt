@@ -1,13 +1,10 @@
-1- fix show article at (where query) jourlive.com
-2- Add tech Seo at add member article
-3- Add picture of seo example for member in create & delete
-3- validation add request content 
-4- Add delete article btn at new pending
-5- Add (no-chages) at update edit pages
-6- Add delete all btn in need improvement
-7- fix proxy visits
-8- Add Arabic Categorires
-9- Add Google captcha for visits
+1- validation content request while member edit  
+2- Add delete article btn at new pending
+3- Add (no-chages) at update edit pages
+4- Add delete all btn in need improvement
+5- fix proxy visits
+6- Add Arabic Categorires
+7- Add Google captcha for visits
 10- 
 11- 
 12- 
@@ -20,8 +17,6 @@
 4- change povami link in footer
 
 
-
-name : nora
-username : nora2022
-email: nora@gmail.com
+Email: nora@gmail.com
+Username: nora2022
 password: nora2022
