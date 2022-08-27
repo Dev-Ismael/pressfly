@@ -27,23 +27,6 @@ $(function () {
 
     $(".form-group span.clipboard-icon").click(function(){
         
-        var clipboardIcons = $(this)
-
-        var content = clipboardIcons.siblings('div.clipboard-content');
-        // alert(content);
-
-        clipboardIcons.children('i').toggleClass('d-none');
-
-        setTimeout( function() { 
-            clipboardIcons.children('i').toggleClass('d-none');
-        }, 3000);
-
-        // clipboard Process
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(content).text()).select();
-        document.execCommand("copy");
-        $temp.remove();
 
     });
 });
@@ -84,3 +67,20 @@ tinymce.init({
     toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 });
 
+
+
+
+
+
+// Check if exist reson for need_imporvment 
+$(function () {
+    $("button[type='submit'][value='5']").click(function (e) { 
+        
+        var review_messege = $("#select2-review_messege-container").attr('title');
+        if ( review_messege == "Approved" ){
+            e.preventDefault();
+            alert("Please Choose Review Messege.")
+        }
+
+    });
+});

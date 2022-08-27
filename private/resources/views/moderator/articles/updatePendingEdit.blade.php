@@ -191,16 +191,14 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" name="status"
                                     value="1">{{ __('Approve') }}</button>
-                            <button type="submit" class="btn btn-info btn-block" name="status"
-                                    value="5">{{ __('Need Improvements') }}</button>
                         </div>
-
+                        <br>
                         
                         <div class="form-group">
                             {{ Form::label('review_messege', __('Review Messege')) }}
                             {{ Form::select('review_messege', 
                                 [
-                                    ''           => 'Approved',
+                                    ''           => 'Choose review messege',
                                     'title'      => "Bad Title",
                                     'category'   => "Wrong Category",
                                     'summary'    => "Bad Summary",
@@ -208,8 +206,10 @@
                                     'image'      => 'Bad Image',
                                     'seo'        => 'SEO Issue',
                                 ],
-                                old('review_messege', $article->review_messege), ['class' => 'form-control select2',
+                                old('review_messege'), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}
+                                <button type="submit" class="btn btn-info btn-block" name="status"
+                                value="5">{{ __('Need Improvements') }}</button>
                         </div>
 
                         

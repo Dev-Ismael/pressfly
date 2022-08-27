@@ -4,6 +4,13 @@
 
 @section('content')
 
+    <!------- Show Review Messege --------->
+    <div class="alert alert-warning" role="alert"> 
+        <i class="fa-solid fa-circle-exclamation"></i>
+        Note...this Article was need improvement at 
+        <span class="text-bold">{{ Str::ucfirst( $article->review_messege ) }}</span>
+    </div>
+
     <form action="{{ route('admin.articles.updateNeedImprovementProcess', $article->id) }}" method="post"
           enctype="multipart/form-data">
         @csrf
@@ -190,16 +197,14 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" name="status"
                                     value="1">{{ __('Approve') }}</button>
-                            <button type="submit" class="btn btn-info btn-block" name="status"
-                                    value="5">{{ __('Need Improvements') }}</button>
                         </div>
-
+                        <br>
                         
                         <div class="form-group">
                             {{ Form::label('review_messege', __('Review Messege')) }}
                             {{ Form::select('review_messege', 
                                 [
-                                    ''           => 'Approved',
+                                    ''           => 'Choose review messege',
                                     'title'      => "Bad Title",
                                     'category'   => "Wrong Category",
                                     'summary'    => "Bad Summary",
@@ -207,8 +212,10 @@
                                     'image'      => 'Bad Image',
                                     'seo'        => 'SEO Issue',
                                 ],
-                                old('review_messege', $article->review_messege), ['class' => 'form-control select2',
+                                old('review_messege'), ['class' => 'form-control select2',
                                 'placeholder' => null]) }}
+                                <button type="submit" class="btn btn-info btn-block" name="status"
+                                value="5">{{ __('Need Improvements') }}</button>    
                         </div>
 
                         

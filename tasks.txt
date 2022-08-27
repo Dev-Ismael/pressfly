@@ -1,6 +1,6 @@
 1- validation content request while member edit  
 2- Add delete article btn at new pending
-3- Add (no-chages) at update edit pages
+3- Add (no-chages) SEO at update edit pages
 4- Add delete all btn in need improvement
 5- fix proxy visits
 6- Add Arabic Categorires
