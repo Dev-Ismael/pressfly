@@ -15,6 +15,14 @@ body::-webkit-scrollbar-thumb{
 .main-sidebar, .main-sidebar::before{
     width: 270px ;
 }
+@media (max-width: 767.98px){
+    .main-sidebar, .main-sidebar::before{
+        margin-left: -270px;
+    }
+}
+.sidebar-collapse .main-sidebar, .sidebar-collapse .main-sidebar::before {
+    margin-left: -270px;
+}
 .main-sidebar a.navbar-brand img{
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;

@@ -77,7 +77,7 @@ $(function () {
     $("button[type='submit'][value='5']").click(function (e) { 
         
         var review_messege = $("#select2-review_messege-container").attr('title');
-        if ( review_messege == "Approved" ){
+        if ( review_messege == "Choose review messege" ){
             e.preventDefault();
             alert("Please Choose Review Messege.")
         }
